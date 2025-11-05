@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Classical Works Processor</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      body {
+        background-color: #f9f7f3;
+      }
+      .hero {
+        background: linear-gradient(135deg, #f8efd4, #d5c4a1);
+        padding: 2rem;
+        border-radius: 0.75rem;
+      }
+      .results-panel {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      pre {
+        white-space: pre-wrap;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body class="container py-5">
+    <header class="hero text-center mb-5">
+      <h1 class="display-6">Classical Works Processing Pipeline</h1>
+      <p class="lead">
+        Submit metadata for a Latin or Greek text to retrieve translations,
+        OCR, and analysis once the pipeline is ready.
+      </p>
+    </header>
+
+    <section class="card shadow-sm mb-4">
+      <div class="card-body">
+        <form id="process-form" class="row g-3">
+          <div class="col-md-6">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" id="title" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label for="author" class="form-label">Author</label>
+            <input type="text" id="author" class="form-control" required />
+          </div>
+          <div class="col-md-4">
+            <label for="year" class="form-label">Year</label>
+            <input type="number" id="year" class="form-control" placeholder="1872" />
+          </div>
+          <div class="col-md-4">
+            <label for="language" class="form-label">Language</label>
+            <select id="language" class="form-select" required>
+              <option value="latin">Latin</option>
+              <option value="greek">Greek</option>
+            </select>
+          </div>
+          <div class="col-md-4 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100">Process</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="card shadow-sm mb-4" id="status-card" hidden>
+      <div class="card-body">
+        <h2 class="h5">Job Status</h2>
+        <p id="status-text">Waiting...</p>
+      </div>
+    </section>
+
+    <section class="card shadow-sm" id="results-card" hidden>
+      <div class="card-body">
+        <h2 class="h5">Processed Output</h2>
+        <div id="metadata" class="mb-3"></div>
+        <div class="results-panel">
+          <div>
+            <h3 class="h6">Original Text</h3>
+            <pre id="original-text"></pre>
+          </div>
+          <div>
+            <h3 class="h6">Translation</h3>
+            <pre id="translated-text"></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const form = document.getElementById("process-form");
+      const statusCard = document.getElementById("status-card");
+      const statusText = document.getElementById("status-text");
+      const resultsCard = document.getElementById("results-card");
+      const metadataDiv = document.getElementById("metadata");
+      const originalText = document.getElementById("original-text");
+      const translatedText = document.getElementById("translated-text");
+
+      const API_BASE = window.location.origin.replace(/\/$/, "");
+
+      let currentJobId = null;
+      let pollingInterval = null;
+
+      function renderMetadata(data) {
+        const metadataList = document.createElement("dl");
+        metadataList.className = "row";
+
+        const entries = {
+          Title: data.title,
+          Author: data.author,
+          Year: data.year ?? "—",
+          Language: data.language,
+        };
+
+        Object.entries(entries).forEach(([label, value]) => {
+          const dt = document.createElement("dt");
+          dt.className = "col-sm-3 fw-semibold";
+          dt.textContent = label;
+          const dd = document.createElement("dd");
+          dd.className = "col-sm-9";
+          dd.textContent = value;
+          metadataList.append(dt, dd);
+        });
+
+        metadataDiv.replaceChildren(metadataList);
+      }
+
+      async function fetchStatus(jobId) {
+        try {
+          const response = await axios.get(`${API_BASE}/status/${jobId}`);
+          const data = response.data;
+          statusText.textContent = data.status;
+
+          if (data.status === "completed") {
+            clearInterval(pollingInterval);
+            await fetchOutput(jobId);
+          }
+
+          if (data.status === "failed") {
+            clearInterval(pollingInterval);
+            statusText.textContent = `Job failed: ${data.error_message ?? "Unknown error"}`;
+          }
+        } catch (error) {
+          console.error(error);
+          statusText.textContent = "Error retrieving status.";
+        }
+      }
+
+      async function fetchOutput(jobId) {
+        try {
+          const response = await axios.get(`${API_BASE}/output/${jobId}`);
+          const data = response.data;
+          renderMetadata(data);
+          originalText.textContent = data.original_text ?? "No text extracted yet.";
+          translatedText.textContent = data.translated_text ?? "Translation pending.";
+          resultsCard.hidden = false;
+        } catch (error) {
+          console.error(error);
+          statusText.textContent = "Error retrieving output.";
+        }
+      }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        resultsCard.hidden = true;
+        statusCard.hidden = false;
+        statusText.textContent = "Submitting job...";
+
+        const payload = {
+          title: document.getElementById("title").value,
+          author: document.getElementById("author").value,
+          year: document.getElementById("year").value ? Number(document.getElementById("year").value) : null,
+          language: document.getElementById("language").value,
+        };
+
+        try {
+          const response = await axios.post(`${API_BASE}/process`, payload);
+          const data = response.data;
+          currentJobId = data.job_id;
+          statusText.textContent = data.status;
+
+          pollingInterval = setInterval(() => fetchStatus(currentJobId), 2000);
+        } catch (error) {
+          console.error(error);
+          statusText.textContent =
+            error.response?.data?.detail || "Unable to submit job. Please try again.";
+        }
+      });
+    </script>
+  </body>
+</html>
