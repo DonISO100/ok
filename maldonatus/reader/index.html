@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maldonatus in Evangelia</title>
+  <link rel="icon" href="../../aquinas-rip/favicon.ico" />
+  <link rel="stylesheet" href="reader.css" />
+</head>
+<body>
+  <header id="bar">
+    <button id="navToggle" title="Contents" aria-label="Contents">☰</button>
+    <div id="title">
+      <span class="t1">IOANNIS MALDONATI</span>
+      <span class="t2">Commentarii in quatuor Evangelistas · Mussiponti 1596–97</span>
+    </div>
+    <div id="controls">
+      <div class="seg" role="group" aria-label="Text">
+        <button data-mode="dip" class="on" title="Diplomatic: printed lines, OCR spelling (long s read as f)">Diplomatic</button>
+        <button data-mode="norm" title="Normalized: running text, hyphens joined, long s restored">Normalized</button>
+      </div>
+      <a href="log.html" id="logLink" title="Long-s decisions, ambiguous pairs, column map">Log</a>
+    </div>
+  </header>
+  <div id="wrap">
+    <nav id="toc" aria-label="Contents"><div id="tocInner">Loading…</div></nav>
+    <main id="pages"></main>
+  </div>
+  <script src="reader.js"></script>
+</body>
+</html>

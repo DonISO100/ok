@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maldonatus build log</title>
+  <link rel="stylesheet" href="reader.css" />
+  <style>
+    body { overflow: auto; }
+    main { max-width: 1000px; margin: 62px auto 60px; padding: 0 16px; }
+    section { background: var(--row); padding: 12px 16px 16px; margin-bottom: 18px; }
+    h2 { font-family: var(--text); font-weight: normal; letter-spacing: .06em; margin: 0 0 6px; }
+    p.d { color: var(--muted); margin: 0 0 10px; max-width: 70ch; line-height: 1.45; }
+    table { border-collapse: collapse; width: 100%; font-size: 13px; }
+    th, td { text-align: left; padding: 3px 8px; border-bottom: 1px solid var(--edge); vertical-align: top; }
+    th { font-weight: normal; color: var(--muted); }
+    td.w { font-family: var(--text); font-size: 16px; }
+    td.n { font-family: "Courier New", monospace; text-align: right; }
+    .scroll { max-height: 520px; overflow: auto; }
+    .tabs button { font: inherit; padding: 4px 10px; background: var(--row2); border: 1px solid var(--edge); color: var(--ink); cursor: pointer; }
+    .tabs button.on { background: var(--ground); }
+    .inf { color: var(--amb); }
+    .bad { color: var(--red); }
+    a { color: var(--link); }
+  </style>
+</head>
+<body>
+  <header id="bar">
+    <a href="index.html" style="color:#ddd;text-decoration:none;font-size:20px;padding:0 6px">←</a>
+    <div id="title"><span class="t1">BUILD LOG</span><span class="t2">long s · ambiguous pairs · column map</span></div>
+  </header>
+  <main>
+    <section>
+      <h2>Ambiguous long-s pairs</h2>
+      <p class="d">Words where the printed f could be a long s and both readings (or several s-readings) are Latin according to the
+        Hunspell Latin dictionary. They are left as printed in the normalized text and dotted-underlined there.</p>
+      <div class="scroll"><table id="amb"><thead><tr><th>printed</th><th>possible s-readings</th><th>f-form Latin?</th><th>count</th><th>first places</th></tr></thead><tbody></tbody></table></div>
+    </section>
+    <section>
+      <h2>Long s restored</h2>
+      <p class="d">Words swapped f → s because the printed form is not Latin and exactly one s-reading is.</p>
+      <div class="scroll"><table id="sw"><thead><tr><th>printed</th><th>normalized</th><th>count</th></tr></thead><tbody></tbody></table></div>
+    </section>
+    <section>
+      <h2>Column map</h2>
+      <p class="d">The book numbers columns, two per page. Numbers read from the running head are <i>printed</i>; where the head
+        number is missing or misread it is <span class="inf">inferred</span> from the sequence. MDZ labels give a page number that
+        does not match the columns.</p>
+      <div class="tabs"><button data-v="tom1" class="on">Tom. I (1596)</button><button data-v="tom2">Tom. II (1597)</button></div>
+      <div class="scroll"><table id="cm"><thead><tr><th>image</th><th>MDZ label</th><th>columns</th><th>source</th><th>head OCR</th><th>layout</th></tr></thead><tbody></tbody></table></div>
+    </section>
+  </main>
+  <script>
+    function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+    fetch("data/longs-log.json").then(function(r){return r.json();}).then(function(d){
+      document.querySelector("#amb tbody").innerHTML = d.ambiguous.map(function(a){
+        return "<tr><td class=w>"+esc(a[0])+"</td><td class=w>"+esc(a[1].join(", "))+"</td><td>"+(a[2]?"yes":"no")+"</td><td class=n>"+a[3]+"</td><td>"+
+          a[4].slice(0,4).map(function(w){var p=w.split(":");return '<a href="index.html#1-'+(p[1].match(/^\d{4}/)?p[1]:p[0])+'">'+esc(p[1])+"</a>";}).join(" ")+"</td></tr>";}).join("");
+      document.querySelector("#sw tbody").innerHTML = d.swaps.map(function(s){
+        return "<tr><td class=w>"+esc(s[0])+"</td><td class=w>"+esc(s[1])+"</td><td class=n>"+s[2]+"</td></tr>";}).join("");
+    });
+    var CM;
+    function showCM(v){
+      document.querySelectorAll(".tabs button").forEach(function(b){b.classList.toggle("on",b.dataset.v===v);});
+      document.querySelector("#cm tbody").innerHTML = CM[v].map(function(r){
+        var src = r.src.map(function(s){return '<span class="'+(s==="printed"?"":s.indexOf("conflict")>=0?"bad":"inf")+'">'+s+"</span>";}).join(", ");
+        return "<tr><td class=n>"+r.img+"</td><td>"+esc(r.mdz)+"</td><td class=n>"+(r.cols.join("–")||"—")+"</td><td>"+src+"</td><td class=n>"+
+          (r.ocr||[]).map(function(x){return x==null?"·":x;}).join(" / ")+"</td><td>"+r.kind+"</td></tr>";}).join("");
+    }
+    fetch("data/colmap.json").then(function(r){return r.json();}).then(function(d){CM=d;showCM("tom1");});
+    document.querySelectorAll(".tabs button").forEach(function(b){b.addEventListener("click",function(){showCM(b.dataset.v);});});
+  </script>
+</body>
+</html>

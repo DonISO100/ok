@@ -1,0 +1,139 @@
+/* Look and feel taken from the aquinas.cc front end (../../aquinas-rip):
+   sage page ground, #eff0dc text rows, minion-pro text face, grey Courier
+   line/column numbers, the dotted-line tree images. Minion Pro is not in git
+   (commercial licence); drop licensed woff2 files into aquinas-rip/webfonts/
+   and they are picked up, otherwise Palatino / Book Antiqua is used. */
+@font-face { font-family: minion-pro; src: url(../../aquinas-rip/webfonts/minionpro.woff2) format("woff2"); font-weight: 400; font-style: normal; }
+@font-face { font-family: minion-pro; src: url(../../aquinas-rip/webfonts/minionpro-italic.woff2) format("woff2"); font-weight: 400; font-style: italic; }
+@font-face { font-family: minion-pro; src: url(../../aquinas-rip/webfonts/minionpro-bold.woff2) format("woff2"); font-weight: 700; font-style: normal; }
+@font-face { font-family: minion-pro; src: url(../../aquinas-rip/webfonts/minionpro-bolditalic.woff2) format("woff2"); font-weight: 700; font-style: italic; }
+
+:root {
+  --ground: #cfd0b9;
+  --row: #eff0dc;
+  --row2: #e6e7d3;
+  --edge: #dee0cb;
+  --ink: #1d1d16;
+  --muted: #777;
+  --num: gray;
+  --red: #8b0000;
+  --link: #337ab7;
+  --tree: #fff;
+  --bar: #3c3c3c;
+  --bar2: #222;
+  --note: #f6f6e8;
+  --amb: #b07a00;
+  --text: minion-pro, "Palatino Linotype", Palatino, "Book Antiqua", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #23241d; --row: #2e2f27; --row2: #383a30; --edge: #44463b; --ink: #e8e8dc;
+    --muted: #a3a395; --num: #8d8d80; --red: #e08a7a; --link: #8fb8e6; --tree: #2a2b24; --note: #34352c; --amb: #e0b24f;
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #23241d; --row: #2e2f27; --row2: #383a30; --edge: #44463b; --ink: #e8e8dc;
+  --muted: #a3a395; --num: #8d8d80; --red: #e08a7a; --link: #8fb8e6; --tree: #2a2b24; --note: #34352c; --amb: #e0b24f;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--ground); color: var(--ink); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; }
+
+/* top bar: the aquinas.cc inverse navbar */
+#bar { position: fixed; inset: 0 0 auto 0; height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 12px;
+  background-image: linear-gradient(#3c3c3c 0, #222 100%); color: #ddd; z-index: 50; }
+#bar button { font: inherit; cursor: pointer; }
+#navToggle { background: none; border: 0; color: #ddd; font-size: 20px; padding: 4px 6px; }
+#title { display: flex; flex-direction: column; line-height: 1.15; min-width: 0; }
+#title .t1 { font-family: var(--text); letter-spacing: .12em; font-size: 16px; color: #fff; }
+#title .t2 { font-family: var(--text); font-style: italic; font-size: 13px; color: #bbb; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#controls { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.seg { display: inline-flex; border: 1px solid #555; border-radius: 3px; overflow: hidden; }
+.seg button { background: #2b2b2b; color: #ccc; border: 0; padding: 5px 10px; font-size: 13px; }
+.seg button + button { border-left: 1px solid #555; }
+.seg button.on { background: #eff0dc; color: #222; }
+#logLink { color: #ccc; font-size: 13px; }
+
+#wrap { position: absolute; inset: 46px 0 0 0; display: flex; }
+
+/* contents tree: aquinas.cc ul.tree */
+#toc { width: 300px; flex: none; overflow: auto; background: var(--tree); border-right: 1px solid var(--edge); padding: 10px 6px 40px 8px; }
+#toc .scope { font-size: 12px; color: var(--muted); margin: 0 0 8px 4px; }
+ul.tree, ul.tree ul { margin: 0; padding: 0 0 0 7px; list-style: none; background: url(../../aquinas-rip/img/vline.png) repeat-y; cursor: default; user-select: none; }
+ul.tree ul { padding-left: 7px; }
+ul.tree li { margin: 0; padding: 0 1px 0 12px; line-height: 22px; background: url(../../aquinas-rip/img/node.png) no-repeat; }
+ul.tree li.last { background: var(--tree) url(../../aquinas-rip/img/lastnode.png) no-repeat; }
+ul.tree li > ul { display: none; }
+ul.tree li.open > ul { display: block; }
+ul.tree .tw { display: inline-block; width: 12px; color: var(--muted); cursor: pointer; font-size: 10px; }
+ul.tree a { color: var(--ink); text-decoration: none; padding: 2px; cursor: pointer; }
+ul.tree a:hover { text-decoration: underline; }
+ul.tree > li > a { font-size: 17px; font-family: var(--text); }
+ul.tree > li > ul > li > a { font-size: 15px; font-family: var(--text); }
+ul.tree > li > ul > li > ul > li > a { color: #030; font-size: 14px; }
+ul.tree li li li li a { color: #005; font-size: 13px; font-family: var(--text); font-style: italic; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) ul.tree li li li a { color: #a8d3a8; } :root:not([data-theme="light"]) ul.tree li li li li a { color: #b4c4ec; } }
+ul.tree a.cur { background: #ffef9e; color: #000; }
+ul.tree .vn { color: var(--red); font-family: "Courier New", monospace; font-size: 12px; margin-right: 4px; font-style: normal; }
+
+/* pages */
+#pages { flex: 1; overflow: auto; padding: 18px 0 80px; scroll-behavior: auto; }
+.page { max-width: 980px; margin: 0 auto 18px; position: relative; }
+.page.stub { min-height: 1400px; }
+.phead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; padding: 6px 16px; background: var(--row2);
+  font-family: "Courier New", Courier, monospace; font-size: 12px; color: var(--num); border-bottom: 1px solid var(--edge); }
+.phead .rh { font-family: var(--text); font-size: 15px; letter-spacing: .08em; color: var(--ink); font-style: normal; }
+.phead a { color: var(--link); }
+.phead .cols b { color: var(--red); font-weight: normal; }
+.phead .inf { color: var(--amb); }
+.ptext { background: var(--row); padding: 10px 220px 14px 64px; position: relative; font-family: var(--text); font-size: 18px; line-height: 1.5; }
+.blk { position: relative; }
+.blk + .blk { margin-top: 8px; }
+.colmark { display: block; font-family: "Courier New", monospace; font-size: 12px; color: var(--red); margin: 0 0 2px -38px; }
+.colsep { border-top: 1px dotted var(--edge); margin: 10px 0 8px; position: relative; }
+.ln { display: block; position: relative; text-align: left; }
+.ln .no { position: absolute; left: -38px; width: 30px; text-align: right; font-family: "Courier New", monospace; font-size: 11px; color: var(--num); user-select: none; top: .35em; }
+.mode-norm .ln { display: inline; }
+.mode-norm .ln .no { display: none; }
+.mode-norm .colmark { margin-left: 0; }
+.mode-norm .ln.p::before { content: ""; display: block; height: .5em; }
+.mode-norm .ln.p { padding-left: 0; }
+.mode-norm .blk { text-align: justify; hyphens: none; }
+.head-blk { margin: 10px 0; }
+.ln.hd { display: block !important; text-align: center; letter-spacing: .14em; font-size: 20px; margin: 6px 0 8px; }
+.mode-norm .ln.hd::before { display: none; }
+.full-blk { }
+.lem { font-style: italic; }
+.vno { color: var(--red); font-family: "Courier New", monospace; font-size: 14px; font-style: normal; }
+.hit { background: #ffef9e; color: #000; }
+.amb { text-decoration: underline dotted var(--amb); text-underline-offset: 3px; cursor: help; }
+.mode-dip .amb { text-decoration: none; cursor: auto; }
+
+/* marginalia in the right margin, positioned beside their anchor line */
+.note { position: absolute; right: 12px; width: 190px; font-size: 13px; line-height: 1.3; color: var(--muted); background: var(--note);
+  border-left: 2px solid var(--edge); padding: 3px 6px; font-family: var(--text); font-style: italic; }
+.note .side { font-style: normal; font-family: "Courier New", monospace; font-size: 10px; color: var(--num); margin-right: 4px; }
+.note.letter { width: auto; background: none; border: 0; font-style: normal; color: var(--red); font-size: 14px; padding: 0; right: auto; left: 6px; }
+.mode-norm .note .nl + .nl::before { content: " "; }
+.mode-dip .note .nl { display: block; }
+.foot { text-align: right; font-size: 13px; color: var(--muted); padding-top: 6px; }
+.plain .ln { color: var(--muted); }
+
+/* phone */
+@media (max-width: 760px) {
+  #toc { position: fixed; top: 46px; bottom: 0; left: 0; z-index: 40; width: 86vw; transform: translateX(-100%); transition: transform .2s; }
+  body.toc-open #toc { transform: none; }
+  #title .t2 { display: none; }
+  #title .t1 { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #title { flex: 1; }
+  #controls { gap: 8px; }
+  .seg button { padding: 5px 7px; font-size: 12px; }
+  .ptext { padding: 10px 16px 14px 40px; font-size: 17px; }
+  .note { position: static; width: auto; margin: 4px 0 4px 0; }
+  .note.letter { display: none; }
+  .colmark { margin-left: -30px; }
+  .ln .no { left: -30px; width: 24px; }
+}
+@media (min-width: 761px) { body:not(.toc-open) #toc { display: none; } }
+body.toc-open-default #toc { display: block; }
