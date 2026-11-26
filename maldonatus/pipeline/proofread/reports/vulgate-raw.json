@@ -2,9 +2,9 @@
  "summary": {
   "pages_with_text": 11,
   "words": 2994,
-  "errors": 12,
+  "errors": 13,
   "split": 2,
-  "error_rate": 0.004,
+  "error_rate": 0.0043,
   "errors_flagged": 2
  },
  "pages": {
@@ -656,9 +656,21 @@
   },
   "0089": {
    "words": 141,
-   "matched": 140,
+   "matched": 139,
    "split": 0,
    "errors": [
+    {
+     "kind": "error",
+     "got": "nó",
+     "expected": "non",
+     "ref": [
+      6,
+      0
+     ],
+     "chapter": 6,
+     "verse": 1,
+     "flagged": false
+    },
     {
      "kind": "edge",
      "got": "exau-",

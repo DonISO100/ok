@@ -73,6 +73,18 @@ def to_blocks(ans):
         if not idxs:
             continue
         used.update(idxs)
+        rz = lines[z]["region"]
+        body = ("full", "col_a", "col_b")
+        if rz != p["region"] and p["region"] in body and rz in body:
+            # a paragraph that runs on from the left column into the right one: one block per column,
+            # the normalized words split where the printed words split
+            more = [k for k in range(a, z + 1) if lines[k]["region"] == rz and k not in used]
+            used.update(more)
+            words = p.get("normalized", "").split()
+            na = len(re.sub(r"-\s+", "", " ".join(lines[k]["text"] for k in idxs)).split())
+            add_block(p["region"], p["kind"], p.get("lemma", ""), idxs, " ".join(words[:na]))
+            add_block(rz, "text", "", more, " ".join(words[na:]))
+            continue
         add_block(p["region"], p["kind"], p.get("lemma", ""), idxs, p.get("normalized", ""))
     for k, L in enumerate(lines):          # orphans
         if k in used:

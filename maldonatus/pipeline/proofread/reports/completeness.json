@@ -1,27 +1,24 @@
 {
  "rerun": [
-  "0032",
-  "0060",
-  "0063",
-  "0065"
+  "0050",
+  "0060"
  ],
  "check": [
   "0020",
   "0025",
   "0029",
   "0035",
-  "0036",
   "0037",
   "0038",
   "0041",
   "0042",
   "0045",
   "0048",
-  "0050",
   "0052",
   "0054",
   "0055",
   "0062",
+  "0065",
   "0070",
   "0071",
   "0076",
@@ -175,21 +172,15 @@
    "source": "v2"
   },
   "0032": {
-   "status": "incomplete",
-   "problems": [
-    "model notes: Only the head and the first paragraph of column a were transcribed; the rest of the page (remaining col_a text, col_b, margin notes, section",
-    "21 body lines for 133 in the OCR",
-    "162 body words for 1059 in the OCR"
-   ],
+   "status": "ok",
+   "problems": [],
    "blocks": [],
-   "warnings": [
-    "4 gutter letters in the OCR, none in the answer"
-   ],
+   "warnings": [],
    "ocr_body_lines": 133,
-   "body_lines": 21,
+   "body_lines": 132,
    "ocr_body_words": 1059,
-   "body_words": 162,
-   "source": "v2"
+   "body_words": 1062,
+   "source": "v3"
   },
   "0033": {
    "status": "ok",
@@ -228,17 +219,15 @@
    "source": "v2"
   },
   "0036": {
-   "status": "check",
+   "status": "ok",
    "problems": [],
    "blocks": [],
-   "warnings": [
-    "model notes: Faint show-through marginal notes on the left margin and right margin are illegible and omitted. Several Hebrew words and Greek words are best attempts. Supersc"
-   ],
+   "warnings": [],
    "ocr_body_lines": 134,
    "body_lines": 132,
    "ocr_body_words": 996,
-   "body_words": 964,
-   "source": "v2"
+   "body_words": 972,
+   "source": "v3"
   },
   "0037": {
    "status": "check",
@@ -399,17 +388,30 @@
    "source": "v2"
   },
   "0050": {
-   "status": "check",
+   "status": "normalized_rebuilt",
    "problems": [],
-   "blocks": [],
-   "warnings": [
-    "model notes: Folio page 69/70 with ornamental headpiece. Drop cap I in woodcut. Margin numeral 1. beside verse 1 and beside commentary start omitted from blocks."
+   "blocks": [
+    {
+     "region": "col_b",
+     "ri": 3,
+     "block": 0,
+     "printed_words": 84,
+     "normalized_words": 124
+    },
+    {
+     "region": "margin_left",
+     "ri": 5,
+     "block": 3,
+     "printed_words": 16,
+     "normalized_words": 24
+    }
    ],
+   "warnings": [],
    "ocr_body_lines": 65,
-   "body_lines": 66,
+   "body_lines": 64,
    "ocr_body_words": 597,
-   "body_words": 582,
-   "source": "v2"
+   "body_words": 574,
+   "source": "v3"
   },
   "0051": {
    "status": "ok",
@@ -501,10 +503,10 @@
    "blocks": [],
    "warnings": [],
    "ocr_body_lines": 135,
-   "body_lines": 132,
+   "body_lines": 133,
    "ocr_body_words": 1023,
-   "body_words": 976,
-   "source": "v2"
+   "body_words": 989,
+   "source": "v3"
   },
   "0059": {
    "status": "ok",
@@ -562,33 +564,15 @@
    "source": "v2"
   },
   "0063": {
-   "status": "normalized_rebuilt",
+   "status": "ok",
    "problems": [],
-   "blocks": [
-    {
-     "region": "col_a",
-     "ri": 1,
-     "block": 1,
-     "printed_words": 351,
-     "normalized_words": 56
-    },
-    {
-     "region": "col_b",
-     "ri": 2,
-     "block": 1,
-     "printed_words": 432,
-     "normalized_words": 13
-    }
-   ],
-   "warnings": [
-    "model notes: Letters A-F in gutter (A at top, B, C, D, E, F) not transcribed as separate blocks. Several blocks' normalized text is abbreviated/truncated; the column text is",
-    "6 gutter letters in the OCR, none in the answer"
-   ],
+   "blocks": [],
+   "warnings": [],
    "ocr_body_lines": 133,
    "body_lines": 132,
    "ocr_body_words": 1031,
-   "body_words": 937,
-   "source": "v2"
+   "body_words": 934,
+   "source": "v3"
   },
   "0064": {
    "status": "ok",
@@ -602,22 +586,17 @@
    "source": "v2"
   },
   "0065": {
-   "status": "incomplete",
-   "problems": [
-    "model notes: Partial transcription only; the rest of the page (col_a remainder, col_b, margins, foot) is not transcribed.",
-    "20 body lines for 133 in the OCR",
-    "173 body words for 1036 in the OCR"
-   ],
+   "status": "check",
+   "problems": [],
    "blocks": [],
    "warnings": [
-    "model notes: Partial transcription only; the rest of the page (col_a remainder, col_b, margins, foot) is not transcribed.",
     "5 gutter letters in the OCR, none in the answer"
    ],
    "ocr_body_lines": 133,
-   "body_lines": 20,
+   "body_lines": 132,
    "ocr_body_words": 1036,
-   "body_words": 173,
-   "source": "v2"
+   "body_words": 1011,
+   "source": "v3"
   },
   "0066": {
    "status": "ok",
@@ -1019,8 +998,8 @@
    "ocr_body_lines": 133,
    "body_lines": 132,
    "ocr_body_words": 1007,
-   "body_words": 951,
-   "source": "v2"
+   "body_words": 971,
+   "source": "v3"
   },
   "0101": {
    "status": "check",

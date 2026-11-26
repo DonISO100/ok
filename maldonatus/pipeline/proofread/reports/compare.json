@@ -1,0 +1,271 @@
+{
+ "0032": {
+  "v2": {
+   "lines": 21,
+   "words": 168,
+   "flags": 2,
+   "check": 0,
+   "unsure": 0,
+   "vulgate_words": 0,
+   "vulgate_errors": 0,
+   "vulgate_flagged": 0,
+   "tokens": {
+    "in": 23233,
+    "out": 1443,
+    "stop": "end_turn",
+    "valid": null,
+    "problems": null
+   },
+   "vulgate_list": []
+  },
+  "v3": {
+   "lines": 132,
+   "words": 1081,
+   "flags": 39,
+   "check": 34,
+   "unsure": 2,
+   "vulgate_words": 0,
+   "vulgate_errors": 0,
+   "vulgate_flagged": 0,
+   "tokens": {
+    "in": 25446,
+    "out": 14548,
+    "stop": "end_turn",
+    "valid": true,
+    "problems": []
+   },
+   "vulgate_list": []
+  }
+ },
+ "0065": {
+  "v2": {
+   "lines": 20,
+   "words": 173,
+   "flags": 2,
+   "check": 0,
+   "unsure": 0,
+   "vulgate_words": 0,
+   "vulgate_errors": 0,
+   "vulgate_flagged": 0,
+   "tokens": {
+    "in": 23576,
+    "out": 1473,
+    "stop": "end_turn",
+    "valid": null,
+    "problems": null
+   },
+   "vulgate_list": []
+  },
+  "v3": {
+   "lines": 132,
+   "words": 1033,
+   "flags": 12,
+   "check": 66,
+   "unsure": 10,
+   "vulgate_words": 0,
+   "vulgate_errors": 0,
+   "vulgate_flagged": 0,
+   "tokens": {
+    "in": 24071,
+    "out": 13603,
+    "stop": "end_turn",
+    "valid": true,
+    "problems": []
+   },
+   "vulgate_list": []
+  }
+ },
+ "0063": {
+  "v2": {
+   "lines": 132,
+   "words": 949,
+   "flags": 5,
+   "check": 0,
+   "unsure": 0,
+   "vulgate_words": 0,
+   "vulgate_errors": 0,
+   "vulgate_flagged": 0,
+   "tokens": {
+    "in": 23760,
+    "out": 6363,
+    "stop": "end_turn",
+    "valid": null,
+    "problems": null
+   },
+   "vulgate_list": []
+  },
+  "v3": {
+   "lines": 132,
+   "words": 1005,
+   "flags": 0,
+   "check": 4,
+   "unsure": 0,
+   "vulgate_words": 0,
+   "vulgate_errors": 0,
+   "vulgate_flagged": 0,
+   "tokens": {
+    "in": 24632,
+    "out": 23996,
+    "stop": "end_turn",
+    "valid": true,
+    "problems": []
+   },
+   "vulgate_list": []
+  }
+ },
+ "0036": {
+  "v2": {
+   "lines": 132,
+   "words": 1018,
+   "flags": 21,
+   "check": 0,
+   "unsure": 0,
+   "vulgate_words": 0,
+   "vulgate_errors": 0,
+   "vulgate_flagged": 0,
+   "tokens": {
+    "in": 23234,
+    "out": 9090,
+    "stop": "end_turn",
+    "valid": null,
+    "problems": null
+   },
+   "vulgate_list": []
+  },
+  "v3": {
+   "lines": 132,
+   "words": 1023,
+   "flags": 24,
+   "check": 35,
+   "unsure": 0,
+   "vulgate_words": 0,
+   "vulgate_errors": 0,
+   "vulgate_flagged": 0,
+   "tokens": {
+    "in": 25702,
+    "out": 20527,
+    "stop": "end_turn",
+    "valid": true,
+    "problems": []
+   },
+   "vulgate_list": []
+  }
+ },
+ "0050": {
+  "v2": {
+   "lines": 66,
+   "words": 604,
+   "flags": 13,
+   "check": 0,
+   "unsure": 0,
+   "vulgate_words": 288,
+   "vulgate_errors": 2,
+   "vulgate_flagged": 1,
+   "tokens": {
+    "in": 21758,
+    "out": 6077,
+    "stop": "end_turn",
+    "valid": null,
+    "problems": null
+   },
+   "vulgate_list": [
+    "Vides -> Videns",
+    "Piogenies -> Progenies"
+   ]
+  },
+  "v3": {
+   "lines": 64,
+   "words": 596,
+   "flags": 7,
+   "check": 15,
+   "unsure": 1,
+   "vulgate_words": 288,
+   "vulgate_errors": 0,
+   "vulgate_flagged": 0,
+   "tokens": {
+    "in": 21883,
+    "out": 8571,
+    "stop": "end_turn",
+    "valid": true,
+    "problems": []
+   },
+   "vulgate_list": []
+  }
+ },
+ "0058": {
+  "v2": {
+   "lines": 132,
+   "words": 1035,
+   "flags": 12,
+   "check": 0,
+   "unsure": 0,
+   "vulgate_words": 0,
+   "vulgate_errors": 0,
+   "vulgate_flagged": 0,
+   "tokens": {
+    "in": 23269,
+    "out": 8879,
+    "stop": "end_turn",
+    "valid": null,
+    "problems": null
+   },
+   "vulgate_list": []
+  },
+  "v3": {
+   "lines": 133,
+   "words": 1044,
+   "flags": 8,
+   "check": 26,
+   "unsure": 0,
+   "vulgate_words": 0,
+   "vulgate_errors": 0,
+   "vulgate_flagged": 0,
+   "tokens": {
+    "in": 25740,
+    "out": 19036,
+    "stop": "end_turn",
+    "valid": true,
+    "problems": []
+   },
+   "vulgate_list": []
+  }
+ },
+ "0100": {
+  "v2": {
+   "lines": 132,
+   "words": 1006,
+   "flags": 15,
+   "check": 0,
+   "unsure": 0,
+   "vulgate_words": 0,
+   "vulgate_errors": 0,
+   "vulgate_flagged": 0,
+   "tokens": {
+    "in": 23074,
+    "out": 8996,
+    "stop": "end_turn",
+    "valid": null,
+    "problems": null
+   },
+   "vulgate_list": []
+  },
+  "v3": {
+   "lines": 132,
+   "words": 1024,
+   "flags": 4,
+   "check": 74,
+   "unsure": 0,
+   "vulgate_words": 0,
+   "vulgate_errors": 0,
+   "vulgate_flagged": 0,
+   "tokens": {
+    "in": 25525,
+    "out": 12809,
+    "stop": "end_turn",
+    "valid": true,
+    "problems": []
+   },
+   "vulgate_list": []
+  }
+ }
+}

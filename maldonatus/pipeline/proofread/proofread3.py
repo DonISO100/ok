@@ -89,7 +89,8 @@ reference like "Matth.5.3." stays as printed.
 - Greek, Hebrew and any other script: your best reading in that script (never [?]) and always a flag.
 - A Latin word you cannot read: [?] for the unreadable part (Euang[?]) and a flag.
 
-PARAGRAPHS: list the printed paragraphs in "paragraphs" by their first and last line IDs (a paragraph \
+PARAGRAPHS (required, and the page is incomplete without them): list EVERY printed paragraph of the page, each body line in \
+exactly one paragraph, in "paragraphs" by their first and last line IDs (a paragraph \
 starts at an indent or after a short last line; a paragraph continuing from the previous column or page \
 is its own paragraph). Kinds: heading (running head, CAPVT III., IN CAPVT III.), lemma (a commentary \
 paragraph opening with the quoted Gospel phrase closed by ")", copied into "lemma"), text, note (marginal \
@@ -230,11 +231,25 @@ def validate(img, ans, pl, stop):
     if re.search(r"\b(partial|not transcribed|truncat|omitted the rest|remaining (text|lines))", ans.get("page_notes", ""), re.I):
         probs.append("page notes say the answer is partial")
     pos = {L["id"]: k for k, L in enumerate(ans.get("lines", []))}
+    # every body line must belong to a paragraph (a run on the real scans returned none at all for 4 of 7 pages)
+    body = [k for k, L in enumerate(ans.get("lines", [])) if L["region"] in ("full", "col_a", "col_b")]
+    cov = set()
+    for p in ans.get("paragraphs", []):
+        a0, z0 = pos.get(p["first"]), pos.get(p["last"])
+        if a0 is not None and z0 is not None and z0 >= a0:
+            cov |= {k for k in range(a0, z0 + 1) if ans["lines"][k]["region"] in ("full", "col_a", "col_b")}
+    if body and len(cov & set(body)) < 0.8 * len(body):
+        probs.append(f"paragraphs cover only {len(cov & set(body))} of {len(body)} body lines: list EVERY printed paragraph of the "
+                     "page (first and last line ID, kind, normalized text) in \"paragraphs\"")
     for p in ans.get("paragraphs", []):
         a, z = pos.get(p["first"]), pos.get(p["last"])
         if a is None or z is None:
             continue
-        dl = " ".join(L["text"] for L in ans["lines"][a:z + 1] if L["region"] == p["region"])
+        if p.get("kind") == "note":
+            continue                        # notes are full of abbreviations that expand: not a truncation signal
+        # a paragraph can run on from the left column into the right one: count both regions
+        regs = {p["region"], ans["lines"][z]["region"]}
+        dl = " ".join(L["text"] for L in ans["lines"][a:z + 1] if L["region"] in regs)
         nd, nn = len(dl.split()), len(p.get("normalized", "").split())
         if nd >= 15 and not (0.8 * nd <= nn <= 1.3 * nd):
             probs.append(f"paragraph {p['first']}: normalized has {nn} words for {nd} printed")
