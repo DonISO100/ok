@@ -79,3 +79,14 @@ python3 maldonatus/pipeline/build.py --data PATH/TO/OCR-PACK --dict package/inde
 - **Missing verse numbers:** some lemmas lose their verse number to OCR errors, so they are listed under the previous verse.
 - **Unsettled words:** until the AI pass runs, the ambiguous long-s words (`fit`, `fi`, `folum`, `fine`, `fuam`…) stay as printed, dotted-underlined.
 - **Systematic OCR errors:** errors that recur across the book (`Deide`, `cu`, `Romanoru`) look like real words to the corpus guard, so they aren't fixed.
+
+
+## Full-page proofread (Sonnet 5.5) and review queue
+
+Reader data for Matthew 1-6 (images 0020-0103) now comes from a full-page proofread: Claude Sonnet 5.5 read each scan (three full-width bands at near-native resolution plus an overview, with the old OCR as a hint) through the Message Batches API. It returns one block per printed paragraph, with the diplomatic lines (long s as ſ, tildes kept), a normalized paragraph, lemma/heading kinds, marginal notes and gutter letters, and a **flag** for every word it was unsure of.
+
+- `pipeline/proofread/proofread2.py` builds and submits the batches (28 pages each; the batch API limit is 256 MB) and collects `proofread/raw/NNNN.json`.
+- `pipeline/proofread/merge.py` turns the raw JSON into `reader/data/pages/tom1-NNNN.json` and `toc.json`, and writes `pipeline/review-queue.json`. It also adds flags itself: every Greek/Hebrew/other-script run, `[?]`, and plain-letter words that are not in the Latin dictionary and are identical to the old OCR (type `ocr_copy`, `auto: true`).
+- `pipeline/proofread/crops.py` cuts a strip of the scan around each flag into `/workspace/maldonatus-review-crops/` (not committed; regenerate from the bboxes).
+- In the reader, flagged words are marked: yellow = unsure, orange = maybe an OCR copy, purple = Greek/Hebrew (hover for the reason).
+- `pipeline/review-queue.json`: one item per flag: `id`, `img`, `block`, `line`, `region`, `type` (`unsure`, `ocr_copy`, `greek`, `hebrew`, `other_script`, `unreadable_note`), `word`, `normalized_word`, `reason`, `auto`, `line_text` with `prev_line`/`next_line`, `bbox` in scan pixels `[x0,y0,x1,y1]` (`bbox_source`: `ocr-word` = snapped to an OCR word box, `approx-y` = the model's vertical estimate), `page_wh`, `sonnet_best` and the crop path. A later Opus pass needs only the crop and these lines.

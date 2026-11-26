@@ -140,3 +140,13 @@ ul.tree .vn { color: var(--red); font-family: "Courier New", monospace; font-siz
 }
 @media (min-width: 761px) { body:not(.toc-open) #toc { display: none; } }
 body.toc-open-default #toc { display: block; }
+
+/* proofread flags: words the AI pass was unsure of, awaiting review by a stronger model */
+.flag { cursor: help; border-radius: 2px; padding: 0 1px; }
+.flag-unsure { background: rgba(255, 205, 40, .38); border-bottom: 2px solid #d99a00; }
+.flag-ocr { background: rgba(255, 140, 60, .26); border-bottom: 2px dotted #d9622b; }
+.flag-script { background: rgba(150, 100, 230, .22); border-bottom: 2px dotted #7b4fd0; }
+#legend { font-size: 11px; display: flex; gap: 8px; align-items: center; color: #ddd; white-space: nowrap; }
+#legend i { font-style: normal; padding: 0 4px; border-radius: 2px; color: #222; }
+#legend .l1 { background: #ffd84d; } #legend .l2 { background: #ffb98a; } #legend .l3 { background: #cdb6f2; }
+@media (max-width: 760px) { #legend { display: none; } }

@@ -23,9 +23,32 @@
   function mdzJpg(bsb, img) { return "https://api.digitale-sammlungen.de/iiif/image/v2/" + bsb + "_" + ("0000" + img).slice(-5) + "/full/full/0/default.jpg"; }
 
   // ---------------------------------------------------------------- text
+  var FLAGCLS = { unsure: "flag-unsure", ocr_copy: "flag-ocr", greek: "flag-script", hebrew: "flag-script", other_script: "flag-script", unreadable_note: "flag-unsure" };
+  var FLAGLBL = { unsure: "unsure reading", ocr_copy: "may be an OCR error", greek: "Greek: awaiting review", hebrew: "Hebrew: awaiting review", other_script: "non-Latin script: awaiting review", unreadable_note: "partly unreadable" };
+  // plain text + flags [{w,t,r}] -> html with each flagged word marked (first free occurrence each)
+  function flagHTML(t, flags) {
+    var hits = [];
+    flags.forEach(function (f) {
+      if (!f.w) return;
+      var from = 0, i;
+      while ((i = t.indexOf(f.w, from)) >= 0) {
+        var ok = !hits.some(function (h) { return i < h.e && i + f.w.length > h.s; });
+        if (ok) { hits.push({ s: i, e: i + f.w.length, f: f }); break; }
+        from = i + 1;
+      }
+    });
+    hits.sort(function (a, b) { return a.s - b.s; });
+    var out = "", p = 0;
+    hits.forEach(function (h) {
+      out += esc(t.slice(p, h.s));
+      out += '<span class="flag ' + (FLAGCLS[h.f.t] || "flag-unsure") + '" title="' + esc((FLAGLBL[h.f.t] || h.f.t) + (h.f.r ? " · " + h.f.r : "")) + '">' + esc(t.slice(h.s, h.e)) + "</span>";
+      p = h.e;
+    });
+    return out + esc(t.slice(p));
+  }
   function lineHTML(L) {
     var t = mode === "norm" ? (L.n != null ? L.n : L.d) : L.d;
-    var h = esc(t);
+    var h = L.f ? flagHTML(t, L.f) : esc(t);
     if (mode === "norm" && L.c) {
       var done = {};
       L.c.forEach(function (c) {
@@ -51,6 +74,12 @@
       }
     }
     return h;
+  }
+
+  function byId(vol, id) {
+    var e = document.getElementById("L" + vol + "-" + id);
+    if (!e && id) e = document.getElementById("L" + vol + "-" + id.replace(/\.\d+$/, "")) || document.getElementById("L" + vol + "-" + id + ".0");
+    return e;
   }
 
   function renderPage(pg) {
@@ -80,13 +109,25 @@
           b.appendChild(cm);
           if (ci === 1) text.appendChild(el("div", "colsep"));
         }
-        col.lines.forEach(function (L) {
+        function addLine(L, id) {
           lineNo++;
           var s = el("span", "ln" + (L.p ? " p" : "") + (L.lem ? " lemline" : "") + (L.h || blk.t === "head" ? " hd" : ""));
-          s.id = "L" + pg.vol + "-" + L.id;
+          s.id = "L" + pg.vol + "-" + id;
           s.innerHTML = '<span class="no">' + lineNo + "</span>" + lineHTML(L);
           b.appendChild(s);
           if (mode === "norm") b.appendChild(document.createTextNode(" "));
+        }
+        col.lines.forEach(function (L) {
+          if (!L.dl) { addLine(L, L.id); return; }          // OCR-era data: one printed line
+          var fl = L.fl || [];
+          if (mode === "norm") {                             // proofread data: one paragraph
+            addLine({ n: L.n, d: L.d, p: 1, lem: L.lem, h: L.h, f: fl.filter(function (f) { return f.t !== "x"; }).map(function (f) { return { w: f.n, t: f.t, r: f.r }; }) }, L.id);
+          } else {
+            L.dl.forEach(function (t, i) {
+              addLine({ d: t, p: i === 0, lem: i === 0 && L.lem, h: L.h,
+                        f: fl.filter(function (f) { return f.i === i; }).map(function (f) { return { w: f.d, t: f.t, r: f.r }; }) }, L.id + "." + i);
+            });
+          }
         });
         text.appendChild(b);
       });
@@ -98,7 +139,7 @@
     var notes = pg.notes.slice().filter(function (n) { return n.anchor && !(n.junk && mode === "norm"); });
     var placed = [];
     notes.forEach(function (n) {
-      var a = document.getElementById("L" + pg.vol + "-" + n.anchor);
+      var a = byId(pg.vol, n.anchor);
       if (!a) return;
       var d = el("div", "note" + (n.kind === "letter" ? " letter" : ""));
       d.dataset.anchor = n.anchor;
@@ -168,7 +209,7 @@
     var idx = toc.pages.findIndex(function (p) { return p.vol == vol && p.img === img; });
     var need = toc.pages.slice(Math.max(0, idx - 1), idx + 2).map(function (p) { return load(p.vol, p.img); });
     return Promise.all(need).then(function () {
-      var t = lineId ? document.getElementById("L" + vol + "-" + lineId) : pageEls[key(vol, img)];
+      var t = lineId ? byId(vol, lineId) : pageEls[key(vol, img)];
       if (!t) t = pageEls[key(vol, img)];
       pagesEl.scrollTop += t.getBoundingClientRect().top - pagesEl.getBoundingClientRect().top - 60;
       document.querySelectorAll(".hit").forEach(function (h) { h.classList.remove("hit"); });
@@ -255,7 +296,7 @@
     Object.keys(loaded).forEach(function (k) { renderPage(loaded[k]); });
     buildToc();
     if (keep) {
-      var k2 = document.getElementById(keep.id);
+      var k2 = document.getElementById(keep.id) || byId(keep.id.slice(1).split("-")[0], keep.id.replace(/^L\d-/, ""));
       if (k2) pagesEl.scrollTop += k2.getBoundingClientRect().top - top;
     }
   }
