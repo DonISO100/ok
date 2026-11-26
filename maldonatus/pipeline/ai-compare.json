@@ -1,0 +1,129 @@
+{
+ "pages": [
+  "0022",
+  "0034",
+  "0038",
+  "0041",
+  "0049",
+  "0052",
+  "0063",
+  "0070",
+  "0083",
+  "0084",
+  "0092",
+  "0096"
+ ],
+ "words": 270,
+ "small_unsure": 8,
+ "reference_unsure": 1,
+ "both_decided": 262,
+ "agree": 247,
+ "agreement": 0.943,
+ "disagreements": [
+  {
+   "key": "0092b0.44|afferunt|1",
+   "word": "afferunt",
+   "small": "asserunt",
+   "reference": "afferunt",
+   "line": "⟦afferunt⟧, quia allegoricæ sunt, prætermitto; &"
+  },
+  {
+   "key": "0092b0.49|fugere|1",
+   "word": "fugere",
+   "small": "sugere",
+   "reference": "fugere",
+   "line": "laudem ⟦fugere⟧. Itaque, qui in publico orat, nolens"
+  },
+  {
+   "key": "0070a0.39|fit|1",
+   "word": "fit",
+   "small": "fit",
+   "reference": "sit",
+   "line": "argumentum, in quo omnis eius consumpta ⟦fit⟧ oraio."
+  },
+  {
+   "key": "0070b0.6|fit|1",
+   "word": "fit",
+   "small": "fit",
+   "reference": "sit",
+   "line": "⟦fit⟧. Quanquam hæc explicatio mihi parum verisimilis"
+  },
+  {
+   "key": "0049a0.44|fit|1",
+   "word": "fit",
+   "small": "fit",
+   "reference": "sit",
+   "line": "⟦fit⟧. Quam sententiam Hieronymus, & auctor operis"
+  },
+  {
+   "key": "0041a0.0|Perfide|1",
+   "word": "Perfide",
+   "small": "Perfide",
+   "reference": "Perside",
+   "line": "& 4.6. & 25.9. Communis mihi placet opinio ex ⟦Perfide⟧"
+  },
+  {
+   "key": "0041a0.50|fit|1",
+   "word": "fit",
+   "small": "fit",
+   "reference": "sit",
+   "line": "vt credibile non ⟦fit⟧ diu iacente in præsepi Christo"
+  },
+  {
+   "key": "0022a0.24|fuiffe|1",
+   "word": "fuiffe",
+   "small": "fuiffe",
+   "reference": "fuisse",
+   "line": "rationem afferunt. Nam alij causam ⟦fuiffe⟧ dixerunt,"
+  },
+  {
+   "key": "0022b0.45|fuiffe|1",
+   "word": "fuiffe",
+   "small": "fuiffe",
+   "reference": "fuisse",
+   "line": "dicere Dauidem Abrahami ⟦fuiffe⟧ filium, ne extra viam"
+  },
+  {
+   "key": "0083b0.9|fit|1",
+   "word": "fit",
+   "small": "fit",
+   "reference": "sit",
+   "line": "quomodo frater à nobis læsus, ⟦fit⟧ nos iudici"
+  },
+  {
+   "key": "0083b0.10|fit|1",
+   "word": "fit",
+   "small": "fit",
+   "reference": "sit",
+   "line": "traditurus; cùm & ipse ⟦fit⟧ iudicandus. Hæc vna ratio"
+  },
+  {
+   "key": "0096b0.9|fit|1",
+   "word": "fit",
+   "small": "sit",
+   "reference": "fit",
+   "line": "dicimus, & tamen vt detur oramus; noster quippe ⟦fit⟧, cum"
+  },
+  {
+   "key": "0096b0.15|fit|1",
+   "word": "fit",
+   "small": "fit",
+   "reference": "sit",
+   "line": "cum Dei potius, quàm noster re vera ⟦fit⟧, non debe"
+  },
+  {
+   "key": "0063a0.4|fecundo|1",
+   "word": "fecundo",
+   "small": "fecundo",
+   "reference": "secundo",
+   "line": "94.9. & 105.14. Christus non poterat, nisi ⟦fecundo⟧ &"
+  },
+  {
+   "key": "0063b0.35|fit|1",
+   "word": "fit",
+   "small": "sit",
+   "reference": "fit",
+   "line": "tam sæpe ⟦fit⟧. Quadragenarius ergo numerus totum (vt"
+  }
+ ]
+}
