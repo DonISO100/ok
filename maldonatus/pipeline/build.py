@@ -13,6 +13,7 @@ Latin dictionary without extension (npm `dictionary-la`: index.aff/index.dic):
 """
 
 import argparse
+import collections
 import gzip
 import json
 import os
@@ -22,7 +23,8 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 import layout  # noqa: E402
-from longs import LongS  # noqa: E402
+from normalize import Normalizer  # noqa: E402
+from align import align_book  # noqa: E402
 
 VOLS = {
     1: {"bsb": "bsb11059226", "year": 1596, "words": "bsb11059226_words.json.gz",
@@ -125,6 +127,8 @@ def main():
     ap.add_argument("--data", required=True)
     ap.add_argument("--dict", required=True)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--decisions", default=os.path.join(os.path.dirname(__file__), "ai-decisions.json"),
+                    help="AI pass decisions (ai_pass.py); applied when the file exists")
     ap.add_argument("--range", default="1:0020-0103",
                     help="volume:first-last images to build as reader pages (proof: Matthew 1-6)")
     a = ap.parse_args()
@@ -132,12 +136,17 @@ def main():
 
     # ---- layout + column map for both volumes (task 4 covers the whole work)
     colmaps, results_by_vol, labels = {}, {}, {}
+    corpus = collections.Counter()
     diag = {"gutter_splits": [], "edge_splits": 0}
     for v, meta in VOLS.items():
         path = os.path.join(a.data, meta["words"])
         if not os.path.exists(path):
             continue
         d = json.load(gzip.open(path))
+        for p in d["pages"]:
+            for w in p["words"]:
+                for t in re.findall(r"[A-Za-zÀ-ÿĀ-žęæœÆŒ]+", w[0]):
+                    corpus[Normalizer.printed_key(t)] += 1
         res = {}
         for p in d["pages"]:
             res[p["image"]] = layout.analyse(p)
@@ -220,26 +229,18 @@ def main():
                                 "anchor": ids.get(tuple(n["anchor"])) if n["anchor"] else None, "d": n["text"]})
         pages.append(pg)
 
-    # ---- normalized text: dehyphenate across lines, then restore long s
-    ls = LongS(a.dict)
-    toks = []
-    for _, L, _, _ in stream:
-        toks += re.findall(r"\S+", L["d"])
-    for pg in pages:
-        for n in pg["notes"]:
-            for t in n["d"]:
-                toks += re.findall(r"\S+", t)
-        toks += re.findall(r"\S+", pg["head"])
-    words = set()
-    for t in toks:
-        words.update(re.findall(r"[A-Za-zÀ-ÿĀ-žęæœÆŒ]+", t))
-    # joined hyphenation forms
-    for i, (_, L, _, _) in enumerate(stream[:-1]):
-        if HYPH.search(L["d"]):
-            nxt = stream[i + 1][1]["d"].split(" ", 1)[0]
-            words.update(re.findall(r"[A-Za-zÀ-ÿĀ-žęæœÆŒ]+", L["d"].split(" ")[-1][:-1] + nxt))
-    ls.prepare(words)
+    # ---- normalized text: dehyphenate across lines, then the rule-based
+    # normalizer (normalize.py); words it cannot settle go to the AI queue
+    vulg = json.load(open(os.path.join(os.path.dirname(__file__), "vulgate_gospels.json"), encoding="utf-8"))["books"]
+    vwords = {w for bk in vulg.values() for c in bk for v in c for w in re.findall(r"[A-Za-zæœëÆ]+", v)}
+    N = Normalizer(a.dict, vwords, corpus)
+    decisions = {}
+    if a.decisions and os.path.exists(a.decisions):
+        decisions = {k: v["choice"] for k, v in json.load(open(a.decisions, encoding="utf-8")).items()
+                     if v.get("choice") and not v.get("unsure")}
+    WRE = r"[A-Za-zÀ-ÿĀ-žęæœÆŒ]+"
 
+    # dehyphenated token lists per line
     carry = None
     for i, (pg, L, _, _) in enumerate(stream):
         parts = L["d"].split(" ")
@@ -250,15 +251,49 @@ def main():
             nxt = stream[i + 1][1]["d"].split(" ", 1)[0]
             parts[-1] = parts[-1][:-1] + nxt
             carry = True
-        where = f"{pg['img']}:{L['id']}"
-        L["n"] = " ".join(ls.normalize_token(t, where) for t in parts)
-        amb = sorted({w for w in re.findall(r"[A-Za-zÀ-ÿĀ-žęæœÆŒ]+", L["n"]) if w in ls.log})
-        if amb:
-            L["a"] = amb
+        L["_parts"] = parts
+    words = set()
+    for _, L, _, _ in stream:
+        words.update(re.findall(WRE, Normalizer.pre(" ".join(L["_parts"]))))
     for pg in pages:
-        pg["headN"] = " ".join(ls.normalize_token(t) for t in pg["head"].split(" "))
         for n in pg["notes"]:
-            n["n"] = [" ".join(ls.normalize_token(t, f"{pg['img']}:{n['id']}") for t in s.split(" ")) for s in n["d"]]
+            for t in n["d"]:
+                words.update(re.findall(WRE, Normalizer.pre(t)))
+        words.update(re.findall(WRE, pg["head"]))
+    N.prepare(words)
+
+    queue = {}
+    for i, (pg, L, _, _) in enumerate(stream):
+        text, ch, amb = N.line(" ".join(L.pop("_parts")), L["id"], decisions)
+        L["n"] = text
+        if ch:
+            L["c"] = ch
+        if amb:
+            L["a"] = sorted({w for w, _ in amb})
+            L["_amb"] = amb
+    # AI queue: each doubtful word marked in its normalized line, with the
+    # neighbouring lines as context
+    for i, (pg, L, _, _) in enumerate(stream):
+        for w, key in L.pop("_amb", []):
+            nth = int(key.rsplit("|", 1)[1])
+            hits = [m for m in re.finditer(r"(?<![A-Za-zÀ-ÿĀ-žęæœÆŒ])" + re.escape(w) + r"(?![A-Za-zÀ-ÿĀ-žęæœÆŒ])", L["n"])]
+            marked = L["n"]
+            if len(hits) >= nth:
+                m = hits[nth - 1]
+                marked = L["n"][:m.start()] + "⟦" + w + "⟧" + L["n"][m.end():]
+            queue[key] = {"word": w, "rule": N.queue[w]["rule"], "options": N.queue[w]["options"],
+                          "img": pg["img"], "line": L["id"], "text": marked,
+                          "before": stream[i - 1][1]["n"] if i else "",
+                          "after": stream[i + 1][1]["n"] if i + 1 < len(stream) else ""}
+    for pg in pages:
+        pg["headN"] = N.line(pg["head"], pg["img"] + "h")[0]
+        for n in pg["notes"]:
+            n["n"] = [N.line(s, n["id"])[0] for s in n["d"]]
+            # junk: no Latin word of 3+ letters and no reference-like number
+            toks = re.findall(WRE, " ".join(n["n"]))
+            if n["kind"] == "note" and not re.search(r"\d", " ".join(n["d"])) and \
+                    not any(len(t) >= 3 and N.latin(t) for t in toks):
+                n["junk"] = 1
 
     # ---- book / chapter / verse / lemma tree
     book = {"title": "Evangelium secundum Matthæum", "key": "Matthew", "chapters": []}
@@ -276,12 +311,16 @@ def main():
             ch["commImg"] = pg["img"]
             mode, last_v = "comm", 0
             L["h"] = "comm"
+            if i + 1 < len(stream):
+                stream[i + 1][1]["p"] = 1  # first commentary line (beside a drop cap)
             continue
         m = CAP_TEXT.search(t) if bk == "head" else CAP_TEXT.match(t)
         if m and roman(m.group(1)) and (bk == "head" or len(t) < 40):
             n = roman(m.group(1))
             if not ch or n == ch["n"] + 1:
                 ch = {"n": n, "start": L["id"], "img": pg["img"], "text": L["id"], "verses": []}
+                if i + 1 < len(stream):
+                    ch["text_first"] = stream[i + 1][1]["id"]
                 book["chapters"].append(ch)
                 mode = "text"
                 L["h"] = "text"
@@ -307,13 +346,22 @@ def main():
             ch["verses"].append({"v": v, "lemmas": []})
         elif not ch["verses"]:
             ch["verses"].append({"v": 0, "lemmas": []})
-        lemma_n = ls.normalize_token(lem)
+        lemma_n = N.line(lem, L["id"] + "lem")[0]
         ch["verses"][-1]["lemmas"].append({"id": L["id"], "img": pg["img"], "d": lem, "n": lemma_n})
         L["lem"] = 1
         if v is not None:
             L["v"] = v
 
-    # ---- write
+    # ---- Vulgate alignment: verse numbers and drop-cap initials
+    byid = {L["id"]: L for _, L, _, _ in stream}
+    align_log = []
+    align_book(book, byid, vulg["Matthew"], align_log)
+    for c in book["chapters"]:
+        for g in c["verses"]:
+            for lem in g["lemmas"]:
+                if g["v"]:
+                    byid[lem["id"]]["v"] = g["v"]
+
     for pg in pages:
         json.dump(pg, open(os.path.join(a.out, "pages", f"tom{vol}-{pg['img']}.json"), "w"),
                   ensure_ascii=False, separators=(",", ":"))
@@ -326,16 +374,33 @@ def main():
         "books": [book],
     }
     json.dump(toc, open(os.path.join(a.out, "toc.json"), "w"), ensure_ascii=False, indent=1)
-    swaps = sorted(([f, s, c] for (f, s), c in ls.swaps.items()), key=lambda x: -x[2])
-    amb = sorted(([w] + [e["variants"], e["f_form_is_latin"], e["count"], e["where"]] for w, e in ls.log.items()),
-                 key=lambda x: -x[3])
-    json.dump({"ambiguous": amb, "swaps": swaps, "gutter_splits": diag["gutter_splits"]},
-              open(os.path.join(a.out, "longs-log.json"), "w"), ensure_ascii=False, indent=0)
+    by_rule = collections.Counter()
+    rows = collections.defaultdict(int)
+    for (rule, w, new), c in N.changes.items():
+        by_rule[rule] += c
+        rows[(rule, w, new)] += c
+    qcount = collections.Counter(q["word"] for q in queue.values())
+    qwhere = collections.defaultdict(list)
+    for k, q in queue.items():
+        if len(qwhere[q["word"]]) < 6:
+            qwhere[q["word"]].append(q["line"])
+    json.dump({"by_rule": by_rule,
+               "changes": sorted(([r, w, n, c] for (r, w, n), c in rows.items()), key=lambda x: (x[0], -x[3])),
+               "queue": sorted(([w, N.queue[w]["rule"], N.queue[w]["options"], c, qwhere[w]] for w, c in qcount.items()),
+                               key=lambda x: -x[3]),
+               "decided": len(decisions),
+               "dropcaps": align_log,
+               "gutter_splits": diag["gutter_splits"]},
+              open(os.path.join(a.out, "norm-log.json"), "w"), ensure_ascii=False, indent=0)
+    json.dump(queue, open(os.path.join(os.path.dirname(__file__), "ai-queue.json"), "w"), ensure_ascii=False, indent=0)
     nl = sum(1 for _ in stream)
     print(f"pages {len(pages)}  lines {nl}  chapters {[c['n'] for c in book['chapters']]}")
     for c in book["chapters"]:
-        print(f"  cap {c['n']}: verses {[v['v'] for v in c['verses']]}  lemmas {sum(len(v['lemmas']) for v in c['verses'])}")
-    print(f"long-s swaps {sum(s[2] for s in swaps)} ({len(swaps)} types), ambiguous {sum(x[3] for x in amb)} ({len(amb)} types)")
+        src = collections.Counter(l.get("vsrc") for v in c["verses"] for l in v["lemmas"])
+        print(f"  cap {c['n']}: verses {[v['v'] for v in c['verses']]}  lemmas {sum(len(v['lemmas']) for v in c['verses'])} {dict(src)}")
+    print("drop caps restored:", [(x[1], x[2]) for x in align_log])
+    print("normalized by rule:", dict(by_rule))
+    print(f"left for the AI pass: {len(queue)} occurrences ({len(qcount)} words); AI decisions applied: {len(decisions)}")
     print(f"gutter splits {len(diag['gutter_splits'])}, edge splits {diag['edge_splits']}")
 
 

@@ -784,7 +784,9 @@
          "id": "0021a0.1",
          "img": "0021",
          "d": "Vangelium fecundum Matthaum.",
-         "n": "Vangelium fecundum Matthaum."
+         "n": "Vangelium fecundum Matthaum.",
+         "vsrc": "inherited",
+         "score": 0.0
         }
        ]
       },
@@ -795,21 +797,28 @@
          "id": "0021a0.56",
          "img": "0021",
          "d": "Liber generationis.",
-         "n": "Liber generationis."
+         "n": "Liber generationis.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0021b0.36",
          "img": "0021",
          "d": "IESV CHRISTI.",
-         "n": "IESV CHRISTI."
+         "n": "IESV CHRISTI.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0021b0.47",
          "img": "0021",
          "d": "Fily Dauid fily Abraha.",
-         "n": "Fily Dauid fily Abraha."
+         "n": "Fily Dauid fily Abraha.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Liber generationis Jesu Christi filii David, filii Abraham."
       },
       {
        "v": 2,
@@ -818,15 +827,26 @@
          "id": "0022b0.47",
          "img": "0022",
          "d": "Abraham autem genuit Ifaac.",
-         "n": "Abraham autem genuit Isaac."
-        },
+         "n": "Abraham autem genuit Isaac.",
+         "vsrc": "printed",
+         "score": 1.0
+        }
+       ],
+       "vulgate": "Abraham genuit Isaac. Isaac autem genuit Jacob. Jacob autem genuit Judam, et fratres ejus."
+      },
+      {
+       "v": 3,
+       "lemmas": [
         {
          "id": "0023a0.36",
          "img": "0023",
          "d": "De Thamar",
-         "n": "De Thamar"
+         "n": "De Thamar",
+         "vsrc": "vulgate",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Judas autem genuit Phares, et Zaram de Thamar. Phares autem genuit Esron. Esron autem genuit Aram."
       },
       {
        "v": 5,
@@ -835,9 +855,12 @@
          "id": "0023a0.65",
          "img": "0023",
          "d": "Salmon autem genuit Boo de Rahab.",
-         "n": "Salmon autem genuit Boo de Rahab."
+         "n": "Salmon autem genuit Boo de Rahab.",
+         "vsrc": "printed",
+         "score": 0.83
         }
-       ]
+       ],
+       "vulgate": "Salmon autem genuit Booz de Rahab. Booz autem genuit Obed ex Ruth. Obed autem genuit Jesse. Jesse autem genuit David regem."
       },
       {
        "v": 6,
@@ -846,21 +869,28 @@
          "id": "0024a0.34",
          "img": "0024",
          "d": "1effe autem genuit.",
-         "n": "1esse autem genuit."
+         "n": "1esse autem genuit.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0024a0.40",
          "img": "0024",
          "d": "Dauid regem.",
-         "n": "Dauid regem."
+         "n": "Dauid regem.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0024a0.52",
          "img": "0024",
          "d": "Ex ea, que fuit Prie.",
-         "n": "Ex ea, que fuit Prie."
+         "n": "Ex ea, que fuit Prie.",
+         "vsrc": "printed",
+         "score": 0.6
         }
-       ]
+       ],
+       "vulgate": "David autem rex genuit Salomonem ex ea quæ fuit Uriæ."
       },
       {
        "v": 8,
@@ -869,9 +899,12 @@
          "id": "0024b0.14",
          "img": "0024",
          "d": "Toram autem genuit oZiam,",
-         "n": "Toram autem genuit oZiam,"
+         "n": "Toram autem genuit oZiam,",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Asa autem genuit Josophat. Josophat autem genuit Joram. Joram autem genuit Oziam."
       },
       {
        "v": 11,
@@ -880,21 +913,28 @@
          "id": "0025a0.65",
          "img": "0025",
          "d": "Fofias autem genuit lechoniam & fratres eius.",
-         "n": "Fofias autem genuit lechoniam & fratres eius."
+         "n": "Fofias autem genuit lechoniam & fratres eius.",
+         "vsrc": "printed",
+         "score": 0.83
         },
         {
          "id": "0026b0.46",
          "img": "0026",
          "d": "Et fratres eim.",
-         "n": "Et fratres eim."
+         "n": "Et fratres eim.",
+         "vsrc": "printed",
+         "score": 0.67
         },
         {
          "id": "0026b0.57",
          "img": "0026",
          "d": "In tranfmigratione Babylonis.",
-         "n": "In transmigratione Babylonis."
+         "n": "In transmigratione Babylonis.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Josias autem genuit Jechoniam, et fratres ejus in transmigratione Babylonis."
       },
       {
        "v": 16,
@@ -903,9 +943,12 @@
          "id": "0027b0.10",
          "img": "0027",
          "d": "Iacob autem genuit lofeph virum Maria",
-         "n": "Iacob autem genuit lofeph virum Maria"
+         "n": "Iacob autem genuit lofeph virum Maria",
+         "vsrc": "printed",
+         "score": 0.83
         }
-       ]
+       ],
+       "vulgate": "Jacob autem genuit Joseph virum Mariæ, de qua natus est Jesus, qui vocatur Christus."
       },
       {
        "v": 17,
@@ -914,9 +957,12 @@
          "id": "0031a0.64",
          "img": "0031",
          "d": "Omnes itaque generationes.",
-         "n": "Omnes itaque generationes."
+         "n": "Omnes itaque generationes.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Omnes itaque generationes ab Abraham usque ad David, generationes quatuordecim : et a David usque ad transmigrationem Babylonis, generationes quatuordecim : et a transmigratione Babylonis usque ad Christum, generationes quatuordecim."
       },
       {
        "v": 18,
@@ -925,45 +971,60 @@
          "id": "0031b0.48",
          "img": "0031",
          "d": "Chrifti ante generatio fic erat.",
-         "n": "Christi ante generatio sic erat."
+         "n": "Christi ante generatio sic erat.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0032a0.21",
          "img": "0032",
          "d": "Cum effet defponfata",
-         "n": "Cum esset desponsata"
+         "n": "Cum esset desponsata",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0033a0.4",
          "img": "0033",
          "d": "Antequam cöuenirent.",
-         "n": "Antequam cöuenirent."
+         "n": "Antequam conuenirent.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0033a0.53",
          "img": "0033",
          "d": "Inuenta eft",
-         "n": "Inuenta est"
+         "n": "Inuenta est",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0033b0.5",
          "img": "0033",
          "d": "o In vtero habens",
-         "n": "o In vtero habens"
+         "n": "o In vtero habens",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0033b0.7",
          "img": "0033",
          "d": "De Spiritu fancto.",
-         "n": "De Spiritu sancto."
+         "n": "De Spiritu sancto.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0033b0.23",
          "img": "0033",
          "d": "De Spiritu fancto",
-         "n": "De Spiritu sancto"
+         "n": "De Spiritu sancto",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Christi autem generatio sic erat : cum esset desponsata mater ejus Maria Joseph, antequam convenirent inventa est in utero habens de Spiritu Sancto."
       },
       {
        "v": 19,
@@ -972,51 +1033,80 @@
          "id": "0034a0.10",
          "img": "0034",
          "d": "lofeph autem vir eins",
-         "n": "lofeph autem vir eins"
+         "n": "lofeph autem vir eins",
+         "vsrc": "printed",
+         "score": 0.75
         },
         {
          "id": "0034a0.13",
          "img": "0034",
          "d": "Cum effet iuftus",
-         "n": "Cum esset iustus"
+         "n": "Cum esset iustus",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0034a0.60",
          "img": "0034",
          "d": "Traducere",
-         "n": "Traducere"
+         "n": "Traducere",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0034b0.10",
          "img": "0034",
          "d": "Voluit occultè dimittere ear",
-         "n": "Voluit occultè dimittere ear"
-        },
+         "n": "Voluit occultè dimittere ear",
+         "vsrc": "printed",
+         "score": 0.75
+        }
+       ],
+       "vulgate": "Joseph autem vir ejus cum esset justus, et nollet eam traducere, voluit occulte dimittere eam."
+      },
+      {
+       "v": 20,
+       "lemmas": [
         {
          "id": "0034b0.57",
          "img": "0034",
          "d": "Hac eo cogitante",
-         "n": "Hac eo cogitante"
+         "n": "Hac eo cogitante",
+         "vsrc": "vulgate",
+         "score": 0.67
         },
         {
          "id": "0035a0.46",
          "img": "0035",
          "d": "Noli timere",
-         "n": "Noli timere"
+         "n": "Noli timere",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0035a0.48",
          "img": "0035",
          "d": "Quod enim in ea natum eft",
-         "n": "Quod enim in ea natum est"
-        },
+         "n": "Quod enim in ea natum est",
+         "vsrc": "vulgate",
+         "score": 1.0
+        }
+       ],
+       "vulgate": "Hæc autem eo cogitante, ecce angelus Domini apparuit in somnis ei, dicens : Joseph, fili David, noli timere accipere Mariam conjugem tuam : quod enim in ea natum est, de Spiritu Sancto est."
+      },
+      {
+       "v": 19,
+       "lemmas": [
         {
          "id": "0035a0.49",
          "img": "0035",
          "d": "Despiritufancto eft",
-         "n": "Despiritufancto est"
+         "n": "Despiritufancto est",
+         "vsrc": "printed",
+         "score": 0.5
         }
-       ]
+       ],
+       "vulgate": "Joseph autem vir ejus cum esset justus, et nollet eam traducere, voluit occulte dimittere eam."
       },
       {
        "v": 21,
@@ -1025,15 +1115,20 @@
          "id": "0035a0.62",
          "img": "0035",
          "d": "Pariet autem filium.",
-         "n": "Pariet autem filium."
+         "n": "Pariet autem filium.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0035b0.9",
          "img": "0035",
          "d": "Et vocabis nomen eius Iefum.",
-         "n": "Et vocabis nomen eius Iesum."
+         "n": "Et vocabis nomen eius Iesum.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Pariet autem filium : et vocabis nomen ejus Jesum : ipse enim salvum faciet populum suum a peccatis eorum."
       },
       {
        "v": 22,
@@ -1042,21 +1137,34 @@
          "id": "0036a0.37",
          "img": "0036",
          "d": "Hoc autem totum",
-         "n": "Hoc autem totum"
+         "n": "Hoc autem totum",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0036a0.42",
          "img": "0036",
          "d": "Totum",
-         "n": "Totum"
-        },
+         "n": "Totum",
+         "vsrc": "printed",
+         "score": 1.0
+        }
+       ],
+       "vulgate": "Hoc autem totum factum est, ut adimpleretur quod dictum est a Domino per prophetam dicentem :"
+      },
+      {
+       "v": 23,
+       "lemmas": [
         {
          "id": "0037a0.21",
          "img": "0037",
          "d": "Et vocabunt.",
-         "n": "Et vocabunt."
+         "n": "Et vocabunt.",
+         "vsrc": "vulgate",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Ecce virgo in utero habebit, et pariet filium : et vocabunt nomen ejus Emmanuel, quod est interpretatum Nobiscum Deus."
       },
       {
        "v": 25,
@@ -1065,17 +1173,23 @@
          "id": "0037a0.45",
          "img": "0037",
          "d": "Et non cognofcebat cam",
-         "n": "Et non cognoscebat cam"
+         "n": "Et non cognoscebat cam",
+         "vsrc": "printed",
+         "score": 0.75
         },
         {
          "id": "0037b0.19",
          "img": "0037",
          "d": "Filium fuum primogenitum",
-         "n": "Filium suum primogenitum"
+         "n": "Filium suum primogenitum",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Et non cognoscebat eam donec peperit filium suum primogenitum : et vocavit nomen ejus Jesum."
       }
      ],
+     "text_first": "0020f4.0",
      "comm": "0021a0.0",
      "commImg": "0021"
     },
@@ -1086,39 +1200,58 @@
      "text": "0038h0.0",
      "verses": [
       {
-       "v": 0,
+       "v": 1,
        "lemmas": [
+        {
+         "id": "0039a0.1",
+         "img": "0039",
+         "d": "VM ergo.",
+         "n": "CVM ergo.",
+         "vsrc": "vulgate",
+         "score": 1.0
+        },
         {
          "id": "0039a0.6",
          "img": "0039",
          "d": "Fn Bethlehem",
-         "n": "Fn Bethlehem"
+         "n": "Fn Bethlehem",
+         "vsrc": "vulgate",
+         "score": 0.5
         },
         {
          "id": "0039a0.49",
          "img": "0039",
          "d": "In diebus.",
-         "n": "In diebus."
+         "n": "In diebus.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0039a0.63",
          "img": "0039",
          "d": "Regi",
-         "n": "Regi"
+         "n": "Regi",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0039b0.6",
          "img": "0039",
          "d": "Ecce",
-         "n": "Ecce"
+         "n": "Ecce",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0041b0.22",
          "img": "0041",
          "d": "ferofolymam.",
-         "n": "ferofolymam."
+         "n": "ierosolymam.",
+         "vsrc": "vulgate",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Cum ergo natus esset Jesus in Bethlehem Juda in diebus Herodis regis, ecce magi ab oriente venerunt Jerosolymam,"
       },
       {
        "v": 2,
@@ -1127,27 +1260,36 @@
          "id": "0041b0.52",
          "img": "0041",
          "d": "Qui natus eft",
-         "n": "Qui natus est"
+         "n": "Qui natus est",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0041b0.61",
          "img": "0041",
          "d": "Rex Iudaeorum.",
-         "n": "Rex Iudaeorum."
+         "n": "Rex Iudaeorum.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0042a0.3",
          "img": "0042",
          "d": "Vidimus enim ftellam eius",
-         "n": "Vidimus enim stellam eius"
+         "n": "Vidimus enim stellam eius",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0043a0.22",
          "img": "0043",
          "d": "Et venimus adorare eum.",
-         "n": "Et venimus adorare eum."
+         "n": "Et venimus adorare eum.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "dicentes : Ubi est qui natus est rex Judæorum ? vidimus enim stellam ejus in oriente, et venimus adorare eum."
       },
       {
        "v": 4,
@@ -1156,21 +1298,28 @@
          "id": "0043a0.32",
          "img": "0043",
          "d": "Et cogregans omnes principes.",
-         "n": "Et cogregans omnes principes."
+         "n": "Et congregans omnes principes.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0043a0.63",
          "img": "0043",
          "d": "Et fcribas populi.",
-         "n": "Et scribas populi."
+         "n": "Et scribas populi.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0043b0.14",
          "img": "0043",
          "d": "Ubi Chriftus nafceretur.",
-         "n": "Ubi Christus nasceretur."
+         "n": "Ubi Christus nasceretur.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Et congregans omnes principes sacerdotum, et scribas populi, sciscitabatur ab eis ubi Christus nasceretur."
       },
       {
        "v": 6,
@@ -1179,9 +1328,12 @@
          "id": "0043b0.16",
          "img": "0043",
          "d": "Et tu Bethlehem.",
-         "n": "Et tu Bethlehem."
+         "n": "Et tu Bethlehem.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Et tu Bethlehem terra Juda, nequaquam minima es in principibus Juda : ex te enim exiet dux, qui regat populum meum Israël."
       },
       {
        "v": 7,
@@ -1190,15 +1342,20 @@
          "id": "0044b0.8",
          "img": "0044",
          "d": "Clam vocatis magis.",
-         "n": "Clam vocatis magis."
+         "n": "Clam vocatis magis.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0044b0.10",
          "img": "0044",
          "d": "Tempus ftella",
-         "n": "Tempus stella"
+         "n": "Tempus stella",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Tunc Herodes clam vocatis magis diligenter didicit ab eis tempus stellæ, quæ apparuit eis :"
       },
       {
        "v": 10,
@@ -1207,21 +1364,34 @@
          "id": "0044b0.13",
          "img": "0044",
          "d": "Videntes autem ftellam.",
-         "n": "Videntes autem stellam."
-        },
+         "n": "Videntes autem stellam.",
+         "vsrc": "printed",
+         "score": 1.0
+        }
+       ],
+       "vulgate": "Videntes autem stellam gavisi sunt gaudio magno valde."
+      },
+      {
+       "v": 11,
+       "lemmas": [
         {
          "id": "0045a0.4",
          "img": "0045",
          "d": "Cum Maria matre eius.",
-         "n": "Cum Maria matre eius."
+         "n": "Cum Maria matre eius.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0045a0.10",
          "img": "0045",
          "d": "obtulerunt ei munera auru, thus, myrrham",
-         "n": "obtulerunt ei munera auru, thus, myrrham"
+         "n": "obtulerunt ei munera auru, thus, myrrham",
+         "vsrc": "vulgate",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Et intrantes domum, invenerunt puerum cum Maria matre ejus, et procidentes adoraverunt eum : et apertis thesauris suis obtulerunt ei munera, aurum, thus, et myrrham."
       },
       {
        "v": 13,
@@ -1230,9 +1400,12 @@
          "id": "0045a0.57",
          "img": "0045",
          "d": "Surge accipe",
-         "n": "Surge accipe"
+         "n": "Surge accipe",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Qui cum recessissent, ecce angelus Domini apparuit in somnis Joseph, dicens : Surge, et accipe puerum, et matrem ejus, et fuge in Ægyptum, et esto ibi usque dum dicam tibi. Futurum est enim ut Herodes quærat puerum ad perdendum eum."
       },
       {
        "v": 14,
@@ -1241,26 +1414,34 @@
          "id": "0045a0.60",
          "img": "0045",
          "d": "Qui confurgens",
-         "n": "Qui consurgens"
-        },
-        {
-         "id": "0045b0.11",
-         "img": "0045",
-         "d": "Et erat ibi vfque ad obitum Herodis.",
-         "n": "Et erat ibi vfque ad obitum Herodis."
+         "n": "Qui consurgens",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Qui consurgens accepit puerum et matrem ejus nocte, et secessit in Ægyptum :"
       },
       {
        "v": 15,
        "lemmas": [
         {
+         "id": "0045b0.11",
+         "img": "0045",
+         "d": "Et erat ibi vfque ad obitum Herodis.",
+         "n": "Et erat ibi vsque ad obitum Herodis.",
+         "vsrc": "vulgate",
+         "score": 1.0
+        },
+        {
          "id": "0046a0.42",
          "img": "0046",
          "d": "Ut adimpleretur.",
-         "n": "Ut adimpleretur."
+         "n": "Ut adimpleretur.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "et erat ibi usque ad obitum Herodis : ut adimpleretur quod dictum est a Domino per prophetam dicentem : Ex Ægypto vocavi filium meum."
       },
       {
        "v": 16,
@@ -1269,21 +1450,28 @@
          "id": "0046b0.56",
          "img": "0046",
          "d": "Tunc Herodes.",
-         "n": "Tunc Herodes."
+         "n": "Tunc Herodes.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0047a0.8",
          "img": "0047",
          "d": "Et mittens",
-         "n": "Et mittens"
+         "n": "Et mittens",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0047a0.20",
          "img": "0047",
          "d": "Abimatur infra",
-         "n": "Abimatur infra"
+         "n": "Abimatur infra",
+         "vsrc": "printed",
+         "score": 0.5
         }
-       ]
+       ],
+       "vulgate": "Tunc Herodes videns quoniam illusus esset a magis, iratus est valde, et mittens occidit omnes pueros, qui erant in Bethlehem, et in omnibus finibus ejus, a bimatu et infra secundum tempus, quod exquisierat a magis."
       },
       {
        "v": 17,
@@ -1292,9 +1480,12 @@
          "id": "0047a0.62",
          "img": "0047",
          "d": "Tunc adimpletum eft.",
-         "n": "Tunc adimpletum est."
+         "n": "Tunc adimpletum est.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Tunc adimpletum est quod dictum est per Jeremiam prophetam dicentem :"
       },
       {
        "v": 18,
@@ -1303,15 +1494,20 @@
          "id": "0047a0.65",
          "img": "0047",
          "d": "Vox in Rama audita eft.",
-         "n": "Vox in Rama audita est."
+         "n": "Vox in Rama audita est.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0048a0.38",
          "img": "0048",
          "d": "Quia non funt",
-         "n": "Quia non sunt"
+         "n": "Quia non sunt",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Vox in Rama audita est ploratus, et ululatus multus : Rachel plorans filios suos, et noluit consolari, quia non sunt."
       },
       {
        "v": 19,
@@ -1320,9 +1516,12 @@
          "id": "0048b0.5",
          "img": "0048",
          "d": "Defuncto autem Herode.",
-         "n": "Defuncto autem Herode."
+         "n": "Defuncto autem Herode.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Defuncto autem Herode, ecce angelus Domini apparuit in somnis Joseph in Ægypto,"
       },
       {
        "v": 20,
@@ -1331,15 +1530,20 @@
          "id": "0048b0.10",
          "img": "0048",
          "d": "Surge accipe.",
-         "n": "Surge accipe."
+         "n": "Surge accipe.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0048b0.11",
          "img": "0048",
          "d": "Defuncti funt enim",
-         "n": "Defuncti sunt enim"
+         "n": "Defuncti sunt enim",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "dicens : Surge, et accipe puerum, et matrem ejus, et vade in terram Israël : defuncti sunt enim qui quærebant animam pueri."
       },
       {
        "v": 22,
@@ -1348,9 +1552,12 @@
          "id": "0048b0.16",
          "img": "0048",
          "d": "Audiens autem quad Archelaus regnaret.",
-         "n": "Audiens autem quad Archelaus regnaret."
+         "n": "Audiens autem quad Archelaus regnaret.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Audiens autem quod Archelaus regnaret in Judæa pro Herode patre suo, timuit illo ire : et admonitus in somnis, secessit in partes Galilææ."
       },
       {
        "v": 23,
@@ -1359,11 +1566,15 @@
          "id": "0048b0.63",
          "img": "0048",
          "d": "Vt adimpleretur.",
-         "n": "Vt adimpleretur."
+         "n": "Vt adimpleretur.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Et veniens habitavit in civitate quæ vocatur Nazareth : ut adimpleretur quod dictum est per prophetas : Quoniam Nazaræus vocabitur."
       }
      ],
+     "text_first": "0038a1.0",
      "comm": "0039a0.0",
      "commImg": "0039"
     },
@@ -1374,51 +1585,74 @@
      "text": "0050h0.0",
      "verses": [
       {
-       "v": 0,
+       "v": 1,
        "lemmas": [
+        {
+         "id": "0050a2.1",
+         "img": "0050",
+         "d": "N diebus autem illis venit.",
+         "n": "N diebus autem illis venit.",
+         "vsrc": "vulgate",
+         "score": 1.0
+        },
         {
          "id": "0050a2.9",
          "img": "0050",
          "d": "In diebus.",
-         "n": "In diebus."
+         "n": "In diebus.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0050b2.12",
          "img": "0050",
          "d": "Venit.",
-         "n": "Venit."
+         "n": "Venit.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0051a0.3",
          "img": "0051",
          "d": "Joannes Baptifta.",
-         "n": "Joannes Baptista."
+         "n": "Joannes Baptista.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0051a0.17",
          "img": "0051",
          "d": "Pradicans in deferto",
-         "n": "Pradicans in deferto"
+         "n": "Pradicans in deferto",
+         "vsrc": "vulgate",
+         "score": 0.67
         },
         {
          "id": "0051b0.63",
          "img": "0051",
          "d": "ille philofophus cos, qui in folitudine viuerét, fupra homines pofuit",
-         "n": "ille philosophus cos, qui in solitudine viuerét, supra homines posuit"
+         "n": "ille philosophus cos, qui in solitudine viuerét, supra homines posuit",
+         "vsrc": "inherited",
+         "score": 0.2
         },
         {
          "id": "0051b0.64",
          "img": "0051",
          "d": "homines pofuit",
-         "n": "homines posuit"
+         "n": "homines posuit",
+         "vsrc": "inherited",
+         "score": 0.0
         },
         {
          "id": "0052a0.29",
          "img": "0052",
          "d": "In deferto ludaa.",
-         "n": "In deferto ludaa."
+         "n": "In deferto ludaa.",
+         "vsrc": "vulgate",
+         "score": 0.67
         }
-       ]
+       ],
+       "vulgate": "In diebus autem illis venit Joannes Baptista prædicans in deserto Judææ,"
       },
       {
        "v": 2,
@@ -1427,15 +1661,20 @@
          "id": "0052a0.43",
          "img": "0052",
          "d": "Penitentiam agite.",
-         "n": "Penitentiam agite."
+         "n": "Penitentiam agite.",
+         "vsrc": "printed",
+         "score": 0.5
         },
         {
          "id": "0052a0.46",
          "img": "0052",
          "d": "Appropinquauit enim regnum calorum.",
-         "n": "Appropinquauit enim regnum calorum."
+         "n": "Appropinquauit enim regnum calorum.",
+         "vsrc": "printed",
+         "score": 0.75
         }
-       ]
+       ],
+       "vulgate": "et dicens : Pœnitentiam agite : appropinquavit enim regnum cælorum."
       },
       {
        "v": 3,
@@ -1444,9 +1683,12 @@
          "id": "0052b0.29",
          "img": "0052",
          "d": "Hic est.",
-         "n": "Hic est."
+         "n": "Hic est.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Hic est enim, qui dictus est per Isaiam prophetam dicentem : Vox clamantis in deserto : Parate viam Domini ; rectas facite semitas ejus."
       },
       {
        "v": 4,
@@ -1455,27 +1697,36 @@
          "id": "0052b0.47",
          "img": "0052",
          "d": "Ipfe autem Ioannes habebat veftimentum de pilis ca- melorum.",
-         "n": "Ipse autem Ioannes habebat vestimentum de pilis ca- melorum."
+         "n": "Ipse autem Ioannes habebat vestimentum de pilis ca- melorum.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0052b0.54",
          "img": "0052",
          "d": "De pilis camelorum.",
-         "n": "De pilis camelorum."
+         "n": "De pilis camelorum.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0053a0.43",
          "img": "0053",
          "d": "Efca autem eius erat locufta.",
-         "n": "Esca autem eius erat locusta."
+         "n": "Esca autem eius erat locusta.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0053b0.28",
          "img": "0053",
          "d": "Mel fylueftre",
-         "n": "Mel fylueftre"
+         "n": "Mel fylueftre",
+         "vsrc": "printed",
+         "score": 0.5
         }
-       ]
+       ],
+       "vulgate": "Ipse autem Joannes habebat vestimentum de pilis camelorum, et zonam pelliceam circa lumbos suos : esca autem ejus erat locustæ, et mel silvestre."
       },
       {
        "v": 6,
@@ -1484,15 +1735,20 @@
          "id": "0053b0.49",
          "img": "0053",
          "d": "Et baptizabatur ab eo in lordane.",
-         "n": "Et baptizabatur ab eo in lordane."
+         "n": "Et baptizabatur ab eo in lordane.",
+         "vsrc": "printed",
+         "score": 0.83
         },
         {
          "id": "0054a0.4",
          "img": "0054",
          "d": "Confitentes peccata fua.",
-         "n": "Confitentes peccata sua."
+         "n": "Confitentes peccata sua.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "et baptizabantur ab eo in Jordane, confitentes peccata sua."
       },
       {
        "v": 7,
@@ -1501,21 +1757,28 @@
          "id": "0054a0.42",
          "img": "0054",
          "d": "Videns autem multos Pharifæorum & Sadduceorum",
-         "n": "Videns autem multos Pharisæorum & Sadduceorum"
+         "n": "Videns autem multos Pharisæorum & Sadduceorum",
+         "vsrc": "printed",
+         "score": 0.8
         },
         {
          "id": "0054b0.66",
          "img": "0054",
          "d": "Progenies viperarum.",
-         "n": "Progenies viperarum."
+         "n": "Progenies viperarum.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0055a0.26",
          "img": "0055",
          "d": "Quis demoftrauit vos fugere à vetura irai",
-         "n": "Quis demoftrauit vos fugere à vetura irai"
+         "n": "Quis demonstrauit vos fugere à vetura irai",
+         "vsrc": "printed",
+         "score": 0.5
         }
-       ]
+       ],
+       "vulgate": "Videns autem multos pharisæorum, et sadducæorum, venientes ad baptismum suum, dixit eis : Progenies viperarum, quis demonstravit vobis fugere a ventura ira ?"
       },
       {
        "v": 9,
@@ -1524,15 +1787,20 @@
          "id": "0055a0.64",
          "img": "0055",
          "d": "Et ne velitis dicere intra vos.",
-         "n": "Et ne velitis dicere intra vos."
+         "n": "Et ne velitis dicere intra vos.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0055b0.24",
          "img": "0055",
          "d": "Potens eft Deus de lapidibus.",
-         "n": "Potens est Deus de lapidibus."
+         "n": "Potens est Deus de lapidibus.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Et ne velitis dicere intra vos : Patrem habemus Abraham. Dico enim vobis quoniam potens est Deus de lapidibus istis suscitare filios Abrahæ."
       },
       {
        "v": 10,
@@ -1541,9 +1809,12 @@
          "id": "0055b0.51",
          "img": "0055",
          "d": "Iam enim fecuris ad radicem arboris pofita eft.",
-         "n": "Iam enim securis ad radicem arboris posita est."
+         "n": "Iam enim securis ad radicem arboris posita est.",
+         "vsrc": "printed",
+         "score": 0.88
         }
-       ]
+       ],
+       "vulgate": "Jam enim securis ad radicem arborum posita est. Omnis ergo arbor, quæ non facit fructum bonum, excidetur, et in ignem mittetur."
       },
       {
        "v": 11,
@@ -1552,27 +1823,36 @@
          "id": "0056a0.49",
          "img": "0056",
          "d": "Ego quide baptio vos in aqua.",
-         "n": "Ego quide baptio vos in aqua."
+         "n": "Ego quide baptio vos in aqua.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0056a0.51",
          "img": "0056",
          "d": "In paenitentiam.",
-         "n": "In paenitentiam."
+         "n": "In paenitentiam.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0056a0.56",
          "img": "0056",
          "d": "Qui autem poft me venturus eft.",
-         "n": "Qui autem post me venturus est."
+         "n": "Qui autem post me venturus est.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0058a0.48",
          "img": "0058",
          "d": "Etigni",
-         "n": "Etigni"
+         "n": "Etigni",
+         "vsrc": "printed",
+         "score": 0.0
         }
-       ]
+       ],
+       "vulgate": "Ego quidem baptizo vos in aqua in pœnitentiam : qui autem post me venturus est, fortior me est, cujus non sum dignus calceamenta portare : ipse vos baptizabit in Spiritu Sancto, et igni."
       },
       {
        "v": 13,
@@ -1581,9 +1861,12 @@
          "id": "0058a0.61",
          "img": "0058",
          "d": "Tum venit lefus à Galilea in Iordanem.",
-         "n": "Tum venit lefus à Galilea in Iordanem."
+         "n": "Tum venit lefus à Galilea in Iordanem.",
+         "vsrc": "printed",
+         "score": 0.5
         }
-       ]
+       ],
+       "vulgate": "Tunc venit Jesus a Galilæa in Jordanem ad Joannem, ut baptizaretur ab eo."
       },
       {
        "v": 14,
@@ -1592,9 +1875,12 @@
          "id": "0058b0.20",
          "img": "0058",
          "d": "Ioannes autem prohibebat eum.",
-         "n": "Ioannes autem prohibebat eum."
+         "n": "Ioannes autem prohibebat eum.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Joannes autem prohibebat eum, dicens : Ego a te debeo baptizari, et tu venis ad me ?"
       },
       {
        "v": 15,
@@ -1603,33 +1889,44 @@
          "id": "0059a0.14",
          "img": "0059",
          "d": "Sine modo.",
-         "n": "Sine modo."
+         "n": "Sine modo.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0059a0.26",
          "img": "0059",
          "d": "Decet.",
-         "n": "Decet."
+         "n": "Decet.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0059a0.28",
          "img": "0059",
          "d": "Nos.",
-         "n": "Nos."
+         "n": "Nos.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0059a0.31",
          "img": "0059",
          "d": "Implere",
-         "n": "Implere"
+         "n": "Implere",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0059a0.34",
          "img": "0059",
          "d": "Omnem inftitiam.",
-         "n": "Omnem inftitiam."
+         "n": "Omnem inftitiam.",
+         "vsrc": "printed",
+         "score": 0.5
         }
-       ]
+       ],
+       "vulgate": "Respondens autem Jesus, dixit ei : Sine modo : sic enim decet nos implere omnem justitiam. Tunc dimisit eum."
       },
       {
        "v": 16,
@@ -1638,33 +1935,44 @@
          "id": "0059a0.62",
          "img": "0059",
          "d": "Et baptarus lifus confeftim afcendit de aqua.",
-         "n": "Et baptarus lisus confestim ascendit de aqua."
+         "n": "Et baptarus lisus confestim ascendit de aqua.",
+         "vsrc": "printed",
+         "score": 0.71
         },
         {
          "id": "0059b0.41",
          "img": "0059",
          "d": "Et ecce aperti funt ei cali.",
-         "n": "Et ecce aperti sunt ei cali."
+         "n": "Et ecce aperti sunt ei cali.",
+         "vsrc": "printed",
+         "score": 0.83
         },
         {
          "id": "0060a0.1",
          "img": "0060",
          "d": "Et vidit.",
-         "n": "Et vidit."
+         "n": "Et vidit.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0060a0.22",
          "img": "0060",
          "d": "Sicut columbam.",
-         "n": "Sicut columbam."
+         "n": "Sicut columbam.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0060b0.20",
          "img": "0060",
          "d": "Et venientem fuper ipfum",
-         "n": "Et venientem super ipsum"
+         "n": "Et venientem super ipsum",
+         "vsrc": "printed",
+         "score": 0.75
         }
-       ]
+       ],
+       "vulgate": "Baptizatus autem Jesus, confestim ascendit de aqua, et ecce aperti sunt ei cæli : et vidit Spiritum Dei descendentem sicut columbam, et venientem super se."
       },
       {
        "v": 17,
@@ -1673,11 +1981,15 @@
          "id": "0060b0.56",
          "img": "0060",
          "d": "Hic ef filius meus dilectus.",
-         "n": "Hic ef filius meus dilectus."
+         "n": "Hic ef filius meus dilectus.",
+         "vsrc": "printed",
+         "score": 0.8
         }
-       ]
+       ],
+       "vulgate": "Et ecce vox de cælis dicens : Hic est Filius meus dilectus, in quo mihi complacui."
       }
      ],
+     "text_first": "0050f1.0",
      "comm": "0050a2.0",
      "commImg": "0050"
     },
@@ -1688,39 +2000,50 @@
      "text": "0061h1.0",
      "verses": [
       {
-       "v": 0,
+       "v": 1,
        "lemmas": [
         {
          "id": "0062a1.2",
          "img": "0062",
          "d": "20 NC",
-         "n": "20 NC"
+         "n": "20 TVNC",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0062a1.4",
          "img": "0062",
          "d": "Ductus eft.",
-         "n": "Ductus est."
+         "n": "Ductus est.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0062a1.18",
          "img": "0062",
          "d": "In defertum.",
-         "n": "In desertum."
+         "n": "In desertum.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0062b1.6",
          "img": "0062",
          "d": "Spiritu.",
-         "n": "Spiritu."
+         "n": "Spiritu.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0063a0.15",
          "img": "0063",
          "d": "Adiabolo.",
-         "n": "Adiabolo."
+         "n": "Adiabolo.",
+         "vsrc": "inherited",
+         "score": 0.0
         }
-       ]
+       ],
+       "vulgate": "Tunc Jesus ductus est in desertum a Spiritu, ut tentaretur a diabolo."
       },
       {
        "v": 2,
@@ -1729,15 +2052,20 @@
          "id": "0063b0.1",
          "img": "0063",
          "d": "Et cum ieiunaffet quadraginta diebus, & quadraginta noctibus.",
-         "n": "Et cum ieiunaffet quadraginta diebus, & quadraginta noctibus."
+         "n": "Et cum ieiunaffet quadraginta diebus, & quadraginta noctibus.",
+         "vsrc": "printed",
+         "score": 0.86
         },
         {
          "id": "0064a0.36",
          "img": "0064",
          "d": "Poftea efurijt.",
-         "n": "Postea esurijt."
+         "n": "Postea esurijt.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Et cum jejunasset quadraginta diebus, et quadraginta noctibus, postea esuriit."
       },
       {
        "v": 3,
@@ -1746,134 +2074,184 @@
          "id": "0064a0.54",
          "img": "0064",
          "d": "Et accedens",
-         "n": "Et accedens"
+         "n": "Et accedens",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0064a0.64",
          "img": "0064",
          "d": "Tentator",
-         "n": "Tentator"
-        }
-       ]
-      },
-      {
-       "v": 8,
-       "lemmas": [
+         "n": "Tentator",
+         "vsrc": "printed",
+         "score": 1.0
+        },
         {
          "id": "0064b0.16",
          "img": "0064",
          "d": "Apocal.12.9. & 20.2. Si filius Dei es.",
-         "n": "Apocal.12.9. & 20.2. Si filius Dei es."
+         "n": "Apocal.12.9. & 20.2. Si filius Dei es.",
+         "vsrc": "vulgate",
+         "score": 0.8
         },
         {
          "id": "0064b0.17",
          "img": "0064",
          "d": "Si filius Dei es.",
-         "n": "Si filius Dei es."
+         "n": "Si filius Dei es.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0064b0.29",
          "img": "0064",
          "d": "Dic.",
-         "n": "Dic."
+         "n": "Dic.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0064b0.44",
          "img": "0064",
          "d": "Et lapides isti.",
-         "n": "Et lapides isti."
+         "n": "Et lapides isti.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0064b0.50",
          "img": "0064",
          "d": "Panes fiant.",
-         "n": "Panes fiant."
-        },
+         "n": "Panes fiant.",
+         "vsrc": "vulgate",
+         "score": 1.0
+        }
+       ],
+       "vulgate": "Et accedens tentator dixit ei : Si Filius Dei es, dic ut lapides isti panes fiant."
+      },
+      {
+       "v": 4,
+       "lemmas": [
         {
          "id": "0064b0.57",
          "img": "0064",
          "d": "Scriptum eft.",
-         "n": "Scriptum est."
+         "n": "Scriptum est.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0064b0.60",
          "img": "0064",
          "d": "Non in folo pane.",
-         "n": "Non in folo pane."
+         "n": "Non in folo pane.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0064b0.62",
          "img": "0064",
          "d": "Viuit.",
-         "n": "Viuit."
+         "n": "Viuit.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0064b0.66",
          "img": "0064",
          "d": "Sed Sed in amni verbo quod procedit de ore Dei.",
-         "n": "Sed Sed in amni verbo quod procedit de ore Dei."
+         "n": "Sed Sed in amni verbo quod procedit de ore Dei.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0065a0.0",
          "img": "0065",
          "d": "Sed in amni verbo quod procedit de ore Dei.",
-         "n": "Sed in amni verbo quod procedit de ore Dei."
-        },
+         "n": "Sed in amni verbo quod procedit de ore Dei.",
+         "vsrc": "vulgate",
+         "score": 1.0
+        }
+       ],
+       "vulgate": "Qui respondens dixit : Scriptum est : Non in solo pane vivit homo, sed in omni verbo, quod procedit de ore Dei."
+      },
+      {
+       "v": 8,
+       "lemmas": [
         {
          "id": "0065a0.53",
          "img": "0065",
          "d": "Assumpsit.",
-         "n": "Assumpsit."
+         "n": "Assumpsit.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0065b0.28",
          "img": "0065",
          "d": "In fanctam ciuitatem.",
-         "n": "In sanctam ciuitatem."
+         "n": "In sanctam ciuitatem.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0065b0.36",
          "img": "0065",
          "d": "Super pinnaculum tepli",
-         "n": "Super pinnaculum tepli"
+         "n": "Super pinnaculum tepli",
+         "vsrc": "printed",
+         "score": 0.67
         },
         {
          "id": "0066a0.38",
          "img": "0066",
          "d": "Rurfum.",
-         "n": "Rursum."
+         "n": "Rursum.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0066a0.41",
          "img": "0066",
          "d": "Non tentabis.",
-         "n": "Non tentabis."
+         "n": "Non tentabis.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0066a0.43",
          "img": "0066",
          "d": "Iterum aẞumpfit.",
-         "n": "Iterum aẞumpfit."
+         "n": "Iterum aẞumpfit.",
+         "vsrc": "printed",
+         "score": 0.5
         },
         {
          "id": "0066a0.44",
          "img": "0066",
          "d": "In montem.",
-         "n": "In montem."
+         "n": "In montem.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0066a0.56",
          "img": "0066",
          "d": "Omnia regna mudi",
-         "n": "Omnia regna mudi"
+         "n": "Omnia regna mudi",
+         "vsrc": "printed",
+         "score": 0.67
         },
         {
          "id": "0066a0.65",
          "img": "0066",
          "d": "tur, vt totú dicat pro maioreparte Mat.9.26. & 27.45. Ergloriam eorum.",
-         "n": "tur, vt totú dicat pro maioreparte Mat.9.26. & 27.45. Ergloriam eorum."
+         "n": "tur, vt totum dicat pro maiore parte Mat.9.26. & 27.45. Ergloriam eorum.",
+         "vsrc": "printed",
+         "score": 0.2
         }
-       ]
+       ],
+       "vulgate": "Iterum assumpsit eum diabolus in montem excelsum valde : et ostendit ei omnia regna mundi, et gloriam eorum,"
       },
       {
        "v": 9,
@@ -1882,9 +2260,12 @@
          "id": "0066b0.3",
          "img": "0066",
          "d": "Hac omnia tibi dabo.",
-         "n": "Hac omnia tibi dabo."
+         "n": "Hac omnia tibi dabo.",
+         "vsrc": "printed",
+         "score": 0.75
         }
-       ]
+       ],
+       "vulgate": "et dixit ei : Hæc omnia tibi dabo, si cadens adoraveris me."
       },
       {
        "v": 10,
@@ -1893,15 +2274,20 @@
          "id": "0066b0.19",
          "img": "0066",
          "d": "Vade Satana.",
-         "n": "Vade Satana."
+         "n": "Vade Satana.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0066b0.27",
          "img": "0066",
          "d": "Dominum Deum tuum adorabi.",
-         "n": "Dominum Deum tuum adorabi."
+         "n": "Dominum Deum tuum adorabi.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Tunc dicit ei Jesus : Vade Satana : Scriptum est enim : Dominum Deum tuum adorabis, et illi soli servies."
       },
       {
        "v": 12,
@@ -1910,9 +2296,12 @@
          "id": "0066b0.60",
          "img": "0066",
          "d": "Cum autem audiffet.",
-         "n": "Cum autem audisset."
+         "n": "Cum autem audisset.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Cum autem audisset Jesus quod Joannes traditus esset, secessit in Galilæam :"
       },
       {
        "v": 14,
@@ -1921,21 +2310,34 @@
          "id": "0067a0.43",
          "img": "0067",
          "d": "Ut adimpleretur.",
-         "n": "Ut adimpleretur."
-        },
+         "n": "Ut adimpleretur.",
+         "vsrc": "printed",
+         "score": 1.0
+        }
+       ],
+       "vulgate": "ut adimpleretur quod dictum est per Isaiam prophetam :"
+      },
+      {
+       "v": 15,
+       "lemmas": [
         {
          "id": "0067a0.54",
          "img": "0067",
          "d": "15 Terra Zabulo terra Nephthalim via maris.",
-         "n": "15 Terra Zabulo terra Nephthalim via maris."
+         "n": "15 Terra Zabulo terra Nephthalim via maris.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0067a0.63",
          "img": "0067",
          "d": "Tras lordanem.",
-         "n": "Tras lordanem."
+         "n": "Tras lordanem.",
+         "vsrc": "vulgate",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Terra Zabulon, et terra Nephthalim, via maris trans Jordanem, Galilæa gentium :"
       },
       {
        "v": 17,
@@ -1944,9 +2346,12 @@
          "id": "0067b0.16",
          "img": "0067",
          "d": "Appropinquauit regnü caloru.",
-         "n": "Appropinquauit regnü caloru."
+         "n": "Appropinquauit regnum caloru.",
+         "vsrc": "printed",
+         "score": 0.67
         }
-       ]
+       ],
+       "vulgate": "Exinde cœpit Jesus prædicare, et dicere : Pœnitentiam agite : appropinquavit enim regnum cælorum."
       },
       {
        "v": 18,
@@ -1955,15 +2360,20 @@
          "id": "0067b0.23",
          "img": "0067",
          "d": "luxta mare Galilea.",
-         "n": "luxta mare Galilea."
+         "n": "luxta mare Galilea.",
+         "vsrc": "printed",
+         "score": 0.67
         },
         {
          "id": "0067b0.36",
          "img": "0067",
          "d": "Petrum Andream.",
-         "n": "Petrum Andream."
+         "n": "Petrum Andream.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Ambulans autem Jesus juxta mare Galilææ, vidit duos fratres, Simonem, qui vocatur Petrus, et Andream fratrem ejus, mittentes rete in mare (erant enim piscatores),"
       },
       {
        "v": 19,
@@ -1972,15 +2382,20 @@
          "id": "0068a0.32",
          "img": "0068",
          "d": "Venite poft me",
-         "n": "Venite post me"
+         "n": "Venite post me",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0068a0.35",
          "img": "0068",
          "d": "Pifcatores hominum.",
-         "n": "Piscatores hominum."
+         "n": "Piscatores hominum.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "et ait illis : Venite post me, et faciam vos fieri piscatores hominum."
       },
       {
        "v": 23,
@@ -1989,23 +2404,31 @@
          "id": "0068b0.12",
          "img": "0068",
          "d": "Totam Galilaam.",
-         "n": "Totam Galilaam."
+         "n": "Totam Galilaam.",
+         "vsrc": "printed",
+         "score": 0.5
         },
         {
          "id": "0068b0.14",
          "img": "0068",
          "d": "Jn Synagog.",
-         "n": "Jn Synagog."
+         "n": "Jn Synagog.",
+         "vsrc": "printed",
+         "score": 0.5
         },
         {
          "id": "0068b0.31",
          "img": "0068",
          "d": "Euangelium regn.",
-         "n": "Euangelium regn."
+         "n": "Euangelium regn.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Et circuibat Jesus totam Galilæam, docens in synagogis eorum, et prædicans Evangelium regni : et sanans omnem languorem, et omnem infirmitatem in populo."
       }
      ],
+     "text_first": "0061f2.0",
      "comm": "0062a1.1",
      "commImg": "0062"
     },
@@ -2016,27 +2439,34 @@
      "text": "0068h1.0",
      "verses": [
       {
-       "v": 0,
+       "v": 1,
        "lemmas": [
         {
          "id": "0070a0.6",
          "img": "0070",
          "d": "VI.. RIDENS autem.",
-         "n": "VI.. RIDENS autem."
+         "n": "VI.. VIDENS autem.",
+         "vsrc": "vulgate",
+         "score": 0.67
         },
         {
          "id": "0070b0.51",
          "img": "0070",
          "d": "Videns autem lefus.",
-         "n": "Videns autem lefus."
+         "n": "Videns autem lefus.",
+         "vsrc": "vulgate",
+         "score": 0.67
         },
         {
          "id": "0071a0.38",
          "img": "0071",
          "d": "Et cum fediffer",
-         "n": "Et cum fediffer"
+         "n": "Et cum fediffer",
+         "vsrc": "vulgate",
+         "score": 0.67
         }
-       ]
+       ],
+       "vulgate": "Videns autem Jesus turbas, ascendit in montem, et cum sedisset, accesserunt ad eum discipuli ejus,"
       },
       {
        "v": 2,
@@ -2045,9 +2475,12 @@
          "id": "0071a0.50",
          "img": "0071",
          "d": "Et aperiens os fuum.",
-         "n": "Et aperiens os suum."
+         "n": "Et aperiens os suum.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "et aperiens os suum docebat eos dicens :"
       },
       {
        "v": 3,
@@ -2056,21 +2489,28 @@
          "id": "0071b0.41",
          "img": "0071",
          "d": "Beati.",
-         "n": "Beati."
+         "n": "Beati.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0071b0.59",
          "img": "0071",
          "d": "Pauperes fpiritu.",
-         "n": "Pauperes spiritu."
+         "n": "Pauperes spiritu.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0072b0.8",
          "img": "0072",
          "d": "Quoniam ipforum eft regnum cælorum.",
-         "n": "Quoniam ipsorum est regnum cælorum."
+         "n": "Quoniam ipsorum est regnum cælorum.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Beati pauperes spiritu : quoniam ipsorum est regnum cælorum."
       },
       {
        "v": 4,
@@ -2079,15 +2519,20 @@
          "id": "0072b0.18",
          "img": "0072",
          "d": "Beati mites.",
-         "n": "Beati mites."
+         "n": "Beati mites.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0072b0.29",
          "img": "0072",
          "d": "Quoniam ipfi poßidebunt terram.",
-         "n": "Quoniam ipsi poßidebunt terram."
+         "n": "Quoniam ipsi poßidebunt terram.",
+         "vsrc": "printed",
+         "score": 0.75
         }
-       ]
+       ],
+       "vulgate": "Beati mites : quoniam ipsi possidebunt terram."
       },
       {
        "v": 5,
@@ -2096,15 +2541,20 @@
          "id": "0073a0.11",
          "img": "0073",
          "d": "Beati qui lugent.",
-         "n": "Beati qui lugent."
+         "n": "Beati qui lugent.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0073a0.36",
          "img": "0073",
          "d": "Quia ipfi confolabuntur.",
-         "n": "Quia ipsi consolabuntur."
+         "n": "Quia ipsi consolabuntur.",
+         "vsrc": "printed",
+         "score": 0.67
         }
-       ]
+       ],
+       "vulgate": "Beati qui lugent : quoniam ipsi consolabuntur."
       },
       {
        "v": 6,
@@ -2113,15 +2563,20 @@
          "id": "0073a0.46",
          "img": "0073",
          "d": "Beati qui efuriunt & fitiunt iuftitiam.",
-         "n": "Beati qui esuriunt & sitiunt iustitiam."
+         "n": "Beati qui esuriunt & sitiunt iustitiam.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0073b0.66",
          "img": "0073",
          "d": "Quoniam Quoniam ipfi faturabuntur.",
-         "n": "Quoniam Quoniam ipsi saturabuntur."
+         "n": "Quoniam Quoniam ipsi saturabuntur.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Beati qui esuriunt et sitiunt justitiam : quoniam ipsi saturabuntur."
       },
       {
        "v": 7,
@@ -2130,9 +2585,12 @@
          "id": "0074a0.15",
          "img": "0074",
          "d": "Beati mifericordes.",
-         "n": "Beati misericordes."
+         "n": "Beati misericordes.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Beati misericordes : quoniam ipsi misericordiam consequentur."
       },
       {
        "v": 8,
@@ -2141,134 +2599,190 @@
          "id": "0074a0.43",
          "img": "0074",
          "d": "Beati mundo corde.",
-         "n": "Beati mundo corde."
-        }
-       ]
-      },
-      {
-       "v": 19,
-       "lemmas": [
+         "n": "Beati mundo corde.",
+         "vsrc": "printed",
+         "score": 1.0
+        },
         {
          "id": "0074b0.18",
          "img": "0074",
          "d": "12. Quoniam ipfi Deum videbunt.",
-         "n": "12. Quoniam ipsi Deum videbunt."
+         "n": "12. Quoniam ipsi Deum videbunt.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0074b0.19",
          "img": "0074",
          "d": "Quoniam ipfi Deum videbunt.",
-         "n": "Quoniam ipsi Deum videbunt."
-        },
+         "n": "Quoniam ipsi Deum videbunt.",
+         "vsrc": "vulgate",
+         "score": 1.0
+        }
+       ],
+       "vulgate": "Beati mundo corde : quoniam ipsi Deum videbunt."
+      },
+      {
+       "v": 9,
+       "lemmas": [
         {
          "id": "0074b0.25",
          "img": "0074",
          "d": "Beati pacifici.",
-         "n": "Beati pacifici."
-        },
+         "n": "Beati pacifici.",
+         "vsrc": "vulgate",
+         "score": 1.0
+        }
+       ],
+       "vulgate": "Beati pacifici : quoniam filii Dei vocabuntur."
+      },
+      {
+       "v": 10,
+       "lemmas": [
         {
          "id": "0075a0.15",
          "img": "0075",
          "d": "Propter iuftitiam.",
-         "n": "Propter iustitiam."
-        },
+         "n": "Propter iustitiam.",
+         "vsrc": "vulgate",
+         "score": 1.0
+        }
+       ],
+       "vulgate": "Beati qui persecutionem patiuntur propter justitiam : quoniam ipsorum est regnum cælorum."
+      },
+      {
+       "v": 19,
+       "lemmas": [
         {
          "id": "0075a0.30",
          "img": "0075",
          "d": "Jpforum eft enim regnum calorum.",
-         "n": "Jpsorum est enim regnum calorum."
+         "n": "Jpsorum est enim regnum calorum.",
+         "vsrc": "printed",
+         "score": 0.6
         },
         {
          "id": "0075a0.40",
          "img": "0075",
          "d": "Vos eftis fal terra.",
-         "n": "Vos estis sal terra."
+         "n": "Vos estis sal terra.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0075b0.2",
          "img": "0075",
          "d": "Quod fi fal evanuerit.",
-         "n": "Quod fi sal evanuerit."
+         "n": "Quod fi sal evanuerit.",
+         "vsrc": "printed",
+         "score": 0.75
         },
         {
          "id": "0075b0.6",
          "img": "0075",
          "d": "In quo falierur?",
-         "n": "In quo falierur?"
+         "n": "In quo falierur?",
+         "vsrc": "printed",
+         "score": 0.67
         },
         {
          "id": "0075b0.12",
          "img": "0075",
          "d": "Nifi vt projciatur foras, conculcesur ab homini bus.",
-         "n": "Nisi vt projciatur foras, conculcesur ab homini bus."
+         "n": "Nisi vt projciatur foras, conculcesur ab homini bus.",
+         "vsrc": "printed",
+         "score": 0.62
         },
         {
          "id": "0075b0.48",
          "img": "0075",
          "d": "Vos eftis lux mundi.",
-         "n": "Vos estis lux mundi."
+         "n": "Vos estis lux mundi.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0076a0.35",
          "img": "0076",
          "d": "Non poteft ciuitas abfcondi.",
-         "n": "Non potest ciuitas abscondi."
+         "n": "Non potest ciuitas abscondi.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0076a0.46",
          "img": "0076",
          "d": "Non poteft.",
-         "n": "Non potest."
+         "n": "Non potest.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0076a0.51",
          "img": "0076",
          "d": "Neque accendunt lucernam, ponunt eam fub modio.",
-         "n": "Neque accendunt lucernam, ponunt eam sub modio."
+         "n": "Neque accendunt lucernam, ponunt eam sub modio.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0076b0.32",
          "img": "0076",
          "d": "Sic luceat lux veftra coram hominibus, vt videant ope ra veftra bona.",
-         "n": "Sic luceat lux vestra coram hominibus, vt videant ope ra vestra bona."
+         "n": "Sic luceat lux vestra coram hominibus, vt videant ope ra vestra bona.",
+         "vsrc": "printed",
+         "score": 0.83
         },
         {
          "id": "0078a0.6",
          "img": "0078",
          "d": "Amen.",
-         "n": "Amen."
+         "n": "Amen.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0078a0.46",
          "img": "0078",
          "d": "lota vnum, vel vnus apex.",
-         "n": "lota vnum, vel vnus apex."
+         "n": "lota vnum, vel vnus apex.",
+         "vsrc": "printed",
+         "score": 0.8
         },
         {
          "id": "0078a0.60",
          "img": "0078",
          "d": "Demandatis iftis minimis.",
-         "n": "Demandatis istis minimis."
+         "n": "Demandatis istis minimis.",
+         "vsrc": "printed",
+         "score": 0.67
         },
         {
          "id": "0078b0.24",
          "img": "0078",
          "d": "Ec docuerit fic homines.",
-         "n": "Ec docuerit sic homines."
+         "n": "Ec docuerit sic homines.",
+         "vsrc": "printed",
+         "score": 0.75
         },
         {
          "id": "0078b0.47",
          "img": "0078",
          "d": "Minimus vocabitur.",
-         "n": "Minimus vocabitur."
+         "n": "Minimus vocabitur.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0079a0.7",
          "img": "0079",
          "d": "In regno calorum.",
-         "n": "In regno calorum."
+         "n": "In regno calorum.",
+         "vsrc": "printed",
+         "score": 0.67
         }
-       ]
+       ],
+       "vulgate": "Qui ergo solverit unum de mandatis istis minimis, et docuerit sic homines, minimus vocabitur in regno cælorum : qui autem fecerit et docuerit, hic magnus vocabitur in regno cælorum."
       },
       {
        "v": 20,
@@ -2277,27 +2791,36 @@
          "id": "0079a0.48",
          "img": "0079",
          "d": "Dico enim vobis.",
-         "n": "Dico enim vobis."
+         "n": "Dico enim vobis.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0079a0.52",
          "img": "0079",
          "d": "Nifi abundauerit.",
-         "n": "Nisi abundauerit."
+         "n": "Nisi abundauerit.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0079a0.54",
          "img": "0079",
          "d": "Iuftitia veftra.",
-         "n": "Iustitia vestra."
+         "n": "Iustitia vestra.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0079a0.57",
          "img": "0079",
          "d": "Quàm Scribarum & Pharifæorum.",
-         "n": "Quàm Scribarum & Pharisæorum."
+         "n": "Quàm Scribarum & Pharisæorum.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Dico enim vobis, quia nisi abundaverit justitia vestra plus quam scribarum et pharisæorum, non intrabitis in regnum cælorum."
       },
       {
        "v": 21,
@@ -2306,15 +2829,20 @@
          "id": "0079a0.61",
          "img": "0079",
          "d": "Audiftis.",
-         "n": "Audistis."
+         "n": "Audistis.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0081a0.16",
          "img": "0081",
          "d": "Reus erit indicio.",
-         "n": "Reus erit indicio."
+         "n": "Reus erit indicio.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Audistis quia dictum est antiquis : Non occides : qui autem occiderit, reus erit judicio."
       },
       {
        "v": 22,
@@ -2323,27 +2851,36 @@
          "id": "0081a0.60",
          "img": "0081",
          "d": "Qui irafcitur.",
-         "n": "Qui irascitur."
+         "n": "Qui irascitur.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0081b0.42",
          "img": "0081",
          "d": "Reus erit iudicio.",
-         "n": "Reus erit iudicio."
+         "n": "Reus erit iudicio.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0081b0.56",
          "img": "0081",
          "d": "Qui autem dixerit fratri fuo raca.",
-         "n": "Qui autem dixerit fratri suo raca."
+         "n": "Qui autem dixerit fratri suo raca.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0082a0.43",
          "img": "0082",
          "d": "Reus erit concilio.",
-         "n": "Reus erit concilio."
+         "n": "Reus erit concilio.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Ego autem dico vobis : quia omnis qui irascitur fratri suo, reus erit judicio. Qui autem dixerit fratri suo, raca : reus erit concilio. Qui autem dixerit, fatue : reus erit gehennæ ignis."
       },
       {
        "v": 23,
@@ -2352,21 +2889,28 @@
          "id": "0082b0.45",
          "img": "0082",
          "d": "Si ergo offers munus tuum ad altare.",
-         "n": "Si ergo offers munus tuum ad altare."
+         "n": "Si ergo offers munus tuum ad altare.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0082b0.50",
          "img": "0082",
          "d": "Et ibi recordatus fueris.",
-         "n": "Et ibi recordatus fueris."
+         "n": "Et ibi recordatus fueris.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0082b0.58",
          "img": "0082",
          "d": "Habet aliquid aduerfum te",
-         "n": "Habet aliquid aduersum te"
+         "n": "Habet aliquid aduersum te",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Si ergo offers munus tuum ad altare, et ibi recordatus fueris quia frater tuus habet aliquid adversum te :"
       },
       {
        "v": 25,
@@ -2375,15 +2919,20 @@
          "id": "0083a0.31",
          "img": "0083",
          "d": "Efto confentiens.",
-         "n": "Esto consentiens."
+         "n": "Esto consentiens.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0083a0.34",
          "img": "0083",
          "d": "Aduerfaris tuo.",
-         "n": "Aduersaris tuo."
+         "n": "Aduersaris tuo.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Esto consentiens adversario tuo cito dum es in via cum eo : ne forte tradat te adversarius judici, et judex tradat te ministro : et in carcerem mittaris."
       },
       {
        "v": 28,
@@ -2392,21 +2941,28 @@
          "id": "0083b0.32",
          "img": "0083",
          "d": "Qui viderit",
-         "n": "Qui viderit"
+         "n": "Qui viderit",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0083b0.35",
          "img": "0083",
          "d": "Mulierem.",
-         "n": "Mulierem."
+         "n": "Mulierem.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0083b0.39",
          "img": "0083",
          "d": "lam machatus eft.",
-         "n": "lam machatus est."
+         "n": "lam machatus est.",
+         "vsrc": "printed",
+         "score": 0.33
         }
-       ]
+       ],
+       "vulgate": "Ego autem dico vobis : quia omnis qui viderit mulierem ad concupiscendum eam, jam mœchatus est eam in corde suo."
       },
       {
        "v": 29,
@@ -2415,9 +2971,12 @@
          "id": "0083b0.41",
          "img": "0083",
          "d": "30. Si oculus tuus dexter.",
-         "n": "30. Si oculus tuus dexter."
+         "n": "30. Si oculus tuus dexter.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Quod si oculus tuus dexter scandalizat te, erue eum, et projice abs te : expedit enim tibi ut pereat unum membrorum tuorum, quam totum corpus tuum mittatur in gehennam."
       },
       {
        "v": 31,
@@ -2426,9 +2985,12 @@
          "id": "0084a0.37",
          "img": "0084",
          "d": "Quicunque dimiferit.",
-         "n": "Quicunque dimiserit."
+         "n": "Quicunque dimiserit.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Dictum est autem : Quicumque dimiserit uxorem suam, det ei libellum repudii."
       },
       {
        "v": 32,
@@ -2437,9 +2999,12 @@
          "id": "0084a0.49",
          "img": "0084",
          "d": "Excepta fornicationis caufa.",
-         "n": "Excepta fornicationis causa."
+         "n": "Excepta fornicationis causa.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Ego autem dico vobis : quia omnis qui dimiserit uxorem suam, excepta fornicationis causa, facit eam mœchari : et qui dimissam duxerit, adulterat."
       },
       {
        "v": 33,
@@ -2448,27 +3013,42 @@
          "id": "0085a0.15",
          "img": "0085",
          "d": "Non periurabis.",
-         "n": "Non periurabis."
+         "n": "Non periurabis.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0085a0.36",
          "img": "0085",
          "d": "Reddes autem Domine iuramenta tua.",
-         "n": "Reddes autem Domine iuramenta tua."
-        },
+         "n": "Reddes autem Domine iuramenta tua.",
+         "vsrc": "printed",
+         "score": 1.0
+        }
+       ],
+       "vulgate": "Iterum audistis quia dictum est antiquis : Non perjurabis : reddes autem Domino juramenta tua."
+      },
+      {
+       "v": 34,
+       "lemmas": [
         {
          "id": "0085a0.51",
          "img": "0085",
          "d": "Non iurare omnino.",
-         "n": "Non iurare omnino."
+         "n": "Non iurare omnino.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0086a0.16",
          "img": "0086",
          "d": "Neque per calum, quia thronus Dei est.",
-         "n": "Neque per calum, quia thronus Dei est."
+         "n": "Neque per calum, quia thronus Dei est.",
+         "vsrc": "vulgate",
+         "score": 0.86
         }
-       ]
+       ],
+       "vulgate": "Ego autem dico vobis, non jurare omnino, neque per cælum, quia thronus Dei est :"
       },
       {
        "v": 35,
@@ -2477,9 +3057,12 @@
          "id": "0086a0.38",
          "img": "0086",
          "d": "Neque per lerofolymam, quia ciuitas eft magni regi.",
-         "n": "Neque per lerofolymam, quia ciuitas est magni regi."
+         "n": "Neque per lerofolymam, quia ciuitas est magni regi.",
+         "vsrc": "printed",
+         "score": 0.88
         }
-       ]
+       ],
+       "vulgate": "neque per terram, quia scabellum est pedum ejus : neque per Jerosolymam, quia civitas est magni regis :"
       },
       {
        "v": 36,
@@ -2488,9 +3071,12 @@
          "id": "0086a0.45",
          "img": "0086",
          "d": "Neque per caput tuum iuraueris, quia non potes vnum capillum album facere, aut nigrum.",
-         "n": "Neque per caput tuum iuraueris, quia non potes vnum capillum album facere, aut nigrum."
+         "n": "Neque per caput tuum iuraueris, quia non potes vnum capillum album facere, aut nigrum.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "neque per caput tuum juraveris, quia non potes unum capillum album facere, aut nigrum."
       },
       {
        "v": 37,
@@ -2499,21 +3085,28 @@
          "id": "0086b0.9",
          "img": "0086",
          "d": "Sit autem fermo vefter Eft, Eft, Non, Non,",
-         "n": "Sit autem sermo vester Est, Est, Non, Non,"
+         "n": "Sit autem sermo vester Est, Est, Non, Non,",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0086b0.39",
          "img": "0086",
          "d": "Quod amplius eft, à male eft.",
-         "n": "Quod amplius est, à male est."
+         "n": "Quod amplius est, à male est.",
+         "vsrc": "printed",
+         "score": 0.8
         },
         {
          "id": "0086b0.61",
          "img": "0086",
          "d": "tum tam fæpe, tamque temere iurandi. 38. Oculum pro oculo.",
-         "n": "tum tam sæpe, tamque temere iurandi. 38. Oculum pro oculo."
+         "n": "tum tam sæpe, tamque temere iurandi. 38. Oculum pro oculo.",
+         "vsrc": "printed",
+         "score": 0.33
         }
-       ]
+       ],
+       "vulgate": "Sit autem sermo vester, est, est : non, non : quod autem his abundantius est, a malo est."
       },
       {
        "v": 38,
@@ -2522,9 +3115,12 @@
          "id": "0086b0.62",
          "img": "0086",
          "d": "Oculum pro oculo.",
-         "n": "Oculum pro oculo."
+         "n": "Oculum pro oculo.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Audistis quia dictum est : Oculum pro oculo, et dentem pro dente."
       },
       {
        "v": 39,
@@ -2533,15 +3129,20 @@
          "id": "0087a0.53",
          "img": "0087",
          "d": "Non refiftere malo.",
-         "n": "Non resistere malo."
+         "n": "Non resistere malo.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0087b0.41",
          "img": "0087",
          "d": "Sed fi quis te percufferit in dexteram.",
-         "n": "Sed fi quis te percusserit in dexteram."
+         "n": "Sed fi quis te percusserit in dexteram.",
+         "vsrc": "printed",
+         "score": 0.86
         }
-       ]
+       ],
+       "vulgate": "Ego autem dico vobis, non resistere malo : sed si quis te percusserit in dexteram maxillam tuam, præbe illi et alteram :"
       },
       {
        "v": 41,
@@ -2550,15 +3151,20 @@
          "id": "0088a0.13",
          "img": "0088",
          "d": "Et quicumque te angariauerit.",
-         "n": "Et quicumque te angariauerit."
+         "n": "Et quicumque te angariauerit.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0088a0.28",
          "img": "0088",
          "d": "Vade cum illo alia duo.",
-         "n": "Vade cum illo alia duo."
+         "n": "Vade cum illo alia duo.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "et quicumque te angariaverit mille passus, vade cum illo et alia duo."
       },
       {
        "v": 42,
@@ -2567,9 +3173,12 @@
          "id": "0088a0.37",
          "img": "0088",
          "d": "Qui autem petit à te da ei.",
-         "n": "Qui autem petit à te da ei."
+         "n": "Qui autem petit à te da ei.",
+         "vsrc": "printed",
+         "score": 0.83
         }
-       ]
+       ],
+       "vulgate": "Qui petit a te, da ei : et volenti mutuari a te, ne avertaris."
       },
       {
        "v": 43,
@@ -2578,9 +3187,12 @@
          "id": "0088b0.3",
          "img": "0088",
          "d": "Audistis.",
-         "n": "Audistis."
+         "n": "Audistis.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Audistis quia dictum est : Diliges proximum tuum, et odio habebis inimicum tuum."
       },
       {
        "v": 44,
@@ -2589,9 +3201,12 @@
          "id": "0088b0.47",
          "img": "0088",
          "d": "Diligite inimicos veftros.",
-         "n": "Diligite inimicos vestros."
+         "n": "Diligite inimicos vestros.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Ego autem dico vobis : diligite inimicos vestros, benefacite his qui oderunt vos, et orate pro persequentibus et calumniantibus vos :"
       },
       {
        "v": 45,
@@ -2600,9 +3215,12 @@
          "id": "0089a0.3",
          "img": "0089",
          "d": "Vt fitis fily",
-         "n": "Vt fitis fily"
+         "n": "Vt fitis fily",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "ut sitis filii Patris vestri, qui in cælis est : qui solem suum oriri facit super bonos et malos : et pluit super justos et injustos."
       },
       {
        "v": 46,
@@ -2611,15 +3229,20 @@
          "id": "0089a0.22",
          "img": "0089",
          "d": "Quam mercedem habebitis.",
-         "n": "Quam mercedem habebitis."
+         "n": "Quam mercedem habebitis.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0089b0.4",
          "img": "0089",
          "d": "Nonne & publicani hoc faciunt.",
-         "n": "Nonne & publicani hoc faciunt."
+         "n": "Nonne & publicani hoc faciunt.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Si enim diligitis eos qui vos diligunt, quam mercedem habebitis ? nonne et publicani hoc faciunt ?"
       },
       {
        "v": 48,
@@ -2628,11 +3251,15 @@
          "id": "0089b0.18",
          "img": "0089",
          "d": "Eftote ergo vos perfecti, ficut pater vefter.",
-         "n": "Estote ergo vos perfecti, sicut pater vester."
+         "n": "Estote ergo vos perfecti, sicut pater vester.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Estote ergo vos perfecti, sicut et Pater vester cælestis perfectus est."
       }
      ],
+     "text_first": "0068f2.0",
      "comm": "0070a0.5",
      "commImg": "0070"
     },
@@ -2649,21 +3276,28 @@
          "id": "0090a2.0",
          "img": "0090",
          "d": "TTENDITE.",
-         "n": "TTENDITE."
+         "n": "ATTENDITE.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0091a0.1",
          "img": "0091",
          "d": "Ne iuftitiam.",
-         "n": "Ne iustitiam."
+         "n": "Ne iustitiam.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0091a0.52",
          "img": "0091",
          "d": "Alioquin mercedem non habebitis apud patrem veftrü.",
-         "n": "Alioquin mercedem non habebitis apud patrem vestrü."
+         "n": "Alioquin mercedem non habebitis apud patrem vestrum.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Attendite ne justitiam vestram faciatis coram hominibus, ut videamini ab eis : alioquin mercedem non habebitis apud Patrem vestrum qui in cælis est."
       },
       {
        "v": 2,
@@ -2672,15 +3306,20 @@
          "id": "0091a0.61",
          "img": "0091",
          "d": "Neli tuba canere.",
-         "n": "Neli tuba canere."
+         "n": "Neli tuba canere.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0091b0.26",
          "img": "0091",
          "d": "In Synagogis.",
-         "n": "In Synagogis."
+         "n": "In Synagogis.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Cum ergo facis eleemosynam, noli tuba canere ante te, sicut hypocritæ faciunt in synagogis, et in vicis, ut honorificentur ab hominibus. Amen dico vobis, receperunt mercedem suam."
       },
       {
        "v": 3,
@@ -2689,9 +3328,12 @@
          "id": "0091b0.37",
          "img": "0091",
          "d": "Nefciat finiftra tua.",
-         "n": "Nesciat sinistra tua."
+         "n": "Nesciat sinistra tua.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Te autem faciente eleemosynam, nesciat sinistra tua quid faciat dextera tua :"
       },
       {
        "v": 4,
@@ -2700,45 +3342,72 @@
          "id": "0092a0.28",
          "img": "0092",
          "d": "In abfcondito.",
-         "n": "In abscondito."
+         "n": "In abscondito.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0092a0.29",
          "img": "0092",
          "d": "Redder tibi.",
-         "n": "Redder tibi."
+         "n": "Redder tibi.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0092a0.62",
          "img": "0092",
          "d": "S Qui amant",
-         "n": "S Qui amant"
+         "n": "S Qui amant",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0092b0.8",
          "img": "0092",
          "d": "In Synagogis",
-         "n": "In Synagogis"
+         "n": "In Synagogis",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0092b0.9",
          "img": "0092",
          "d": "Et in angulis.",
-         "n": "Et in angulis."
-        },
+         "n": "Et in angulis.",
+         "vsrc": "printed",
+         "score": 1.0
+        }
+       ],
+       "vulgate": "ut sit eleemosyna tua in abscondito, et Pater tuus, qui videt in abscondito, reddet tibi."
+      },
+      {
+       "v": 5,
+       "lemmas": [
         {
          "id": "0092b0.23",
          "img": "0092",
          "d": "Stantes.",
-         "n": "Stantes."
-        },
+         "n": "Stantes.",
+         "vsrc": "vulgate",
+         "score": 1.0
+        }
+       ],
+       "vulgate": "Et cum oratis, non eritis sicut hypocritæ qui amant in synagogis et in angulis platearum stantes orare, ut videantur ab hominibus : amen dico vobis, receperunt mercedem suam."
+      },
+      {
+       "v": 4,
+       "lemmas": [
         {
          "id": "0092b0.40",
          "img": "0092",
          "d": "Mercedem fuam.",
-         "n": "Mercedem fuam."
+         "n": "Mercedem fuam.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "ut sit eleemosyna tua in abscondito, et Pater tuus, qui videt in abscondito, reddet tibi."
       },
       {
        "v": 6,
@@ -2747,9 +3416,12 @@
          "id": "0092b0.42",
          "img": "0092",
          "d": "Jntra in cubiculum tuum.",
-         "n": "Jntra in cubiculum tuum."
+         "n": "Jntra in cubiculum tuum.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Tu autem cum oraveris, intra in cubiculum tuum, et clauso ostio, ora Patrem tuum in abscondito : et Pater tuus, qui videt in abscondito, reddet tibi."
       },
       {
        "v": 7,
@@ -2758,74 +3430,98 @@
          "id": "0093a0.8",
          "img": "0093",
          "d": "Nolite multùm loqui.",
-         "n": "Nolite multùm loqui."
+         "n": "Nolite multùm loqui.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0093a0.46",
          "img": "0093",
          "d": "Ethnici.",
-         "n": "Ethnici."
+         "n": "Ethnici.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0093a0.53",
          "img": "0093",
          "d": "Jn multiloquio.",
-         "n": "Jn multiloquio."
-        },
-        {
-         "id": "0093a0.54",
-         "img": "0093",
-         "d": ", vt Mar. 9.38. 70 % mod 9. Sic ergo vos orabitis.",
-         "n": ", vt Mar. 9.38. 70 % mod 9. Sic ergo vos orabitis."
+         "n": "Jn multiloquio.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Orantes autem, nolite multum loqui, sicut ethnici, putant enim quod in multiloquio suo exaudiantur."
       },
       {
        "v": 9,
        "lemmas": [
         {
+         "id": "0093a0.54",
+         "img": "0093",
+         "d": ", vt Mar. 9.38. 70 % mod 9. Sic ergo vos orabitis.",
+         "n": ", vt Mar. 9.38. 70 % mod 9. Sic ergo vos orabitis.",
+         "vsrc": "vulgate",
+         "score": 0.57
+        },
+        {
          "id": "0093a0.55",
          "img": "0093",
          "d": "Sic ergo vos orabitis.",
-         "n": "Sic ergo vos orabitis."
+         "n": "Sic ergo vos orabitis.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0093b0.12",
          "img": "0093",
          "d": "Sic ergo vos.",
-         "n": "Sic ergo vos."
+         "n": "Sic ergo vos.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0093b0.17",
          "img": "0093",
          "d": "Sic.",
-         "n": "Sic."
+         "n": "Sic.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0094a0.25",
          "img": "0094",
          "d": "Pater.",
-         "n": "Pater."
+         "n": "Pater.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0094a0.65",
          "img": "0094",
          "d": "at tota Trinitas regenerauit. Nofter.",
-         "n": "at tota Trinitas regenerauit. Noster."
+         "n": "at tota Trinitas regenerauit. Noster.",
+         "vsrc": "printed",
+         "score": 0.2
         },
         {
          "id": "0094b0.51",
          "img": "0094",
          "d": "Qui es in calis.",
-         "n": "Qui es in calis."
+         "n": "Qui es in calis.",
+         "vsrc": "printed",
+         "score": 0.75
         },
         {
          "id": "0095a0.10",
          "img": "0095",
          "d": "Sanctificetur nomen tuu.",
-         "n": "Sanctificetur nomen tuu."
+         "n": "Sanctificetur nomen tuu.",
+         "vsrc": "printed",
+         "score": 0.67
         }
-       ]
+       ],
+       "vulgate": "Sic ergo vos orabitis : Pater noster, qui es in cælis, sanctificetur nomen tuum."
       },
       {
        "v": 10,
@@ -2834,21 +3530,28 @@
          "id": "0095a0.42",
          "img": "0095",
          "d": "Adueniat regnum tuum",
-         "n": "Adueniat regnum tuum"
+         "n": "Adueniat regnum tuum",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0095b0.23",
          "img": "0095",
          "d": "Fiat voluntas tua.",
-         "n": "Fiat voluntas tua."
+         "n": "Fiat voluntas tua.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0095b0.55",
          "img": "0095",
          "d": "Sicut in calo.",
-         "n": "Sicut in calo."
+         "n": "Sicut in calo.",
+         "vsrc": "printed",
+         "score": 0.67
         }
-       ]
+       ],
+       "vulgate": "Adveniat regnum tuum ; fiat voluntas tua, sicut in cælo et in terra."
       },
       {
        "v": 11,
@@ -2857,21 +3560,28 @@
          "id": "0095b0.61",
          "img": "0095",
          "d": "Panem noftrum quotidianum.",
-         "n": "Panem nostrum quotidianum."
+         "n": "Panem nostrum quotidianum.",
+         "vsrc": "printed",
+         "score": 0.67
         },
         {
          "id": "0096b0.5",
          "img": "0096",
          "d": "Noftrum.",
-         "n": "Nostrum."
+         "n": "Nostrum.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0096b0.36",
          "img": "0096",
          "d": "Quotidianum.",
-         "n": "Quotidianum."
+         "n": "Quotidianum.",
+         "vsrc": "printed",
+         "score": 0.0
         }
-       ]
+       ],
+       "vulgate": "Panem nostrum supersubstantialem da nobis hodie,"
       },
       {
        "v": 12,
@@ -2880,15 +3590,20 @@
          "id": "0097a0.28",
          "img": "0097",
          "d": "Et dimitte nobis debita noftra.",
-         "n": "Et dimitte nobis debita nostra."
+         "n": "Et dimitte nobis debita nostra.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0097a0.51",
          "img": "0097",
          "d": "Sicut nos dimittimus debitoribus noftris.",
-         "n": "Sicut nos dimittimus debitoribus nostris."
+         "n": "Sicut nos dimittimus debitoribus nostris.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "et dimitte nobis debita nostra, sicut et nos dimittimus debitoribus nostris."
       },
       {
        "v": 13,
@@ -2897,15 +3612,20 @@
          "id": "0098a0.35",
          "img": "0098",
          "d": "Et ne nos inducas in tentationem.",
-         "n": "Et ne nos inducas in tentationem."
+         "n": "Et ne nos inducas in tentationem.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0098b0.52",
          "img": "0098",
          "d": "Quia tuum eft regnum",
-         "n": "Quia tuum est regnum"
+         "n": "Quia tuum est regnum",
+         "vsrc": "printed",
+         "score": 0.5
         }
-       ]
+       ],
+       "vulgate": "Et ne nos inducas in tentationem, sed libera nos a malo. Amen."
       },
       {
        "v": 14,
@@ -2914,9 +3634,12 @@
          "id": "0099a0.22",
          "img": "0099",
          "d": "15. Sienim dimiferitis hominibus.",
-         "n": "15. Sienim dimiseritis hominibus."
+         "n": "15. Sienim dimiseritis hominibus.",
+         "vsrc": "printed",
+         "score": 0.67
         }
-       ]
+       ],
+       "vulgate": "Si enim dimiseritis hominibus peccata eorum : dimittet et vobis Pater vester cælestis delicta vestra."
       },
       {
        "v": 16,
@@ -2925,33 +3648,44 @@
          "id": "0099a0.45",
          "img": "0099",
          "d": "Sicut hypocrita.",
-         "n": "Sicut hypocrita."
+         "n": "Sicut hypocrita.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0099a0.47",
          "img": "0099",
          "d": "Trifles.",
-         "n": "Trifles."
+         "n": "Trifles.",
+         "vsrc": "printed",
+         "score": 0.0
         },
         {
          "id": "0099a0.50",
          "img": "0099",
          "d": "Exterminant.",
-         "n": "Exterminant."
+         "n": "Exterminant.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0099a0.63",
          "img": "0099",
          "d": "Mercedem fuam.",
-         "n": "Mercedem fuam."
+         "n": "Mercedem fuam.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0099a0.64",
          "img": "0099",
          "d": "Tu autem.",
-         "n": "Tu autem."
+         "n": "Tu autem.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Cum autem jejunatis, nolite fieri sicut hypocritæ, tristes. Exterminant enim facies suas, ut appareant hominibus jejunantes. Amen dico vobis, quia receperunt mercedem suam."
       },
       {
        "v": 19,
@@ -2960,9 +3694,12 @@
          "id": "0099b0.18",
          "img": "0099",
          "d": "Nolite thefauriare.",
-         "n": "Nolite thefauriare."
+         "n": "Nolite thefauriare.",
+         "vsrc": "printed",
+         "score": 0.5
         }
-       ]
+       ],
+       "vulgate": "Nolite thesaurizare vobis thesauros in terra : ubi ærugo, et tinea demolitur : et ubi fures effodiunt, et furantur."
       },
       {
        "v": 21,
@@ -2971,9 +3708,12 @@
          "id": "0099b0.42",
          "img": "0099",
          "d": "Thefaurus tuus.",
-         "n": "Thesaurus tuus."
+         "n": "Thesaurus tuus.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Ubi enim est thesaurus tuus, ibi est et cor tuum."
       },
       {
        "v": 22,
@@ -2982,27 +3722,36 @@
          "id": "0099b0.50",
          "img": "0099",
          "d": "Lucerna corporis tui.",
-         "n": "Lucerna corporis tui."
+         "n": "Lucerna corporis tui.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0100a0.1",
          "img": "0100",
          "d": "Si ergo.",
-         "n": "Si ergo."
+         "n": "Si ergo.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0100a0.4",
          "img": "0100",
          "d": "Oculus tuus fuerit fimplex.",
-         "n": "Oculus tuus fuerit simplex."
+         "n": "Oculus tuus fuerit simplex.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0100a0.6",
          "img": "0100",
          "d": "Totum corpus tuum lucidum erit.",
-         "n": "Totum corpus tuum lucidum erit."
+         "n": "Totum corpus tuum lucidum erit.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Lucerna corporis tui est oculus tuus. Si oculus tuus fuerit simplex, totum corpus tuum lucidum erit."
       },
       {
        "v": 23,
@@ -3011,21 +3760,28 @@
          "id": "0100a0.12",
          "img": "0100",
          "d": "Si autem oculus tuus fuerit nequam.",
-         "n": "Si autem oculus tuus fuerit nequam."
+         "n": "Si autem oculus tuus fuerit nequam.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0100a0.16",
          "img": "0100",
          "d": "Lumen, quod in te eft, tenebre funt.",
-         "n": "Lumen, quod in te est, tenebre sunt."
+         "n": "Lumen, quod in te est, tenebre sunt.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0100a0.23",
          "img": "0100",
          "d": "Ipfa tenebra quanta erunt?",
-         "n": "Ipsa tenebra quanta erunt?"
+         "n": "Ipsa tenebra quanta erunt?",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Si autem oculus tuus fuerit nequam, totum corpus tuum tenebrosum erit. Si ergo lumen, quod in te est, tenebræ sunt : ipsæ tenebræ quantæ erunt ?"
       },
       {
        "v": 24,
@@ -3034,39 +3790,58 @@
          "id": "0100a0.26",
          "img": "0100",
          "d": "Non poteftis duobus dominis feruire.",
-         "n": "Non potestis duobus dominis seruire."
+         "n": "Non potestis duobus dominis seruire.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0100a0.65",
          "img": "0100",
          "d": "Aut enim vnum odio habebit.",
-         "n": "Aut enim vnum odio habebit."
+         "n": "Aut enim vnum odio habebit.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0100b0.25",
          "img": "0100",
          "d": "Non poteftis Deo feruire mamona.",
-         "n": "Non potestis Deo seruire mamona."
+         "n": "Non potestis Deo seruire mamona.",
+         "vsrc": "printed",
+         "score": 0.8
         },
         {
          "id": "0100b0.31",
          "img": "0100",
          "d": "Anima veftra.",
-         "n": "Anima vestra."
-        },
+         "n": "Anima vestra.",
+         "vsrc": "printed",
+         "score": 1.0
+        }
+       ],
+       "vulgate": "Nemo potest duobus dominis servire : aut enim unum odio habebit, et alterum diliget : aut unum sustinebit, et alterum contemnet. Non potestis Deo servire et mammonæ."
+      },
+      {
+       "v": 25,
+       "lemmas": [
         {
          "id": "0100b0.38",
          "img": "0100",
          "d": "Neque corpori veftro.",
-         "n": "Neque corpori vestro."
+         "n": "Neque corpori vestro.",
+         "vsrc": "vulgate",
+         "score": 1.0
         },
         {
          "id": "0100b0.50",
          "img": "0100",
          "d": "Nonne anima plus eft, quam efca?",
-         "n": "Nonne anima plus est, quam esca?"
+         "n": "Nonne anima plus est, quam esca?",
+         "vsrc": "vulgate",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Ideo dico vobis, ne solliciti sitis animæ vestræ quid manducetis, neque corpori vestro quid induamini. Nonne anima plus est quam esca, et corpus plus quam vestimentum ?"
       },
       {
        "v": 26,
@@ -3075,21 +3850,28 @@
          "id": "0101a0.4",
          "img": "0101",
          "d": "Refpicite volatilia.",
-         "n": "Respicite volatilia."
+         "n": "Respicite volatilia.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0101a0.34",
          "img": "0101",
          "d": "Etpater vefter celestis pafcit illa.",
-         "n": "Etpater vester celestis pascit illa."
+         "n": "Etpater vester celestis pascit illa.",
+         "vsrc": "printed",
+         "score": 0.6
         },
         {
          "id": "0101a0.49",
          "img": "0101",
          "d": "Nonne vos magis pluris eftis illis?",
-         "n": "Nonne vos magis pluris estis illis?"
+         "n": "Nonne vos magis pluris estis illis?",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Respicite volatilia cæli, quoniam non serunt, neque metunt, neque congregant in horrea : et Pater vester cælestis pascit illa. Nonne vos magis pluris estis illis ?"
       },
       {
        "v": 27,
@@ -3098,15 +3880,20 @@
          "id": "0101a0.54",
          "img": "0101",
          "d": "Quis autem veftrum cogitans",
-         "n": "Quis autem vestrum cogitans"
+         "n": "Quis autem vestrum cogitans",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0101a0.57",
          "img": "0101",
          "d": "Cubitum vnum",
-         "n": "Cubitum vnum"
+         "n": "Cubitum vnum",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Quis autem vestrum cogitans potest adjicere ad staturam suam cubitum unum ?"
       },
       {
        "v": 28,
@@ -3115,9 +3902,12 @@
          "id": "0101b0.60",
          "img": "0101",
          "d": "Lilia agri",
-         "n": "Lilia agri"
+         "n": "Lilia agri",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Et de vestimento quid solliciti estis ? Considerate lilia agri quomodo crescunt : non laborant, neque nent."
       },
       {
        "v": 29,
@@ -3126,15 +3916,20 @@
          "id": "0102a1.7",
          "img": "0102",
          "d": "Nec Salomon.",
-         "n": "Nec Salomon."
+         "n": "Nec Salomon.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0102a1.13",
          "img": "0102",
          "d": "In omni gloria fua.",
-         "n": "In omni gloria sua."
+         "n": "In omni gloria sua.",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Dico autem vobis, quoniam nec Salomon in omni gloria sua coopertus est sicut unum ex istis."
       },
       {
        "v": 30,
@@ -3143,9 +3938,12 @@
          "id": "0102a1.27",
          "img": "0102",
          "d": "Si autem fænum",
-         "n": "Si autem fænum"
+         "n": "Si autem fænum",
+         "vsrc": "printed",
+         "score": 1.0
         }
-       ]
+       ],
+       "vulgate": "Si autem fœnum agri, quod hodie est, et cras in clibanum mittitur, Deus sic vestit, quanto magis vos modicæ fidei ?"
       },
       {
        "v": 33,
@@ -3154,33 +3952,44 @@
          "id": "0102a1.38",
          "img": "0102",
          "d": "Querite.",
-         "n": "Querite."
+         "n": "Querite.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0102a1.45",
          "img": "0102",
          "d": "Primùm.",
-         "n": "Primùm."
+         "n": "Primùm.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0102b1.3",
          "img": "0102",
          "d": "Regnum Dei.",
-         "n": "Regnum Dei."
+         "n": "Regnum Dei.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0102b1.16",
          "img": "0102",
          "d": "Et iustitiam eius.",
-         "n": "Et iustitiam eius."
+         "n": "Et iustitiam eius.",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0102b1.32",
          "img": "0102",
          "d": "Hac omnia adycientur vobis.",
-         "n": "Hac omnia adycientur vobis."
+         "n": "Hac omnia adycientur vobis.",
+         "vsrc": "printed",
+         "score": 0.5
         }
-       ]
+       ],
+       "vulgate": "Quærite ergo primum regnum Dei, et justitiam ejus : et hæc omnia adjicientur vobis."
       },
       {
        "v": 34,
@@ -3189,23 +3998,31 @@
          "id": "0102b1.42",
          "img": "0102",
          "d": "Nolite ergo",
-         "n": "Nolite ergo"
+         "n": "Nolite ergo",
+         "vsrc": "printed",
+         "score": 1.0
         },
         {
          "id": "0102b1.51",
          "img": "0102",
          "d": "Fn craftinum.",
-         "n": "Fn crastinum."
+         "n": "Fn crastinum.",
+         "vsrc": "printed",
+         "score": 0.5
         },
         {
          "id": "0103a0.5",
          "img": "0103",
          "d": "Craftinus enim dies folicitus erit fibi ipfi.",
-         "n": "Crastinus enim dies solicitus erit sibi ipsi."
+         "n": "Crastinus enim dies solicitus erit sibi ipsi.",
+         "vsrc": "printed",
+         "score": 0.86
         }
-       ]
+       ],
+       "vulgate": "Nolite ergo solliciti esse in crastinum. Crastinus enim dies sollicitus erit sibi ipsi : sufficit diei malitia sua."
       }
      ],
+     "text_first": "0089f2.0",
      "comm": "0090h1.0",
      "commImg": "0090"
     },
@@ -3214,7 +4031,8 @@
      "start": "0103h1.0",
      "img": "0103",
      "text": "0103h1.0",
-     "verses": []
+     "verses": [],
+     "text_first": "0103f2.0"
     }
    ]
   }

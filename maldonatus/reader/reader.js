@@ -26,6 +26,17 @@
   function lineHTML(L) {
     var t = mode === "norm" ? (L.n != null ? L.n : L.d) : L.d;
     var h = esc(t);
+    if (mode === "norm" && L.c) {
+      var done = {};
+      L.c.forEach(function (c) {
+        var nw = esc(c[1]);
+        if (done[nw] || c[0] === c[1]) return;
+        done[nw] = 1;
+        var t = "printed " + c[0] + " · " + ({ longs: "long s", nasal: "abbreviation", ocr: "OCR fix", split: "word split", sigla: "sign", dropcap: "drop cap (Vulgate)", ai: "AI choice" }[c[2]] || c[2]);
+        h = h.replace(new RegExp("(^|[^A-Za-zÀ-ÿĀ-žęæœ])(" + nw.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")(?=$|[^A-Za-zÀ-ÿĀ-žęæœ])"),
+          '$1<span class="chg r-' + c[2] + '" title="' + esc(t) + '">$2</span>');
+      });
+    }
     if (mode === "norm" && L.a) {
       L.a.forEach(function (w) {
         h = h.replace(new RegExp("(^|[^A-Za-zÀ-ÿĀ-žęæœ])(" + w + ")(?=$|[^A-Za-zÀ-ÿĀ-žęæœ])", "g"),
@@ -84,7 +95,7 @@
     box.appendChild(text);
 
     // marginal notes: place beside the anchor line, push down to avoid overlap
-    var notes = pg.notes.slice().filter(function (n) { return n.anchor; });
+    var notes = pg.notes.slice().filter(function (n) { return n.anchor && !(n.junk && mode === "norm"); });
     var placed = [];
     notes.forEach(function (n) {
       var a = document.getElementById("L" + pg.vol + "-" + n.anchor);
@@ -206,7 +217,7 @@
               return treeItem(esc(t.length > 46 ? t.slice(0, 44) + "…" : t), { go: [V, l.img, l.id], title: t });
             });
             var lab = v.v ? '<span class="vn">' + v.v + "</span>" + (v.lemmas[0] ? esc(firstWords(mode === "norm" ? v.lemmas[0].n : v.lemmas[0].d)) : "")
-                          : '<span class="vn">–</span>ante v. 1';
+                          : '<span class="vn">–</span>Titulus';
             return treeItem(lab, { go: v.lemmas[0] ? [V, v.lemmas[0].img, v.lemmas[0].id] : null }, lems);
           });
           kids.push(treeItem("Commentarius", { go: [V, ch.commImg, ch.comm] }, vs));

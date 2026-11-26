@@ -36,13 +36,31 @@ Each MDZ image is a single printed page. The book numbers **columns**, two per p
    - The section letters A–H in the gutter become anchored marks.
    - Notes in the outer strips are grouped and anchored to the nearest body line on their side.
    - The signature or catchword row at the foot becomes `foot`.
-3. **Long s** (`longs.py`). Every lowercase, non-final `f` is tried as `s` against the Hunspell Latin dictionary (npm `dictionary-la`, GPL-2, fetched, not vendored):
-   - The word is swapped when the f-form is not Latin and exactly one s-reading is.
-   - It is left as printed and logged when both forms are Latin (`fit/sit`, `fi/si`, `fuit/suit`) or when several s-readings are.
-   - The lookup expands the abbreviation marks Vision reads as acute accents (`Euágelium` = Euangelium) but leaves the printed form in the text.
+3. **Normalization** (`normalize.py`, `longs.py`, `align.py`). The normalized view is built from the diplomatic text in steps, each logged by rule (see the Log page):
+   - **Long s:** every lowercase, non-final `f` is tried as `s` against the Hunspell Latin dictionary (npm `dictionary-la`, GPL-2, fetched, not vendored).
+   - **Abbreviations:** Vision reads the printer's nasal tilde as an acute accent (or ä/ö/ü). These expand to whichever of +n / +m gives a Latin word: `nó` → non, `tépus` → tempus, `Euágelifta` → Euangelista. Where both are Latin, it's m before p/b/m and at the end of a word, n elsewhere. Grave accents (`quòd`, `à`) are real and stay.
+   - **Signs:** `ę` → æ, `q;` → que, `b'` → bus.
+   - **OCR fixes:** a non-word becomes a word through one typical Vision confusion (n/u, c/e, rn/m, ff read as fl, a lost tilde, a doubled syllable), but only if the result occurs at least twice elsewhere in the book's 2.3 million words. Words the book itself uses four or more times are never "corrected" (names the dictionary lacks, such as Gregorius and Galilea), and neither are abbreviated names or roman numerals.
+   - **Word splits:** run-together pairs are split (`quodpepererit` → quod pepererit) when both halves are common in the book.
+   - **Vulgate:** lemmas are matched against the Clementine Vulgate (`pipeline/vulgate_gospels.json`, the Gospels from npm `@bible-api/bible-api-version-vulgate`, MIT-0). This confirms or supplies verse numbers and restores lost or misread drop caps (`VM ergo` → CVM ergo, `TTENDITE` → ATTENDITE, `RIDENS` → VIDENS).
+   - **AI pass:** words the rules cannot settle (`fit`/`sit`, `fi`/`si`, `folum`/`solum`, `Fn`/`In`…) are written to `pipeline/ai-queue.json` with their allowed readings, and stay as printed until `ai_pass.py` has run (see below).
 4. **Column numbers** (`build.py`). Head numbers are accepted when they continue the sequence, or when the next page confirms a jump; otherwise they are inferred. A page that is mostly full-width text carries a single column number. MDZ's labels give page numbers that do not match: image 0021 is labeled "11" but holds columns 12–13.
 
 Structure: `CAPVT n` starts the chapter text and `IN CAPVT …` starts the commentary. Lemmas are paragraph-initial phrases closed by `)`, with an optional verse number (`2. Qui natus eft)`). Verse numbers are only accepted if they increase within the chapter and stay within its length.
+
+### AI pass (needs a Claude API key)
+
+`pipeline/ai_pass.py` sends each page's doubtful words to Claude Haiku 5.5. For each word the model must answer with one of the listed readings or "unsure", which is enforced with structured output; "unsure" leaves the printed form. For Matthew 1–6 that's 84 requests for 2,029 words, about 4 cents.
+
+```bash
+pip install anthropic
+export ANTHROPIC_API_KEY=...
+python3 maldonatus/pipeline/ai_pass.py --dry-run                          # counts and a sample request
+python3 maldonatus/pipeline/ai_pass.py --compare claude-opus-5-5 --sample 12   # agreement check first
+python3 maldonatus/pipeline/ai_pass.py                                    # writes pipeline/ai-decisions.json
+```
+
+Then rebuild (below): `build.py` applies `ai-decisions.json` when it exists. In a cloud session, the key goes in the environment's settings as the `ANTHROPIC_API_KEY` environment variable, and a new session picks it up.
 
 ### Rebuild
 
@@ -59,4 +77,5 @@ python3 maldonatus/pipeline/build.py --data PATH/TO/OCR-PACK --dict package/inde
 - **Missing characters:** Vision dropped a few line-initial letters in column b on some pages (`ertit` for Vertit), and letters under drop caps. They are missing from the OCR itself and can't be recovered from the boxes.
 - **Truncated notes:** marginal notes are only as complete as the OCR. Several are cut off where they meet the text block.
 - **Missing verse numbers:** some lemmas lose their verse number to OCR errors, so they are listed under the previous verse.
-- **Unswapped long s:** the dictionary accepts some rare or archaic f-forms (`fuam`, `fatis`, `fiue`, `folum`), so those stay ambiguous and unswapped. They are listed in the log.
+- **Unsettled words:** until the AI pass runs, the ambiguous long-s words (`fit`, `fi`, `folum`, `fine`, `fuam`…) stay as printed, dotted-underlined.
+- **Systematic OCR errors:** errors that recur across the book (`Deide`, `cu`, `Romanoru`) look like real words to the corpus guard, so they aren't fixed.

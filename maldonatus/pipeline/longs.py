@@ -42,8 +42,17 @@ def lookup_keys(word):
             slots.append([unicodedata.normalize("NFC", ch)])
     n = sum(len(s) > 1 for s in slots)
     if n > 3:  # too many marks: plain form only
-        return ["".join(s[0] for s in slots)]
-    return ["".join(p) for p in itertools.product(*slots)]
+        keys = ["".join(s[0] for s in slots)]
+    else:
+        keys = ["".join(p) for p in itertools.product(*slots)]
+    # printed u/v, i/j: initial v before a consonant is the vowel (vnum = unum)
+    extra = []
+    for k in keys:
+        if len(k) > 1 and k[0] in "vV" and k[1].lower() not in "aeiouy":
+            extra.append(("u" if k[0] == "v" else "U") + k[1:])
+        if "j" in k:
+            extra.append(k.replace("j", "i"))
+    return keys + extra
 
 
 def f_positions(word):

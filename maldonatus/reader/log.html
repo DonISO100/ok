@@ -27,19 +27,25 @@
 <body>
   <header id="bar">
     <a href="index.html" style="color:#ddd;text-decoration:none;font-size:20px;padding:0 6px">←</a>
-    <div id="title"><span class="t1">BUILD LOG</span><span class="t2">long s · ambiguous pairs · column map</span></div>
+    <div id="title"><span class="t1">BUILD LOG</span><span class="t2">normalization · AI queue · column map</span></div>
   </header>
   <main>
     <section>
-      <h2>Ambiguous long-s pairs</h2>
-      <p class="d">Words where the printed f could be a long s and both readings (or several s-readings) are Latin according to the
-        Hunspell Latin dictionary. They are left as printed in the normalized text and dotted-underlined there.</p>
-      <div class="scroll"><table id="amb"><thead><tr><th>printed</th><th>possible s-readings</th><th>f-form Latin?</th><th>count</th><th>first places</th></tr></thead><tbody></tbody></table></div>
+      <h2>Normalization</h2>
+      <p class="d">What the normalized view changes, by rule. The diplomatic view is untouched. In the normalized view, changed words
+        are underlined faintly (red for OCR fixes, word splits, drop caps and AI choices); hover a word to see the printed form.</p>
+      <div id="sum" class="d"></div>
     </section>
     <section>
-      <h2>Long s restored</h2>
-      <p class="d">Words swapped f → s because the printed form is not Latin and exactly one s-reading is.</p>
-      <div class="scroll"><table id="sw"><thead><tr><th>printed</th><th>normalized</th><th>count</th></tr></thead><tbody></tbody></table></div>
+      <h2>Left for the AI pass</h2>
+      <p class="d">Words the rules could not settle, each with the readings it may take. They stay as printed (dotted underline)
+        until <code>pipeline/ai_pass.py</code> has chosen; a choice outside the list, or "unsure", leaves the printed form.</p>
+      <div class="scroll"><table id="q"><thead><tr><th>printed</th><th>rule</th><th>options</th><th>count</th><th>first places</th></tr></thead><tbody></tbody></table></div>
+    </section>
+    <section>
+      <h2>Changes</h2>
+      <div class="tabs" id="rtabs"></div>
+      <div class="scroll"><table id="ch"><thead><tr><th>printed</th><th>normalized</th><th>count</th></tr></thead><tbody></tbody></table></div>
     </section>
     <section>
       <h2>Column map</h2>
@@ -52,23 +58,38 @@
   </main>
   <script>
     function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
-    fetch("data/longs-log.json").then(function(r){return r.json();}).then(function(d){
-      document.querySelector("#amb tbody").innerHTML = d.ambiguous.map(function(a){
-        return "<tr><td class=w>"+esc(a[0])+"</td><td class=w>"+esc(a[1].join(", "))+"</td><td>"+(a[2]?"yes":"no")+"</td><td class=n>"+a[3]+"</td><td>"+
-          a[4].slice(0,4).map(function(w){var p=w.split(":");return '<a href="index.html#1-'+(p[1].match(/^\d{4}/)?p[1]:p[0])+'">'+esc(p[1])+"</a>";}).join(" ")+"</td></tr>";}).join("");
-      document.querySelector("#sw tbody").innerHTML = d.swaps.map(function(s){
-        return "<tr><td class=w>"+esc(s[0])+"</td><td class=w>"+esc(s[1])+"</td><td class=n>"+s[2]+"</td></tr>";}).join("");
+    var RULE = {longs:"long s", nasal:"abbreviations", ocr:"OCR fixes", split:"word splits", sigla:"signs (ę, q;, b')", dropcap:"drop caps", ai:"AI choices"};
+    var LOG;
+    function showRule(r){
+      document.querySelectorAll("#rtabs button").forEach(function(b){b.classList.toggle("on",b.dataset.r===r);});
+      var rows = r==="dropcap" ? LOG.dropcaps.map(function(x){return [x[0],x[1],x[2],1,x[3]];}) : LOG.changes.filter(function(c){return c[0]===r;});
+      document.querySelector("#ch tbody").innerHTML = rows.slice(0,3000).map(function(c){
+        return "<tr><td class=w>"+esc(c[1])+"</td><td class=w>"+esc(c[2])+"</td><td class=n>"+c[3]+"</td></tr>";}).join("");
+    }
+    fetch("data/norm-log.json").then(function(r){return r.json();}).then(function(d){
+      LOG=d;
+      var br=d.by_rule; br.dropcap=d.dropcaps.length;
+      document.getElementById("sum").innerHTML = Object.keys(RULE).filter(function(k){return br[k];}).map(function(k){
+        return "<b>"+br[k].toLocaleString()+"</b> "+RULE[k];}).join(" · ") +
+        " · <b>"+d.queue.reduce(function(a,q){return a+q[3];},0).toLocaleString()+"</b> left for the AI pass · <b>"+d.decided+"</b> AI decisions applied";
+      document.querySelector("#q tbody").innerHTML = d.queue.map(function(q){
+        return "<tr><td class=w>"+esc(q[0])+"</td><td>"+esc(RULE[q[1]]||q[1])+"</td><td class=w>"+esc(q[2].join(" | "))+"</td><td class=n>"+q[3]+"</td><td>"+
+          q[4].slice(0,4).map(function(l){return '<a href="index.html#1-'+l+'">'+esc(l)+"</a>";}).join(" ")+"</td></tr>";}).join("");
+      var tabs=document.getElementById("rtabs");
+      Object.keys(RULE).filter(function(k){return br[k];}).forEach(function(k,i){
+        var b=document.createElement("button"); b.dataset.r=k; b.textContent=RULE[k]; b.onclick=function(){showRule(k);}; tabs.appendChild(b);});
+      showRule("ocr");
     });
     var CM;
     function showCM(v){
-      document.querySelectorAll(".tabs button").forEach(function(b){b.classList.toggle("on",b.dataset.v===v);});
+      document.querySelectorAll(".tabs button[data-v]").forEach(function(b){b.classList.toggle("on",b.dataset.v===v);});
       document.querySelector("#cm tbody").innerHTML = CM[v].map(function(r){
         var src = r.src.map(function(s){return '<span class="'+(s==="printed"?"":s.indexOf("conflict")>=0?"bad":"inf")+'">'+s+"</span>";}).join(", ");
         return "<tr><td class=n>"+r.img+"</td><td>"+esc(r.mdz)+"</td><td class=n>"+(r.cols.join("–")||"—")+"</td><td>"+src+"</td><td class=n>"+
           (r.ocr||[]).map(function(x){return x==null?"·":x;}).join(" / ")+"</td><td>"+r.kind+"</td></tr>";}).join("");
     }
     fetch("data/colmap.json").then(function(r){return r.json();}).then(function(d){CM=d;showCM("tom1");});
-    document.querySelectorAll(".tabs button").forEach(function(b){b.addEventListener("click",function(){showCM(b.dataset.v);});});
+    document.querySelectorAll(".tabs button[data-v]").forEach(function(b){b.addEventListener("click",function(){showCM(b.dataset.v);});});
   </script>
 </body>
 </html>
