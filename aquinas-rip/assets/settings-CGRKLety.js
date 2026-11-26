@@ -1,0 +1,37 @@
+import{i as e,l as t,p as n}from"./i18n-fj3F4Jw9.js";/* empty css               */import{a as r,n as i,o as a}from"./admin-CoCrMR08.js";function o(e){let t={};for(let n of e){let e=n.current.trim();n.remove?t[n.name]=null:n.kind===`secret`?e!==``&&(t[n.name]=e):e!==n.original.trim()&&(t[n.name]=e===``?null:e)}return t}function s(e){return`$`+(Number.isFinite(e)?e:0).toFixed(2)}function c(e){return(e??``).replace(/&/g,`&amp;`).replace(/</g,`&lt;`).replace(/>/g,`&gt;`).replace(/"/g,`&quot;`).replace(/'/g,`&#39;`)}var l=null;function u(e){return{...e,groups:e.groups.filter(e=>a(e.scope))}}function d(){let e=i();return e===`general`?`<p class="st-intro">${c(t(`These settings apply to every author site. A site's own settings (its title and start page) are in that site's admin.`))}</p>`:e===`author`?`<p class="st-intro">${c(t(`These settings apply to this site only. The settings all sites share (the Claude chat and email) are in the`))}
+            <a href="${r(`settings`)}">${c(t(`Editio admin`))}</a>.</p>`:``}var f=null,p=new Set;function m(e){return`st-`+e.replace(/[^A-Za-z0-9]/g,`-`)}function h(e,t=`info`){let n=document.getElementById(`st-status`);n&&(n.textContent=e,n.className=`st-status st-status-${t}`)}async function g(){let e=await fetch(`${n}/api/admin/settings`,{credentials:`include`});if(!e.ok)throw Error(`HTTP ${e.status}`);return await e.json()}async function _(e){let t=await fetch(`${n}/api/admin/settings`,{method:`POST`,credentials:`include`,headers:{"Content-Type":`application/json`},body:JSON.stringify({values:e})}),r=await t.json().catch(()=>null);if(!t.ok||!r?.success)throw Error(r?.message||`HTTP ${t.status}`);return r}function v(e){if(e.saved){let n=e.updatedUtc?new Date(e.updatedUtc):null,r=n&&!isNaN(n.getTime())?n.toLocaleDateString():``;return e.updatedBy&&r?t(`Saved here by {0} on {1}.`,[e.updatedBy,r]):t(`Saved here.`)}return e.fileHasValue?t(`From the settings file.`):t(`Not set.`)}function y(e){let n=c(e.value??``),r=e.kind===`whole`||e.kind===`money`?` st-short`:``,i=`id="${m(e.name)}" data-name="${c(e.name)}" class="st-input${r}"`;switch(e.kind){case`choice`:{let t=e.choices??[];return`<select ${i}>${(e.value&&!t.includes(e.value)?[e.value,...t]:t).map(t=>`<option value="${c(t)}" ${t===e.value?`selected`:``}>${c(t)}</option>`).join(``)}</select>`}case`whole`:return`<input ${i} type="text" inputmode="numeric" value="${n}">`;case`money`:return`<input ${i} type="text" inputmode="decimal" value="${n}">`;case`secret`:return`<input ${i} type="password" autocomplete="new-password" value="" placeholder="${c(e.hasValue?t(`Enter a new value to replace it`):t(`Enter a value`))}">`;default:return`<input ${i} type="text" value="${n}">`}}function b(e){return e.unreadable?`<div class="st-secret-state st-problem">${c(t(`A value is saved, but this server cannot read it. Enter it again.`))}</div>`:`<div class="st-secret-state">${c(e.hasValue?e.ending?t(`Set. It ends in {0}.`,[e.ending]):t(`Set.`):t(`Not set.`))}</div>`}function x(e){let n=e.kind===`secret`,r=e.saved?`<button type="button" class="st-link st-reset" data-name="${c(e.name)}">${c(n?t(`Remove the saved value`):e.fileHasValue?t(`Use the settings file's value instead ({0})`,[e.fileValue??``]):t(`Remove the saved value`))}</button>`:``;return`
+        <div class="st-row" data-row="${c(e.name)}">
+            <label class="st-label" for="${m(e.name)}">${c(t(e.label))}</label>
+            <div class="st-field">
+                ${n?b(e):``}
+                ${y(e)}
+                <div class="st-help">${c(t(e.help))}</div>
+                <div class="st-source">${c(v(e))} ${r}</div>
+            </div>
+        </div>
+    `}function S(e){if(e.spendingError)return`<p class="st-banner">${c(t(e.spendingError))}</p>`;if(!e.spending)return``;let n=e.spending;return`<p class="st-spending">${c(t(`Spent this month on the organisation's key, all sites:`))} <strong>${s(n.thisMonthUsd)}</strong> ${c(t(`of {0}.`,[s(n.monthlyLimitUsd)]))} ${c(t(`Today: {0}.`,[s(n.todayUsd)]))}</p>`}function C(e,n){let r=e.scope===`all`?t(`All sites`):t(`This site only: {0}`,[n.siteTitle||n.site]);return`
+        <section class="st-card">
+            <div class="card-header">
+                <span class="card-title">${c(t(e.title))}</span>
+                <span class="st-scope">${c(r)}</span>
+            </div>
+            <div class="card-body">
+                <p class="st-note">${c(t(e.note))}</p>
+                ${e.id===`claude`?S(n):``}
+                ${e.settings.map(x).join(``)}
+            </div>
+        </section>
+    `}function w(n){if(!f)return;p.clear();let r=[];!n.available&&n.message&&r.push(n.message),n.sharedSignIn||r.push(t(`This server does not share its keys with other sites (appSettings:SharedKeyRing is not set). A key or password saved here works on this site only, and each site has its own sign-in.`)),f.innerHTML=`
+        <div class="st-page">
+            <p class="st-intro">${c(t(`What you save here takes effect at once on this site. Other sites follow within {0} seconds. A setting you have not saved here keeps the value from the server's settings file.`,[n.refreshSeconds]))}</p>
+            ${d()}
+            ${r.map(e=>`<p class="st-banner">${c(e)}</p>`).join(``)}
+            <form class="st-form" id="st-form" autocomplete="off">
+                ${n.groups.map(e=>C(e,n)).join(``)}
+                <div class="st-actions">
+                    <button type="submit" class="btn-primary" id="st-save" disabled>${c(t(`Save`))}</button>
+                    <span id="st-status" class="st-status st-status-info"></span>
+                </div>
+            </form>
+        </div>
+    `,e.translateIn(f),A()}function T(){return l?l.groups.flatMap(e=>e.settings):[]}function E(){return T().map(e=>{let t=document.getElementById(m(e.name));return{name:e.name,kind:e.kind,original:e.kind===`secret`?``:e.value??``,current:t?.value??``,remove:p.has(e.name)}})}function D(){let e=o(E());document.querySelectorAll(`.st-row`).forEach(t=>{t.classList.toggle(`st-changed`,(t.dataset.row??``)in e)});let t=document.getElementById(`st-save`);t&&(t.disabled=Object.keys(e).length===0)}function O(e){let n=T().find(t=>t.name===e),r=document.getElementById(m(e));n&&r&&(p.add(e),r.value=n.kind===`secret`?``:n.fileValue??``,D(),h(t(`Click Save to apply.`),`info`))}async function k(e){e.preventDefault();let n=o(E());if(Object.keys(n).length===0)return;let r=document.getElementById(`st-save`);r&&(r.disabled=!0),h(t(`Saving…`),`info`);try{l=u(await _(n)),w(l),h(t(`Saved. Other sites follow within {0} seconds.`,[l.refreshSeconds]),`success`)}catch(e){h(e instanceof Error?e.message:String(e),`error`),r&&(r.disabled=!1)}}function A(){document.getElementById(`st-form`)?.addEventListener(`submit`,e=>void k(e)),document.querySelectorAll(`.st-input`).forEach(e=>{let t=()=>{p.delete(e.dataset.name??``),D()};e.addEventListener(`input`,t),e.addEventListener(`change`,t)}),document.querySelectorAll(`.st-reset`).forEach(e=>{e.addEventListener(`click`,()=>O(e.dataset.name??``))})}async function j(e){f=e,e.innerHTML=`<div class="st-page"><p class="st-intro">${c(t(`Loading…`))}</p></div>`;try{l=u(await g()),w(l)}catch(n){console.error(`Failed to load settings:`,n),e.innerHTML=`<div class="st-page"><p class="st-banner">${c(t(`The settings could not be loaded. Reload the page to try again.`))}</p></div>`}}function M(){l=null,f=null,p.clear()}export{M as cleanup,j as render};

@@ -1,0 +1,1 @@
+import{p as e}from"./i18n-fj3F4Jw9.js";function t(t){let n=(e,n,r)=>`<a href="${n}" class="${t===e?`active`:``}" data-i18n="${r}">${r}</a>`;return`<div class="activity-tabs">${n(`live`,`${e}/admin/activity`,`Live`)}${n(`visitors`,`${e}/admin/activity/visitors`,`Visitors`)}${n(`works`,`${e}/admin/activity/works`,`Works`)}</div>`}export{t};
