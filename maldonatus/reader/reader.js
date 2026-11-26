@@ -23,8 +23,8 @@
   function mdzJpg(bsb, img) { return "https://api.digitale-sammlungen.de/iiif/image/v2/" + bsb + "_" + ("0000" + img).slice(-5) + "/full/full/0/default.jpg"; }
 
   // ---------------------------------------------------------------- text
-  var FLAGCLS = { unsure: "flag-unsure", ocr_copy: "flag-ocr", greek: "flag-script", hebrew: "flag-script", other_script: "flag-script", unreadable_note: "flag-unsure" };
-  var FLAGLBL = { unsure: "unsure reading", ocr_copy: "may be an OCR error", greek: "Greek: awaiting review", hebrew: "Hebrew: awaiting review", other_script: "non-Latin script: awaiting review", unreadable_note: "partly unreadable" };
+  var FLAGCLS = { unsure: "flag-unsure", ocr_copy: "flag-ocr", greek: "flag-script", hebrew: "flag-script", other_script: "flag-script", unreadable_note: "flag-unsure", vulgate_diff: "flag-ocr", line_unsure: "flag-unsure" };
+  var FLAGLBL = { unsure: "unsure reading", ocr_copy: "may be an OCR error", greek: "Greek: awaiting review", hebrew: "Hebrew: awaiting review", other_script: "non-Latin script: awaiting review", unreadable_note: "partly unreadable", vulgate_diff: "differs from the Vulgate", line_unsure: "whole line uncertain" };
   // plain text + flags [{w,t,r}] -> html with each flagged word marked (first free occurrence each)
   function flagHTML(t, flags) {
     var hits = [];

@@ -1,0 +1,792 @@
+{
+ "summary": {
+  "pages_with_text": 11,
+  "words": 2994,
+  "errors": 12,
+  "split": 2,
+  "error_rate": 0.004,
+  "errors_flagged": 2
+ },
+ "pages": {
+  "0020": {
+   "words": 375,
+   "matched": 373,
+   "split": 0,
+   "errors": [
+    {
+     "kind": "variant",
+     "got": "Iosaphat",
+     "expected": "Josophat",
+     "ref": [
+      1,
+      4
+     ],
+     "chapter": 1,
+     "verse": 8
+    },
+    {
+     "kind": "variant",
+     "got": "Iosaphat",
+     "expected": "Josophat",
+     "ref": [
+      1,
+      4
+     ],
+     "chapter": 1,
+     "verse": 8
+    }
+   ]
+  },
+  "0021": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0022": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0023": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0024": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0025": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0026": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0027": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0028": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0029": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0030": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0031": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0032": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0033": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0034": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0035": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0036": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0037": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0038": {
+   "words": 422,
+   "matched": 414,
+   "split": 1,
+   "errors": [
+    {
+     "kind": "error",
+     "got": "ei",
+     "expected": "",
+     "ref": [
+      1,
+      1
+     ],
+     "chapter": null,
+     "verse": null,
+     "flagged": false
+    },
+    {
+     "kind": "variant",
+     "got": "Israel",
+     "expected": "Israël",
+     "ref": [
+      1,
+      1
+     ],
+     "chapter": 2,
+     "verse": 6
+    },
+    {
+     "kind": "error",
+     "got": "dicit",
+     "expected": "didicit",
+     "ref": [
+      1,
+      1
+     ],
+     "chapter": 2,
+     "verse": 7,
+     "flagged": false
+    },
+    {
+     "kind": "split",
+     "got": "vsquedum",
+     "expected": "usque dum",
+     "ref": [
+      1,
+      1
+     ],
+     "chapter": 2,
+     "verse": 9
+    },
+    {
+     "kind": "error",
+     "got": "rediret",
+     "expected": "redirent",
+     "ref": [
+      1,
+      1
+     ],
+     "chapter": 2,
+     "verse": 12,
+     "flagged": false
+    },
+    {
+     "kind": "error",
+     "got": "auditaest",
+     "expected": "audita",
+     "ref": [
+      1,
+      1
+     ],
+     "chapter": 2,
+     "verse": 18,
+     "flagged": false
+    },
+    {
+     "kind": "missing",
+     "got": "",
+     "expected": "est",
+     "ref": null,
+     "chapter": 2,
+     "verse": 18
+    },
+    {
+     "kind": "variant",
+     "got": "Israel",
+     "expected": "Israël",
+     "ref": [
+      1,
+      1
+     ],
+     "chapter": 2,
+     "verse": 20
+    },
+    {
+     "kind": "variant",
+     "got": "Israel",
+     "expected": "Israël",
+     "ref": [
+      1,
+      1
+     ],
+     "chapter": 2,
+     "verse": 21
+    }
+   ]
+  },
+  "0039": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0040": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0041": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0042": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0043": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0044": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0045": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0046": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0047": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0048": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0049": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0050": {
+   "words": 288,
+   "matched": 286,
+   "split": 0,
+   "errors": [
+    {
+     "kind": "error",
+     "got": "Vides",
+     "expected": "Videns",
+     "ref": [
+      1,
+      1
+     ],
+     "chapter": 3,
+     "verse": 7,
+     "flagged": true
+    },
+    {
+     "kind": "error",
+     "got": "Piogenies",
+     "expected": "Progenies",
+     "ref": [
+      1,
+      1
+     ],
+     "chapter": 3,
+     "verse": 7,
+     "flagged": false
+    }
+   ]
+  },
+  "0051": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0052": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0053": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0054": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0055": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0056": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0057": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0058": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0059": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0060": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0061": {
+   "words": 159,
+   "matched": 158,
+   "split": 0,
+   "errors": [
+    {
+     "kind": "edge",
+     "got": "re-",
+     "expected": "reliquit",
+     "ref": [
+      5,
+      5
+     ],
+     "chapter": 4,
+     "verse": 11
+    }
+   ]
+  },
+  "0062": {
+   "words": 235,
+   "matched": 231,
+   "split": 0,
+   "errors": [
+    {
+     "kind": "edge",
+     "got": "liquit",
+     "expected": "Tunc",
+     "ref": [
+      1,
+      0
+     ],
+     "chapter": 3,
+     "verse": 15
+    },
+    {
+     "kind": "error",
+     "got": "secesslit",
+     "expected": "secessit",
+     "ref": [
+      1,
+      0
+     ],
+     "chapter": 4,
+     "verse": 12,
+     "flagged": true
+    },
+    {
+     "kind": "error",
+     "got": "sinibus",
+     "expected": "finibus",
+     "ref": [
+      1,
+      0
+     ],
+     "chapter": 4,
+     "verse": 13,
+     "flagged": false
+    },
+    {
+     "kind": "variant",
+     "got": "Ioannnem",
+     "expected": "Joannem",
+     "ref": [
+      1,
+      0
+     ],
+     "chapter": 4,
+     "verse": 21
+    }
+   ]
+  },
+  "0063": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0064": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0065": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0066": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0067": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0068": {
+   "words": 116,
+   "matched": 116,
+   "split": 0,
+   "errors": []
+  },
+  "0069": {
+   "words": 559,
+   "matched": 557,
+   "split": 1,
+   "errors": [
+    {
+     "kind": "error",
+     "got": "abscinde",
+     "expected": "abscide",
+     "ref": [
+      1,
+      0
+     ],
+     "chapter": 5,
+     "verse": 30,
+     "flagged": false
+    },
+    {
+     "kind": "split",
+     "got": "prodente",
+     "expected": "pro dente",
+     "ref": [
+      1,
+      0
+     ],
+     "chapter": 5,
+     "verse": 38
+    }
+   ]
+  },
+  "0070": {
+   "words": 61,
+   "matched": 61,
+   "split": 0,
+   "errors": []
+  },
+  "0071": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0072": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0073": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0074": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0075": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0076": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0077": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0078": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0079": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0080": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0081": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0082": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0083": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0084": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0085": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0086": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0087": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0088": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0089": {
+   "words": 141,
+   "matched": 140,
+   "split": 0,
+   "errors": [
+    {
+     "kind": "edge",
+     "got": "exau-",
+     "expected": "exaudiantur",
+     "ref": [
+      6,
+      0
+     ],
+     "chapter": 6,
+     "verse": 7
+    }
+   ]
+  },
+  "0090": {
+   "words": 428,
+   "matched": 426,
+   "split": 0,
+   "errors": [
+    {
+     "kind": "edge",
+     "got": "diantur",
+     "expected": "vestri",
+     "ref": [
+      1,
+      0
+     ],
+     "chapter": 5,
+     "verse": 45
+    },
+    {
+     "kind": "error",
+     "got": "sibijpsi",
+     "expected": "sibi",
+     "ref": [
+      1,
+      0
+     ],
+     "chapter": 6,
+     "verse": 34,
+     "flagged": false
+    },
+    {
+     "kind": "missing",
+     "got": "",
+     "expected": "ipsi",
+     "ref": null,
+     "chapter": 6,
+     "verse": 34
+    }
+   ]
+  },
+  "0091": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0092": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0093": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0094": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0095": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0096": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0097": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0098": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0099": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0100": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0101": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0102": {
+   "words": 0,
+   "matched": 0,
+   "split": 0,
+   "errors": []
+  },
+  "0103": {
+   "words": 210,
+   "matched": 210,
+   "split": 0,
+   "errors": []
+  }
+ }
+}

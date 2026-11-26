@@ -1,0 +1,1064 @@
+{
+ "rerun": [
+  "0032",
+  "0060",
+  "0063",
+  "0065"
+ ],
+ "check": [
+  "0020",
+  "0025",
+  "0029",
+  "0035",
+  "0036",
+  "0037",
+  "0038",
+  "0041",
+  "0042",
+  "0045",
+  "0048",
+  "0050",
+  "0052",
+  "0054",
+  "0055",
+  "0062",
+  "0070",
+  "0071",
+  "0076",
+  "0078",
+  "0081",
+  "0084",
+  "0085",
+  "0088",
+  "0089",
+  "0101",
+  "0103"
+ ],
+ "pages": {
+  "0020": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "40 body lines for 49 in the OCR (OCR noise, or text missing?)",
+    "416 body words for 513 in the OCR (OCR noise, or text missing?)"
+   ],
+   "ocr_body_lines": 49,
+   "body_lines": 40,
+   "ocr_body_words": 513,
+   "body_words": 416,
+   "source": "v2"
+  },
+  "0021": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 994,
+   "body_words": 951,
+   "source": "v2"
+  },
+  "0022": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1024,
+   "body_words": 968,
+   "source": "v2"
+  },
+  "0023": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 996,
+   "body_words": 955,
+   "source": "v2"
+  },
+  "0024": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 131,
+   "ocr_body_words": 1008,
+   "body_words": 951,
+   "source": "v2"
+  },
+  "0025": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Column A letters A-F sit in the gutter between columns; A, B, C, D, E, F are listed under margin_right but are central gutter. Hebrew runs are small and partly "
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 133,
+   "ocr_body_words": 990,
+   "body_words": 944,
+   "source": "v2"
+  },
+  "0026": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 134,
+   "body_lines": 132,
+   "ocr_body_words": 973,
+   "body_words": 932,
+   "source": "v2"
+  },
+  "0027": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1053,
+   "body_words": 1031,
+   "source": "v2"
+  },
+  "0028": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 134,
+   "body_lines": 133,
+   "ocr_body_words": 1024,
+   "body_words": 987,
+   "source": "v2"
+  },
+  "0029": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Faint show-through of the verso is visible; ignored. A faint marginal note at the right near the top and bottom is illegible. Italic Vulgate quotations are tran"
+   ],
+   "ocr_body_lines": 134,
+   "body_lines": 132,
+   "ocr_body_words": 1043,
+   "body_words": 1094,
+   "source": "v2"
+  },
+  "0030": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1037,
+   "body_words": 1042,
+   "source": "v2"
+  },
+  "0031": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 970,
+   "body_words": 928,
+   "source": "v2"
+  },
+  "0032": {
+   "status": "incomplete",
+   "problems": [
+    "model notes: Only the head and the first paragraph of column a were transcribed; the rest of the page (remaining col_a text, col_b, margin notes, section",
+    "21 body lines for 133 in the OCR",
+    "162 body words for 1059 in the OCR"
+   ],
+   "blocks": [],
+   "warnings": [
+    "4 gutter letters in the OCR, none in the answer"
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 21,
+   "ocr_body_words": 1059,
+   "body_words": 162,
+   "source": "v2"
+  },
+  "0033": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 995,
+   "body_words": 1003,
+   "source": "v2"
+  },
+  "0034": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 980,
+   "body_words": 981,
+   "source": "v2"
+  },
+  "0035": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Section letters A–F in the gutter not separately transcribed (A, B, C, D, E, F). Faint show-through text ignored. Hebrew and Greek words are best attempts.",
+    "4 gutter letters in the OCR, none in the answer"
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1033,
+   "body_words": 1004,
+   "source": "v2"
+  },
+  "0036": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Faint show-through marginal notes on the left margin and right margin are illegible and omitted. Several Hebrew words and Greek words are best attempts. Supersc"
+   ],
+   "ocr_body_lines": 134,
+   "body_lines": 132,
+   "ocr_body_words": 996,
+   "body_words": 964,
+   "source": "v2"
+  },
+  "0037": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: A letter at top of col_b is printed in gutter (A, B, C, D, E, F). Letter A beside first line of col_b. Margin letters approximate; a small mirrored show-through"
+   ],
+   "ocr_body_lines": 126,
+   "body_lines": 126,
+   "ocr_body_words": 950,
+   "body_words": 938,
+   "source": "v2"
+  },
+  "0038": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "38 body lines for 52 in the OCR (OCR noise, or text missing?)",
+    "model notes: Page shows heavy show-through of the verso text in the lower part; ignored. Drop cap C (ornate) precedes VM. Text is full-width Vulgate only; no commentary colu"
+   ],
+   "ocr_body_lines": 52,
+   "body_lines": 38,
+   "ocr_body_words": 501,
+   "body_words": 478,
+   "source": "v2"
+  },
+  "0039": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1039,
+   "body_words": 931,
+   "source": "v2"
+  },
+  "0040": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1012,
+   "body_words": 975,
+   "source": "v2"
+  },
+  "0041": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Section letters A-F in gutter (A,B,C,D,E,F) only A given; others omitted. Faint show-through note in right margin near 'nomẽ dies' ignored. Page-number/head sho"
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1036,
+   "body_words": 1015,
+   "source": "v2"
+  },
+  "0042": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Letters A–F in gutter between columns not output as blocks (A beside 'poteſt', B 'qua ratione', C 'eſſe cognouerint', D 'ea facta ſit', E 'Epiph. Alij', F 'ſti ",
+    "5 gutter letters in the OCR, none in the answer"
+   ],
+   "ocr_body_lines": 134,
+   "body_lines": 132,
+   "ocr_body_words": 1032,
+   "body_words": 1052,
+   "source": "v2"
+  },
+  "0043": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 999,
+   "body_words": 1003,
+   "source": "v2"
+  },
+  "0044": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 996,
+   "body_words": 975,
+   "source": "v2"
+  },
+  "0045": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Letters A-F sit in the gutter between columns; placed under margin_left. Faint show-through text ignored. Normalized Augst. kept as printed abbreviation."
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1018,
+   "body_words": 993,
+   "source": "v2"
+  },
+  "0046": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 133,
+   "ocr_body_words": 1014,
+   "body_words": 987,
+   "source": "v2"
+  },
+  "0047": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 133,
+   "ocr_body_words": 1022,
+   "body_words": 989,
+   "source": "v2"
+  },
+  "0048": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Marginal letters A-F printed in gutter (A at line 1 col a, B beside 'eam vrbem nominaſſe', C beside 'ruſalem non longe', D beside 'luit Propheta', E beside 'ral",
+    "5 gutter letters in the OCR, none in the answer"
+   ],
+   "ocr_body_lines": 134,
+   "body_lines": 132,
+   "ocr_body_words": 1009,
+   "body_words": 959,
+   "source": "v2"
+  },
+  "0049": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 106,
+   "body_lines": 106,
+   "ocr_body_words": 816,
+   "body_words": 781,
+   "source": "v2"
+  },
+  "0050": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Folio page 69/70 with ornamental headpiece. Drop cap I in woodcut. Margin numeral 1. beside verse 1 and beside commentary start omitted from blocks."
+   ],
+   "ocr_body_lines": 65,
+   "body_lines": 66,
+   "ocr_body_words": 597,
+   "body_words": 582,
+   "source": "v2"
+  },
+  "0051": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1022,
+   "body_words": 993,
+   "source": "v2"
+  },
+  "0052": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Two-column page. Section letters A-F in the gutter (A, B, C, D, E in the middle gutter, F lower); only A included as a letter block, positions of the others are"
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1009,
+   "body_words": 971,
+   "source": "v2"
+  },
+  "0053": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1039,
+   "body_words": 1010,
+   "source": "v2"
+  },
+  "0054": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Section letters A,B,C,D,E,F in the gutter between columns not transcribed as blocks (A beside line 1, B beside 'probaret ſacramentũ', C beside 'tiam captantes',",
+    "5 gutter letters in the OCR, none in the answer"
+   ],
+   "ocr_body_lines": 134,
+   "body_lines": 132,
+   "ocr_body_words": 988,
+   "body_words": 961,
+   "source": "v2"
+  },
+  "0055": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Faint show-through marginal text on left of col_a (around 55-68% height) is not transcribed. Section letters A-F printed in gutter between columns; assigned to "
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1055,
+   "body_words": 1025,
+   "source": "v2"
+  },
+  "0056": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1031,
+   "body_words": 1000,
+   "source": "v2"
+  },
+  "0057": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1039,
+   "body_words": 989,
+   "source": "v2"
+  },
+  "0058": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 135,
+   "body_lines": 132,
+   "ocr_body_words": 1023,
+   "body_words": 976,
+   "source": "v2"
+  },
+  "0059": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1041,
+   "body_words": 995,
+   "source": "v2"
+  },
+  "0060": {
+   "status": "normalized_rebuilt",
+   "problems": [],
+   "blocks": [
+    {
+     "region": "margin_left",
+     "ri": 4,
+     "block": 1,
+     "printed_words": 19,
+     "normalized_words": 15
+    }
+   ],
+   "warnings": [],
+   "ocr_body_lines": 134,
+   "body_lines": 132,
+   "ocr_body_words": 1032,
+   "body_words": 960,
+   "source": "v2"
+  },
+  "0061": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 93,
+   "body_lines": 95,
+   "ocr_body_words": 798,
+   "body_words": 781,
+   "source": "v2"
+  },
+  "0062": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Marginal letters A, B, C appear in the gutter between columns (A at top of col_b, B beside 'fuerat.c.3.', C beside 'hoc etiam modo Deum'); not transcribed as se",
+    "2 gutter letters in the OCR, none in the answer"
+   ],
+   "ocr_body_lines": 89,
+   "body_lines": 88,
+   "ocr_body_words": 765,
+   "body_words": 719,
+   "source": "v2"
+  },
+  "0063": {
+   "status": "normalized_rebuilt",
+   "problems": [],
+   "blocks": [
+    {
+     "region": "col_a",
+     "ri": 1,
+     "block": 1,
+     "printed_words": 351,
+     "normalized_words": 56
+    },
+    {
+     "region": "col_b",
+     "ri": 2,
+     "block": 1,
+     "printed_words": 432,
+     "normalized_words": 13
+    }
+   ],
+   "warnings": [
+    "model notes: Letters A-F in gutter (A at top, B, C, D, E, F) not transcribed as separate blocks. Several blocks' normalized text is abbreviated/truncated; the column text is",
+    "6 gutter letters in the OCR, none in the answer"
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1031,
+   "body_words": 937,
+   "source": "v2"
+  },
+  "0064": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1035,
+   "body_words": 934,
+   "source": "v2"
+  },
+  "0065": {
+   "status": "incomplete",
+   "problems": [
+    "model notes: Partial transcription only; the rest of the page (col_a remainder, col_b, margins, foot) is not transcribed.",
+    "20 body lines for 133 in the OCR",
+    "173 body words for 1036 in the OCR"
+   ],
+   "blocks": [],
+   "warnings": [
+    "model notes: Partial transcription only; the rest of the page (col_a remainder, col_b, margins, foot) is not transcribed.",
+    "5 gutter letters in the OCR, none in the answer"
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 20,
+   "ocr_body_words": 1036,
+   "body_words": 173,
+   "source": "v2"
+  },
+  "0066": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 133,
+   "ocr_body_words": 1029,
+   "body_words": 1022,
+   "source": "v2"
+  },
+  "0067": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 134,
+   "body_lines": 132,
+   "ocr_body_words": 1017,
+   "body_words": 940,
+   "source": "v2"
+  },
+  "0068": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 96,
+   "body_lines": 93,
+   "ocr_body_words": 761,
+   "body_words": 728,
+   "source": "v2"
+  },
+  "0069": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 54,
+   "body_lines": 46,
+   "ocr_body_words": 678,
+   "body_words": 604,
+   "source": "v2"
+  },
+  "0070": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Left-margin small-type notes (scripture references) are mostly faint show-through or illegible; only the top ones (Act. 7, Luc. 23) transcribed. Signature at fo"
+   ],
+   "ocr_body_lines": 123,
+   "body_lines": 117,
+   "ocr_body_words": 931,
+   "body_words": 897,
+   "source": "v2"
+  },
+  "0071": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Letters A-F positions approximate; some right-column line ends are cut by the page edge. Faint show-through of the verso at the head and in the margins ignored."
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1080,
+   "body_words": 1045,
+   "source": "v2"
+  },
+  "0072": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 132,
+   "body_lines": 132,
+   "ocr_body_words": 1031,
+   "body_words": 1108,
+   "source": "v2"
+  },
+  "0073": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1039,
+   "body_words": 962,
+   "source": "v2"
+  },
+  "0074": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 133,
+   "ocr_body_words": 1074,
+   "body_words": 1038,
+   "source": "v2"
+  },
+  "0075": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1053,
+   "body_words": 1037,
+   "source": "v2"
+  },
+  "0076": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Left margin has a tiny mark near lines 5-6 (not transcribed). Columns have letters A-F in gutter."
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1096,
+   "body_words": 1101,
+   "source": "v2"
+  },
+  "0077": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 134,
+   "body_lines": 132,
+   "ocr_body_words": 1025,
+   "body_words": 1072,
+   "source": "v2"
+  },
+  "0078": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Marginal letters A-F sit in the gutter between columns; their anchors are approximate. Faint show-through of the verso is visible in the lower half. Left margin"
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1020,
+   "body_words": 1028,
+   "source": "v2"
+  },
+  "0079": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 133,
+   "ocr_body_words": 1003,
+   "body_words": 1027,
+   "source": "v2"
+  },
+  "0080": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 134,
+   "body_lines": 132,
+   "ocr_body_words": 1083,
+   "body_words": 1028,
+   "source": "v2"
+  },
+  "0081": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Letters A-F sit in the gutter between columns. Faint show-through text and a stain near the top right. Faint partially legible note near bottom-left ('Euthym.')"
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1016,
+   "body_words": 956,
+   "source": "v2"
+  },
+  "0082": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1007,
+   "body_words": 942,
+   "source": "v2"
+  },
+  "0083": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 134,
+   "body_lines": 132,
+   "ocr_body_words": 1000,
+   "body_words": 1037,
+   "source": "v2"
+  },
+  "0084": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "5 gutter letters in the OCR, none in the answer"
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 133,
+   "ocr_body_words": 1017,
+   "body_words": 993,
+   "source": "v2"
+  },
+  "0085": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "7 gutter letters in the OCR, none in the answer"
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1023,
+   "body_words": 976,
+   "source": "v2"
+  },
+  "0086": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 133,
+   "ocr_body_words": 1104,
+   "body_words": 1061,
+   "source": "v2"
+  },
+  "0087": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1026,
+   "body_words": 1032,
+   "source": "v2"
+  },
+  "0088": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Two-column page with letters A-F in the gutter. Greek and Hebrew words are small and worn, so they are flagged. The 'foot' catchword is conueniunt. A marginal m"
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1029,
+   "body_words": 1046,
+   "source": "v2"
+  },
+  "0089": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Letters A, C, D in gutter and further faint marginal notes (show-through) not transcribed; the drop cap A of ATTENDITE included. Page tilde readings in col_a sh"
+   ],
+   "ocr_body_lines": 86,
+   "body_lines": 83,
+   "ocr_body_words": 722,
+   "body_words": 694,
+   "source": "v2"
+  },
+  "0090": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 54,
+   "body_lines": 53,
+   "ocr_body_words": 560,
+   "body_words": 562,
+   "source": "v2"
+  },
+  "0091": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 966,
+   "body_words": 949,
+   "source": "v2"
+  },
+  "0092": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1086,
+   "body_words": 1086,
+   "source": "v2"
+  },
+  "0093": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1056,
+   "body_words": 1016,
+   "source": "v2"
+  },
+  "0094": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1048,
+   "body_words": 985,
+   "source": "v2"
+  },
+  "0095": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1073,
+   "body_words": 1039,
+   "source": "v2"
+  },
+  "0096": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 134,
+   "body_lines": 133,
+   "ocr_body_words": 1007,
+   "body_words": 954,
+   "source": "v2"
+  },
+  "0097": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1033,
+   "body_words": 983,
+   "source": "v2"
+  },
+  "0098": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 133,
+   "ocr_body_words": 1038,
+   "body_words": 950,
+   "source": "v2"
+  },
+  "0099": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1000,
+   "body_words": 979,
+   "source": "v2"
+  },
+  "0100": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1007,
+   "body_words": 951,
+   "source": "v2"
+  },
+  "0101": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Section letters A-F in gutter between columns (A beside line 1, B beside 'minauerit', C beside 'ris argumentationis', D beside 'ni corporis', E beside 'tus soli",
+    "3 gutter letters in the OCR, none in the answer"
+   ],
+   "ocr_body_lines": 133,
+   "body_lines": 132,
+   "ocr_body_words": 1013,
+   "body_words": 965,
+   "source": "v2"
+  },
+  "0102": {
+   "status": "ok",
+   "problems": [],
+   "blocks": [],
+   "warnings": [],
+   "ocr_body_lines": 127,
+   "body_lines": 132,
+   "ocr_body_words": 1035,
+   "body_words": 1032,
+   "source": "v2"
+  },
+  "0103": {
+   "status": "check",
+   "problems": [],
+   "blocks": [],
+   "warnings": [
+    "model notes: Faint show-through of the verso text visible in the lower margin of the commentary block and around the ornament; ignored. Ornamental band between commentary an"
+   ],
+   "ocr_body_lines": 78,
+   "body_lines": 75,
+   "ocr_body_words": 679,
+   "body_words": 624,
+   "source": "v2"
+  }
+ }
+}

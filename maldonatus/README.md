@@ -83,10 +83,84 @@ python3 maldonatus/pipeline/build.py --data PATH/TO/OCR-PACK --dict package/inde
 
 ## Full-page proofread (Sonnet 5.5) and review queue
 
-Reader data for Matthew 1-6 (images 0020-0103) now comes from a full-page proofread: Claude Sonnet 5.5 read each scan (three full-width bands at near-native resolution plus an overview, with the old OCR as a hint) through the Message Batches API. It returns one block per printed paragraph, with the diplomatic lines (long s as ſ, tildes kept), a normalized paragraph, lemma/heading kinds, marginal notes and gutter letters, and a **flag** for every word it was unsure of.
+Reader data for Matthew 1-6 (images 0020-0103) comes from a full-page proofread: Claude Sonnet 5.5 read each scan with the old OCR as a hint, through the Message Batches API (`proofread/raw/NNNN.json`, prompt v2). Since then the answers go through deterministic clean-up and checks (no API calls), a line-ID proofread (prompt v3) is ready to run, and an Opus review of the flags is ready to run.
 
-- `pipeline/proofread/proofread2.py` builds and submits the batches (28 pages each; the batch API limit is 256 MB) and collects `proofread/raw/NNNN.json`.
-- `pipeline/proofread/merge.py` turns the raw JSON into `reader/data/pages/tom1-NNNN.json` and `toc.json`, and writes `pipeline/review-queue.json`. It also adds flags itself: every Greek/Hebrew/other-script run, `[?]`, and plain-letter words that are not in the Latin dictionary and are identical to the old OCR (type `ocr_copy`, `auto: true`).
-- `pipeline/proofread/crops.py` cuts a strip of the scan around each flag into `/workspace/maldonatus-review-crops/` (not committed; regenerate from the bboxes).
-- In the reader, flagged words are marked: yellow = unsure, orange = maybe an OCR copy, purple = Greek/Hebrew (hover for the reason).
-- `pipeline/review-queue.json`: one item per flag: `id`, `img`, `block`, `line`, `region`, `type` (`unsure`, `ocr_copy`, `greek`, `hebrew`, `other_script`, `unreadable_note`), `word`, `normalized_word`, `reason`, `auto`, `line_text` with `prev_line`/`next_line`, `bbox` in scan pixels `[x0,y0,x1,y1]` (`bbox_source`: `ocr-word` = snapped to an OCR word box, `approx-y` = the model's vertical estimate), `page_wh`, `sonnet_best` and the crop path. A later Opus pass needs only the crop and these lines.
+### What runs without an API key
+
+`python3 maldonatus/pipeline/proofread/merge.py` rebuilds `reader/data/pages`, `reader/data/toc.json`, `pipeline/review-queue.json` and the reports from whatever answers are present:
+
+- **Source per page:** `proofread/raw3/` (v3) if it passed validation, else `proofread/raw/` (v2), else the pre-proofread page (commit `b7ccb18`, exported automatically).
+- **Completeness check** (`reports/completeness.json`): a page falls back to the old data when the model said it stopped early, or the body has under 60% of the OCR's lines or words. Pages from 60-85% are listed under `check` (usually OCR noise). A paragraph whose normalized text is under 80% or over 130% of the printed words gets a normalized text rebuilt from the diplomatic lines (`nfb` on the block). Pages under `rerun` need a new proofread. Currently 0032 and 0065 are truncated and fall back; 0063 (two paragraphs) and 0060 (one note) have rebuilt normalized text.
+- **Text fixes** (`fixes.py`), on every block:
+  - symbol variants are mapped to one sign each (`⁹ ᵒ` → `ꝰ`, `ç ẹ` → `ę`, `ʒ` → `z` …);
+  - an acute is turned into a tilde where the normalized text shows the m/n (`nó` → `nõ`), or, failing that, where the Hunspell dictionary knows the expansion. Real accents before an enclitic (`ideóque`, `quámque`) are left alone;
+  - the space after `, ; :` is restored (not between digits, not in `q;`).
+
+  On the v2 data: 716 + 322 tildes, about 3,270 spaces in the diplomatic text and 2,540 in the normalized text, 164 symbols.
+- **Flags:** each flag is re-anchored to the line that holds the word. Lines are tied to OCR lines (exactly for v3, by alignment for v2), so a flag's `bbox` snaps to the OCR word box (`ocr-word`) or line (`ocr-line`), and its `crop_box` is the column from 1.6 lines above to 1.6 below. Review items have stable ids (`img-hash`).
+- **Vulgate check** (`vulgate.py`): the chapter text is scored against the Clementine Vulgate after spelling folding. Differences become `vulgate_diff` flags. On v2: 12 real errors in 2,994 words (0.4%), only 2 of them flagged by Sonnet (`Piogenies`, `dicit` for didicit, `ſinibus`, `auditaeſt` …).
+- **Opus decisions** in `pipeline/review-decisions.json` are applied: corrections replace the word in the diplomatic and normalized text, confirmed flags disappear, unreadable ones stay marked `reviewed`.
+
+### Data files the scripts need (on the machine that runs them)
+
+| What | Default location | Override |
+|---|---|---|
+| Tom. I scans, one JPEG per image (`0020.jpg` … at full size, BSB bsb11059226) | `~/maldonatus-scans/bsb11059226_tom1_1596/` | `MALD_SCANS` |
+| OCR word pack `bsb11059226_tom1_1596_words.json.gz` (Google Drive, file id `1TId3Wt8VKmiTvn8KyxFaMpCxfjtP_1D1`) | `~/maldonatus-pack/` | `MALD_PACK` |
+| Hunspell + Latin dictionary (`npm pack dictionary-la && tar xzf dictionary-la-*.tgz`, then the `package/index` base path; `apt-get install hunspell`) | `~/dictla/package/index` | `MALD_DICT` |
+| Work dir (batch ids, dry-run output, crops, old reader export) | `~/maldonatus-work/` | `MALD_WORK` |
+| Python packages: `anthropic`, `Pillow` | | |
+
+The repository itself must be a git checkout (merge exports the old reader data from commit `b7ccb18`). Everything kept is written in the repository.
+
+### Line-ID proofread (prompt v3): `proofread3.py`
+
+The model gets every OCR line with its ID (`ocrlines.py`; the same IDs the reader used) and returns one corrected line per ID. It also gets the text regions at full resolution: each column, the full-width bands, the margins and the gutter, cut into tiles under the 2576 px limit, plus a small overview.
+
+- **Output:** a line the OCR missed comes back as `+<id>`, and non-text OCR lines are listed as `dropped`. Each line carries `conf` (`sure` / `check` / `unsure`), and lines marked check/unsure become `line_unsure` flags.
+- **Prompt:** it has the tilde rule and lists the one allowed character per abbreviation sign (`fixes.SYMBOLS`).
+- **Validation:** pages that answer under 97% of the IDs, stop early, or truncate a normalized paragraph are resubmitted once (`--retries`).
+- **Single command:** submit → wait → collect into `proofread/raw3/` → merge → Vulgate score → `compare.py`, which writes `reports/compare.html` (OCR | v2 | v3 per line, differences marked) and a per-page table.
+
+```bash
+export ANTHROPIC_API_KEY=...
+python3 maldonatus/pipeline/proofread/proofread3.py run --pages 0032,0065,0063 --dry-run   # tiles + sample request in $MALD_WORK/dryrun3, cost estimate
+python3 maldonatus/pipeline/proofread/proofread3.py run --pages 0032,0065,0063
+python3 maldonatus/pipeline/proofread/proofread3.py collect msgbatch_...                   # resume after an interruption
+```
+
+Options: `--effort` (default `medium`, as v2), `--model` (default `claude-sonnet-5-5`), `--retries`, `--no-merge`.
+
+### Opus flag review: `opus_review.py`
+
+The script reads `pipeline/review-queue.json`. For each open flag it sends the crop (flagged word outlined) with the line, its neighbours and the reason, in batches of 20 per request to `claude-opus-5-5`. It writes `pipeline/review-decisions.json`, then runs the merge.
+
+```bash
+python3 maldonatus/pipeline/proofread/opus_review.py run --dry-run    # count, cost estimate, sample request
+python3 maldonatus/pipeline/proofread/opus_review.py run
+```
+
+Options: `--pages`, `--types unsure,ocr_copy,…`, `--limit`, `--effort`, `--include-reviewed`. `crops.py` writes the same crops to `$MALD_WORK/review-crops/` for looking at flags by eye.
+
+### Files
+
+- `proofread/ocrlines.py`: OCR lines with IDs and boxes.
+- `proofread/fixes.py`: text clean-up and the symbol inventory.
+- `proofread/vulgate.py`: the Vulgate scorer.
+- `proofread/adapt3.py`: the v3 schema and adapter.
+- `proofread/batchlib.py`: batch submit/poll/collect.
+- `proofread/merge.py`, `proofread3.py`, `opus_review.py`, `compare.py`, `crops.py`: the commands above.
+- `proofread2.py`: the v2 script that produced `proofread/raw/` (kept for the record; its hard-coded paths are from the machine that ran it).
+- `pipeline/review-queue.json`: one item per open flag. Fields:
+  - `id` (stable), `img`, `block`, `line`, `region`;
+  - `type`: `unsure`, `ocr_copy`, `greek`, `hebrew`, `other_script`, `unreadable_note`, `vulgate_diff`, `line_unsure`;
+  - `word`, `normalized_word`, `reason`, `auto`;
+  - `line_text`, `prev_line`, `next_line`;
+  - `ocr_line`, `bbox` and `bbox_source` (`ocr-word`, `ocr-line`, `approx-y`), `crop_box`, `page_wh`;
+  - `source` (`v2`/`v3`), `reviewed`.
+- In the reader, flagged words are marked:
+  - yellow: unsure, or the whole line is uncertain;
+  - orange: maybe an OCR copy, or differs from the Vulgate;
+  - purple: Greek/Hebrew.
+
+  Hover a word for the reason.

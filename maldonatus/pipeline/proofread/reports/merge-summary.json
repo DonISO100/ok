@@ -1,0 +1,82 @@
+{
+ "pages": 84,
+ "sources": {
+  "v2": 84
+ },
+ "status": {
+  "check": 27,
+  "ok": 53,
+  "incomplete": 2,
+  "normalized_rebuilt": 2
+ },
+ "rerun": [
+  "0032",
+  "0060",
+  "0063",
+  "0065"
+ ],
+ "check": [
+  "0020",
+  "0025",
+  "0029",
+  "0035",
+  "0036",
+  "0037",
+  "0038",
+  "0041",
+  "0042",
+  "0045",
+  "0048",
+  "0050",
+  "0052",
+  "0054",
+  "0055",
+  "0062",
+  "0070",
+  "0071",
+  "0076",
+  "0078",
+  "0081",
+  "0084",
+  "0085",
+  "0088",
+  "0089",
+  "0101",
+  "0103"
+ ],
+ "fixes": {
+  "symbols": 164,
+  "tildes": 716,
+  "spaces": 3267,
+  "norm_spaces": 2537,
+  "tildes_dict": 322,
+  "normalized_rebuilt": 3
+ },
+ "flags": {
+  "moved": 217,
+  "not_found": 24
+ },
+ "decisions_applied": {},
+ "review_items": 1127,
+ "review_open": 1127,
+ "review_types": {
+  "unsure": 479,
+  "greek": 236,
+  "ocr_copy": 232,
+  "hebrew": 151,
+  "unreadable_note": 17,
+  "vulgate_diff": 12
+ },
+ "bbox_source": {
+  "ocr-word": 720,
+  "approx-y": 25,
+  "ocr-line": 380,
+  "none": 2
+ },
+ "vulgate": {
+  "words": 2994,
+  "errors": 12,
+  "rate": 0.004
+ },
+ "toc_ids_lost": 5
+}
